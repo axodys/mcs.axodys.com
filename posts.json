@@ -1,0 +1,12 @@
+{
+  "posts": [
+    {
+      "id": "welcome001",
+      "date": "2026-03-02T12:00:00.000Z",
+      "body": "Welcome to my journal. This is the first post — a small hello to the void. Thoughts, observations, and the occasional longer piece will live here.",
+      "tags": ["meta"],
+      "image": null,
+      "imageCaption": null
+    }
+  ]
+}
