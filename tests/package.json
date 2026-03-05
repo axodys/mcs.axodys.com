@@ -1,0 +1,13 @@
+{
+  "name": "microcosm-tests",
+  "private": true,
+  "description": "Unit tests for Microcosm — never deployed to GitHub Pages",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
