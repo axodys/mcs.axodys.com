@@ -3,8 +3,11 @@
 // Reads posts.json + config.json, writes YYYY/MM.html archive pages.
 // Run automatically by GitHub Actions on every deploy.
 
-const fs   = require('fs');
-const path = require('path');
+const fs     = require('fs');
+const path   = require('path');
+const { marked } = require('./js/marked.umd.js');
+
+marked.setOptions({ breaks: true, gfm: true });
 
 const posts  = JSON.parse(fs.readFileSync('posts.json',  'utf8')).posts  || [];
 const config = JSON.parse(fs.readFileSync('config.json', 'utf8'));
@@ -47,28 +50,7 @@ function postCard(post) {
 
   const emojiStr = (post.emojis || []).join('');
 
-  // Simple markdown-like rendering for the static page (no JS dependency)
-  // We inline a minimal subset: bold, italic, links, linebreaks → paragraphs
-  const body = (post.body || '')
-    .split(/\n\n+/)
-    .map(para => {
-      let p = escapeHtml(para.trim());
-      // inline: **bold**, *italic*, [text](url), `code`
-      p = p.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
-      p = p.replace(/\*(.+?)\*/g,     '<em>$1</em>');
-      p = p.replace(/`(.+?)`/g,       '<code>$1</code>');
-      p = p.replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2">$1</a>');
-      // headings
-      p = p.replace(/^### (.+)/m, '<h3>$1</h3>');
-      p = p.replace(/^## (.+)/m,  '<h2>$1</h2>');
-      p = p.replace(/^# (.+)/m,   '<h1>$1</h1>');
-      // blockquote
-      if (p.startsWith('&gt; ')) {
-        return `<blockquote>${p.slice(5)}</blockquote>`;
-      }
-      return p.startsWith('<h') || p.startsWith('<blockquote') ? p : `<p>${p}</p>`;
-    })
-    .join('\n');
+  const body = marked.parse(post.body || '');
 
   const image = post.image ? `
     <figure class="post-image">

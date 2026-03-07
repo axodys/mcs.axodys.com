@@ -5,13 +5,16 @@
 // its pure logic by extracting the same transformations it performs.
 
 // ─── Helpers mirrored from generate-feed.js ──────────────────────────────────
+const { marked } = require('../../js/marked.umd.js');
+marked.setOptions({ breaks: true, gfm: true });
+
 function buildFeedItems(posts, siteUrl) {
   const sorted = [...posts].sort((a, b) => new Date(b.date) - new Date(a.date));
   return sorted.map(p => ({
     guid: `${siteUrl}/index.html#${p.id}`,
     link: `${siteUrl}/index.html#${p.id}`,
     pubDate: new Date(p.date).toUTCString(),
-    description: p.body + (p.image ? `\n\n<img src="${p.image}" alt="${p.imageCaption || ''}" />` : ''),
+    description: marked.parse(p.body || '') + (p.image ? `\n\n<img src="${p.image}" alt="${p.imageCaption || ''}" />` : ''),
   }));
 }
 
@@ -28,9 +31,9 @@ const posts = [
 describe('buildFeedItems', () => {
   test('sorts posts newest-first', () => {
     const items = buildFeedItems(posts, SITE_URL);
-    expect(items[0].description).toBe('Third');
-    expect(items[1].description).toBe('Second');
-    expect(items[2].description).toBe('First');
+    expect(items[0].description).toContain('Third');
+    expect(items[1].description).toContain('Second');
+    expect(items[2].description).toContain('First');
   });
 
   test('does not mutate the original posts array', () => {
