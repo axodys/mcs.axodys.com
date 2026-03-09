@@ -2,8 +2,14 @@
 // Public-facing feed logic extracted from index.html.
 // Pure/testable functions are exported via `window.FeedModule` for browser use,
 // and via `module.exports` for Jest.
+// Depends on js/utils.js being loaded first (window.Utils in browser,
+// require('./utils') in Jest).
 
 (function (exports) {
+
+  // Resolve Utils — browser (window.Utils) or Node (require)
+  const Utils = (typeof window !== 'undefined' && window.Utils) ||
+    (typeof require !== 'undefined' && require('./utils'));
 
   // ─── Theme ─────────────────────────────────────────────────────────────────
   function applyTheme(theme) {
@@ -22,21 +28,9 @@
     applyTheme(next);
   }
 
-  // ─── Timezone / date formatting ─────────────────────────────────────────────
-  function getBlogTz(config) {
-    return (config && config.timezone) ||
-      (typeof Intl !== 'undefined' && Intl.DateTimeFormat().resolvedOptions().timeZone) ||
-      'UTC';
-  }
-
-  function formatPostDate(isoString, config) {
-    const tz = getBlogTz(config);
-    const d = new Date(isoString);
-    const month = d.toLocaleDateString('en-US', { month: 'short', timeZone: tz });
-    const day   = d.toLocaleDateString('en-US', { day: '2-digit',  timeZone: tz });
-    const time  = d.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: tz });
-    return `${month} ${day} ${time}`;
-  }
+  // ─── Timezone / date formatting — delegated to Utils ───────────────────────
+  function getBlogTz(config)                { return Utils.getBlogTz(config); }
+  function formatPostDate(isoString, config) { return Utils.formatPostDate(isoString, config); }
 
   // ─── Tag helpers ────────────────────────────────────────────────────────────
   function collectTags(posts) {
