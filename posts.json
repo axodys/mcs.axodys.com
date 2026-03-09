@@ -1,10 +1,277 @@
 {
   "posts": [
     {
-      "id": "welcome001",
-      "date": "2026-03-02T12:00:00.000Z",
-      "body": "Welcome to my journal. This is the first post — a small hello to the void. Thoughts, observations, and the occasional longer piece will live here.",
-      "tags": ["meta"],
+      "id": 25,
+      "date": "2025-03-09T16:18:00.000Z",
+      "body": "Claude helped me make some tweaks to the Microblog format I've been using and I should be able to import everything all the way back to September. Unfortunately, it's struggling to make the final import-posts.js utility right now. Must be a lot of compute demand at the moment.",
+      "tags": [],
+      "emojis": [
+        "🤖"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
+      "id": 24,
+      "date": "2025-03-09T15:22:00.000Z",
+      "body": "Working with Claude on my microcosm project.",
+      "tags": [],
+      "emojis": [
+        "🤖"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
+      "id": 23,
+      "date": "2025-03-08T21:05:00.000Z",
+      "body": "How did I not realize that Modric had gone to AC Milan this season? All the more reason to root for AC Milan in Serie A.",
+      "tags": [],
+      "emojis": [
+        "⚽️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
+      "id": 22,
+      "date": "2025-03-08T03:50:00.000Z",
+      "body": "Mary cooked up a huge Panda Express-inspired spread, and now I'm completely stuffed.",
+      "tags": [],
+      "emojis": [
+        "🐼"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
+      "id": 21,
+      "date": "2025-03-07T18:40:00.000Z",
+      "body": "Chelsea had all of the possession, but Wrexham was the better team by far with multiple chances beyond their fantastic goal.",
+      "tags": [],
+      "emojis": [
+        "⚽️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
+      "id": 20,
+      "date": "2025-03-07T18:35:00.000Z",
+      "body": "Wrexham 1-1 Chelsea HT Excellent game, just unfortunate that Garnacho ended up unmarked with the ball of the left wing in transition and was able to create an own goal situation for the equalizer. Okwonkwo really hadn't been troubled all game prior to that goal.",
+      "tags": [],
+      "emojis": [
+        "⚽️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
+      "id": 19,
+      "date": "2025-03-07T18:06:00.000Z",
+      "body": "Brilliant route one goal from Sam Smith over the top puts Wrexham up 1-0!",
+      "tags": [],
+      "emojis": [
+        "⚽️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
+      "id": 18,
+      "date": "2025-03-07T17:29:00.000Z",
+      "body": "Looking forward to rooting for Wrexham over Chelsea in the FA Cup today.",
+      "tags": [],
+      "emojis": [
+        "⚽️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
+      "id": 17,
+      "date": "2025-03-06T23:59:00.000Z",
+      "body": "Just heard Gorillaz will be the musical guest on SNL tomorrow night, and now I want to tune in.",
+      "tags": [],
+      "emojis": [
+        "📺"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
+      "id": 16,
+      "date": "2025-03-06T23:15:00.000Z",
+      "body": "I've been listening to *The Mountain* from Gorillaz all week, and I've been really digging it. Orange County was the earworm that I found myself humming to myself at random times after a few listen throughs. Turns out the whole album was strongly influenced by the deaths of both of Albam's and Hewlett's fathers during production, and now I feel like it's a serendipitous gift to revisit the emotion of my dad's passing almost exactly twenty-five years ago.",
+      "tags": [],
+      "emojis": [
+        "🎶"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
+      "id": 15,
+      "date": "2025-03-06T15:24:00.000Z",
+      "body": "[jottit.org](https://jottit.org) is a really simple editing tool that Simon Carstensen originally built with Aaron Swartz that Simon recently decided to fully resurrect as an open source project. Of particular note to me is that he's clearly using Claude as part of his development process.",
+      "tags": [],
+      "emojis": [
+        "🌐"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
+      "id": 14,
+      "date": "2025-03-06T05:42:00.000Z",
+      "body": "Star Trek: Starfleet Academy S1E9: 300th Night 👍👍 Excellent penultimate episode to the season with a cliffhanger to boot! Enjoyed SAM's personality evolution and internal conflict over her previous version's memories, and obviously this is the Caleb storyline we've been waiting to see play out all season.",
+      "tags": [],
+      "emojis": [
+        "📺"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
+      "id": 13,
+      "date": "2025-03-05T17:47:00.000Z",
+      "body": "Learned yesterday that we were having weird streaming issues on our TV upstairs with Peacock and Prime failing to load videos. It took MTGA to stop working for our computers for me to finally realize our Xfinity router needed a reboot.",
+      "tags": [],
+      "emojis": [
+        "🌐"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
+      "id": 12,
+      "date": "2025-03-05T16:24:00.000Z",
+      "body": "Making progress with Claude on the personal microblog project that I've been thinking about for a few years. The starting implementation was impressive, but the iterative assistance since has been impressive. Getting the project set up on Github, and then setting up unit tests has been really helpful and educational.",
+      "tags": [],
+      "emojis": [
+        "🤖"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
+      "id": 11,
+      "date": "2025-03-05T04:29:00.000Z",
+      "body": "Heh, accidentally lost a Jump-In game to my daughter by decking with my Summoned Elves deck. Probably one of the most synergistic pairings available right now.",
+      "tags": [],
+      "emojis": [
+        "🧙‍♂"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
+      "id": 10,
+      "date": "2025-03-04T16:52:00.000Z",
+      "body": "The MacBook Neo looks sweet and the price point is great, but only 8GB of RAM bums me out.",
+      "tags": [],
+      "emojis": [
+        "🍏"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
+      "id": 9,
+      "date": "2025-03-04T16:22:00.000Z",
+      "body": "Dave Winer's comments about working with Claude on a programming project mirrors my own initial experience. It's very collaborative and works quite well if you have enough knowledge to give it a directive, evaluate the result, and continue iterating.",
+      "tags": [],
+      "emojis": [
+        "🤖"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
+      "id": 8,
+      "date": "2025-03-04T04:34:00.000Z",
+      "body": "Paradise S2E4: A Holy Charge 👍👍 Welp, this one didn't turn out how I expected at all.",
+      "tags": [],
+      "emojis": [
+        "📺"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
+      "id": 7,
+      "date": "2025-03-03T22:08:00.000Z",
+      "body": "Macbook Neo is the leaked name for the new entry-level MacBook from Apple. I think that's pretty good if it's true.",
+      "tags": [],
+      "emojis": [
+        "🍏"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
+      "id": 6,
+      "date": "2025-03-03T04:13:00.000Z",
+      "body": "After 3 episodes, it's fair to say that Paradise season 2 is off to quite a start. Impressed by all the new layers in this onion, and now I wonder just how many seasons they've got planned.",
+      "tags": [],
+      "emojis": [
+        "📺"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
+      "id": 5,
+      "date": "2025-03-02T23:46:00.000Z",
+      "body": "Building a static microblog with Claude has been amazing so far. It's a very iterative collaboration. So far there has only been one breaking bug introduced after I introduced some additional functionality and Claude immediately figured it out and fixed it when I brought it up.",
+      "tags": [],
+      "emojis": [
+        "🤖"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
+      "id": 4,
+      "date": "2025-03-02T21:39:00.000Z",
+      "body": "I guess all the Claude ads I've been seeing have been working because I decided to sign up and see what kind of microblogging system it could build for me based on a variety of specifications.",
+      "tags": [],
+      "emojis": [
+        "🤖"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
+      "id": 3,
+      "date": "2025-03-02T17:34:00.000Z",
+      "body": "Feeling fairly functional now that I'm fully hydrated, but wasn't feeling tremendous four hours ago when I woke up with an aching neck, sore back, congestion, raw throat, and a minor cough.",
+      "tags": [],
+      "emojis": [
+        "🤧"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
+      "id": 2,
+      "date": "2025-03-02T04:34:00.000Z",
+      "body": "My Hero Academia: You're Next 👍 Fun to see all the students and heroes in a feature-length film, but kind of a ridiculous premise to fit such a huge and momentous one-off side conflict into the week before the actual final battle of the series.",
+      "tags": [],
+      "emojis": [
+        "🍿"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
+      "id": 1,
+      "date": "2025-03-01T20:32:00.000Z",
+      "body": "Star Trek: Starfleet Academy S1E8: The Life of the Stars 👍👍 Lt. Tilly is back to sort out all of the cadets' post Miyazaki drama in dramatic fashion, and SAM gets an unexpected system restart with the help of her creators and the doctor.",
+      "tags": [],
+      "emojis": [
+        "📺"
+      ],
       "image": null,
       "imageCaption": null
     }

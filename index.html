@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Journal</title>
-  <link rel="alternate" type="application/rss+xml" title="Journal RSS" href="feed.xml">
+  <title>Microcosm</title>
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="feed.xml">
 
   <!-- PWA / Home Screen -->
   <link rel="manifest" href="manifest.json">
@@ -216,7 +216,7 @@
   <div class="container">
     <div class="header-inner">
       <div>
-        <a class="site-name" href="index.html" id="site-name">Journal</a>
+        <a class="site-name" href="index.html" id="site-name">Microcosm</a>
         <div class="site-tagline" id="site-tagline"></div>
       </div>
       <div class="header-right">
@@ -237,6 +237,7 @@
   <div class="container"><span id="footer-text"></span></div>
 </footer>
 
+<script src="js/utils.js"></script>
 <script src="js/feed.js"></script>
 <script>
 // ─── Init ─────────────────────────────────────────────────────────────────────
@@ -263,11 +264,11 @@ async function init() {
     config = await cfgRes.json();
     allPosts = (await postsRes.json()).posts || [];
   } catch (e) {
-    config = { title: 'Journal', tagline: '', author: '' };
+    config = { title: 'Microcosm', tagline: '', author: '' };
   }
 
-  document.title = config.title || 'Journal';
-  document.getElementById('site-name').textContent = config.title || 'Journal';
+  document.title = config.title || 'Microcosm';
+  document.getElementById('site-name').textContent = config.title || 'Microcosm';
   if (config.tagline) document.getElementById('site-tagline').textContent = config.tagline;
   document.getElementById('footer-text').textContent = config.author ? `© ${config.author}` : '';
 
