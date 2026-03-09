@@ -54,7 +54,7 @@ function postCard(post) {
 
   const image = post.image ? `
     <figure class="post-image">
-      <img src="../../${post.image.startsWith('data:') ? '' : ''}${post.image.startsWith('data:') ? post.image : '../../' + post.image}" alt="${escapeHtml(post.imageCaption||'')}">
+      <img src="${post.image}" alt="${escapeHtml(post.imageCaption||'')}">
       ${post.imageCaption ? `<figcaption>${escapeHtml(post.imageCaption)}</figcaption>` : ''}
     </figure>` : '';
 

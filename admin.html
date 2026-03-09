@@ -510,6 +510,24 @@
         <button class="btn-primary" onclick="saveConfig()">save settings</button>
       </div>
 
+      <p class="section-title">image hosting (cloudinary)</p>
+      <div class="config-card">
+        <div class="info-note">
+          Images are uploaded to Cloudinary and stored as URLs — no base64 bloat in posts.json.<br><br>
+          Create a free account at <strong>cloudinary.com</strong>, then go to <strong>Settings → Upload → Upload presets</strong> and create an <strong>unsigned</strong> preset. Enter your cloud name and preset name below.
+        </div>
+        <div class="field-group">
+          <span class="field-label">cloud name</span>
+          <input type="text" id="cfg-cloudinary-name" placeholder="your-cloud-name">
+        </div>
+        <div class="field-group">
+          <span class="field-label">upload preset (unsigned)</span>
+          <input type="text" id="cfg-cloudinary-preset" placeholder="your-preset-name">
+        </div>
+        <button class="btn-primary" onclick="saveCloudinaryConfig()">save</button>
+        <div id="cloudinary-status" style="font-family:var(--mono);font-size:0.72rem;display:none;margin-top:0.5rem;"></div>
+      </div>
+
       <p class="section-title">change password</p>
       <div class="config-card">
         <div class="field-group">
@@ -668,8 +686,8 @@ function populateTimezoneSelect() {
 }
 
 // ─── State ───────────────────────────────────────────────────────────────────
-let posts = [], config = { title: 'Journal', tagline: '', author: '', timezone: '' };
-let currentImageData = null, editingId = null;
+let posts = [], config = { title: 'Journal', tagline: '', author: '', timezone: '', cloudinary: { cloudName: '', uploadPreset: '' } };
+let currentImageData = null, currentImageFile = null, editingId = null;
 
 function loadState() {
   const p = localStorage.getItem('journal_posts');
@@ -912,20 +930,19 @@ function togglePanel(id) {
 function handleImageUpload(e) {
   const file = e.target.files[0];
   if (!file) return;
-  const reader = new FileReader();
-  reader.onload = ev => {
-    currentImageData = ev.target.result;
-    document.getElementById('preview-img').src = currentImageData;
-    document.getElementById('image-preview').style.display = 'block';
-    document.getElementById('image-remove').style.display = 'block';
-    document.getElementById('upload-area').classList.add('has-image');
-    document.getElementById('upload-area').textContent = file.name;
-  };
-  reader.readAsDataURL(file);
+  currentImageFile = file;
+  // Show a local preview without storing base64
+  const objectUrl = URL.createObjectURL(file);
+  document.getElementById('preview-img').src = objectUrl;
+  document.getElementById('image-preview').style.display = 'block';
+  document.getElementById('image-remove').style.display = 'block';
+  document.getElementById('upload-area').classList.add('has-image');
+  document.getElementById('upload-area').textContent = file.name;
 }
 
 function removeImage() {
   currentImageData = null;
+  currentImageFile = null;
   document.getElementById('preview-img').src = '';
   document.getElementById('image-preview').style.display = 'none';
   document.getElementById('image-remove').style.display = 'none';
@@ -955,9 +972,38 @@ function resetCompose() {
   document.getElementById('publish-btn').onclick = publishPost;
 }
 
+async function uploadToCloudinary(file) {
+  const cloudName   = config.cloudinary?.cloudName;
+  const uploadPreset = config.cloudinary?.uploadPreset;
+  if (!cloudName || !uploadPreset) {
+    throw new Error('Cloudinary not configured — add cloud name and upload preset in Settings');
+  }
+  const formData = new FormData();
+  formData.append('file', file);
+  formData.append('upload_preset', uploadPreset);
+  const res = await fetch(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`, {
+    method: 'POST',
+    body: formData,
+  });
+  if (!res.ok) {
+    const err = await res.json();
+    throw new Error(err.error?.message || `Cloudinary error ${res.status}`);
+  }
+  const data = await res.json();
+  return data.secure_url;
+}
+
+function nextPostId() {
+  if (!posts.length) return 1;
+  return Math.max(...posts.map(p => typeof p.id === 'number' ? p.id : 0)) + 1;
+}
+
 async function publishPost() {
   const body = document.getElementById('post-body').value.trim();
   if (!body) { toast('write something first'); return; }
+
+  const btn = document.getElementById('publish-btn');
+  btn.disabled = true;
 
   const tagsRaw = document.getElementById('post-tags').value;
   const tags = tagsRaw ? tagsRaw.split(',').map(t => t.trim()).filter(Boolean) : [];
@@ -966,6 +1012,19 @@ async function publishPost() {
     document.getElementById('emoji-1').value.trim(),
     document.getElementById('emoji-2').value.trim(),
   ].filter(Boolean);
+
+  // Upload new image to Cloudinary if one was selected
+  let imageUrl = currentImageData || null; // currentImageData holds URL when editing existing post
+  if (currentImageFile) {
+    try {
+      showPublishStatus('loading', 'uploading image…');
+      imageUrl = await uploadToCloudinary(currentImageFile);
+    } catch (e) {
+      showPublishStatus('error', `✗ ${e.message}`);
+      btn.disabled = false;
+      return;
+    }
+  }
 
   // If editing, allow overriding the date; otherwise use now
   let postDate;
@@ -976,24 +1035,23 @@ async function publishPost() {
     postDate = new Date().toISOString();
   }
 
-  const post = {
-    id: Date.now().toString(36) + Math.random().toString(36).slice(2, 6),
-    date: postDate,
-    body, tags, emojis,
-    image: currentImageData || null,
-    imageCaption: caption || null
-  };
-
   if (editingId) {
     const idx = posts.findIndex(p => p.id === editingId);
-    posts[idx] = { ...posts[idx], date: postDate, body, tags, emojis, image: currentImageData || null, imageCaption: caption || null };
+    posts[idx] = { ...posts[idx], date: postDate, body, tags, emojis, image: imageUrl, imageCaption: caption || null };
   } else {
-    posts.unshift(post);
+    posts.unshift({
+      id: nextPostId(),
+      date: postDate,
+      body, tags, emojis,
+      image: imageUrl,
+      imageCaption: caption || null,
+    });
   }
 
   saveState();
   resetCompose();
   renderPostsList();
+  btn.disabled = false;
   await pushToGitHub();
 }
 
@@ -1080,7 +1138,8 @@ function editPost(id) {
   document.getElementById('post-datetime').value = isoToLocalInput(post.date);
 
   if (post.image) {
-    currentImageData = post.image;
+    currentImageData = post.image; // existing URL preserved if no new file uploaded
+    currentImageFile = null;
     document.getElementById('preview-img').src = post.image;
     document.getElementById('image-preview').style.display = 'block';
     document.getElementById('image-remove').style.display = 'block';
@@ -1102,6 +1161,8 @@ function fillConfigFields() {
   document.getElementById('cfg-title').value    = config.title    || '';
   document.getElementById('cfg-tagline').value  = config.tagline  || '';
   document.getElementById('cfg-author').value   = config.author   || '';
+  document.getElementById('cfg-cloudinary-name').value   = config.cloudinary?.cloudName   || '';
+  document.getElementById('cfg-cloudinary-preset').value = config.cloudinary?.uploadPreset || '';
   populateTimezoneSelect();
 }
 
@@ -1120,6 +1181,19 @@ function saveConfig() {
   config.timezone = document.getElementById('cfg-timezone').value;
   saveState();
   toast('settings saved');
+}
+
+function saveCloudinaryConfig() {
+  const cloudName    = document.getElementById('cfg-cloudinary-name').value.trim();
+  const uploadPreset = document.getElementById('cfg-cloudinary-preset').value.trim();
+  if (!cloudName || !uploadPreset) { toast('enter both cloud name and upload preset'); return; }
+  config.cloudinary = { cloudName, uploadPreset };
+  saveState();
+  const status = document.getElementById('cloudinary-status');
+  status.style.display = 'block';
+  status.style.color = 'var(--accent)';
+  status.textContent = '✓ cloudinary config saved';
+  toast('cloudinary settings saved');
 }
 
 // ─── Export (manual fallback) ─────────────────────────────────────────────────

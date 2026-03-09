@@ -53,7 +53,7 @@ describe('buildFeedItems', () => {
   });
 
   test('appends image tag to description when image is present', () => {
-    const withImage = [{ id: 'img1', date: '2026-03-01T00:00:00.000Z', body: 'Look', image: 'data:image/png;base64,abc', imageCaption: 'Nice' }];
+    const withImage = [{ id: 1, date: '2026-03-01T00:00:00.000Z', body: 'Look', image: 'https://res.cloudinary.com/demo/image/upload/sample.jpg', imageCaption: 'Nice' }];
     const items = buildFeedItems(withImage, SITE_URL);
     expect(items[0].description).toContain('<img');
     expect(items[0].description).toContain('Nice');

@@ -12,7 +12,7 @@ const {
 
 // ─── Sample fixtures ──────────────────────────────────────────────────────────
 const POST_A = {
-  id: 'abc123',
+  id: 1,
   date: '2026-03-02T12:00:00.000Z',
   body: 'Hello world',
   tags: ['meta', 'life'],
@@ -22,7 +22,7 @@ const POST_A = {
 };
 
 const POST_B = {
-  id: 'def456',
+  id: 2,
   date: '2026-01-15T08:30:00.000Z',
   body: 'Earlier post',
   tags: ['life'],
@@ -32,7 +32,7 @@ const POST_B = {
 };
 
 const POST_C = {
-  id: 'ghi789',
+  id: 3,
   date: '2025-11-20T18:00:00.000Z',
   body: 'Old post',
   tags: ['books'],
@@ -115,15 +115,15 @@ describe('collectTags', () => {
 describe('sortPostsByDate', () => {
   test('sorts newest first', () => {
     const sorted = sortPostsByDate([POST_C, POST_A, POST_B]);
-    expect(sorted[0].id).toBe('abc123'); // Mar 2026
-    expect(sorted[1].id).toBe('def456'); // Jan 2026
-    expect(sorted[2].id).toBe('ghi789'); // Nov 2025
+    expect(sorted[0].id).toBe(1); // Mar 2026
+    expect(sorted[1].id).toBe(2); // Jan 2026
+    expect(sorted[2].id).toBe(3); // Nov 2025
   });
 
   test('does not mutate the original array', () => {
     const original = [POST_C, POST_A, POST_B];
     sortPostsByDate(original);
-    expect(original[0].id).toBe('ghi789');
+    expect(original[0].id).toBe(3);
   });
 
   test('handles empty array', () => {
@@ -160,7 +160,7 @@ describe('getArchiveMonths', () => {
   test('deduplicates months when multiple posts share a month', () => {
     const twoInJan = [
       POST_A,
-      { ...POST_B, id: 'extra', date: '2026-01-20T00:00:00.000Z' },
+      { ...POST_B, id: 4, date: '2026-01-20T00:00:00.000Z' },
       POST_B,
     ];
     const months = getArchiveMonths(twoInJan, 1);
@@ -175,7 +175,7 @@ describe('postHTML', () => {
 
   test('includes the post id as the article id', () => {
     const html = postHTML(POST_A, cfg, noop);
-    expect(html).toContain('id="post-abc123"');
+    expect(html).toContain('id="post-1"');
   });
 
   test('renders tags as post-tag spans', () => {
@@ -202,7 +202,7 @@ describe('postHTML', () => {
 
   test('includes a permalink anchor', () => {
     const html = postHTML(POST_A, cfg, noop);
-    expect(html).toContain('href="#abc123"');
+    expect(html).toContain('href="#1"');
   });
 
   test('omits figure when image is null', () => {
@@ -211,7 +211,7 @@ describe('postHTML', () => {
   });
 
   test('renders image figure when image is present', () => {
-    const withImage = { ...POST_A, image: 'data:image/png;base64,abc', imageCaption: 'A caption' };
+    const withImage = { ...POST_A, image: 'https://res.cloudinary.com/demo/image/upload/sample.jpg', imageCaption: 'A caption' };
     const html = postHTML(withImage, cfg, noop);
     expect(html).toContain('post-image');
     expect(html).toContain('A caption');
@@ -220,5 +220,34 @@ describe('postHTML', () => {
   test('handles missing body gracefully', () => {
     const noBody = { ...POST_A, body: null };
     expect(() => postHTML(noBody, cfg, noop)).not.toThrow();
+  });
+});
+
+// ─── nextPostId ───────────────────────────────────────────────────────────────
+// Mirrored from admin.html
+function nextPostId(posts) {
+  if (!posts.length) return 1;
+  return Math.max(...posts.map(p => typeof p.id === 'number' ? p.id : 0)) + 1;
+}
+
+describe('nextPostId', () => {
+  test('returns 1 for empty posts array', () => {
+    expect(nextPostId([])).toBe(1);
+  });
+
+  test('returns max id + 1', () => {
+    expect(nextPostId([{ id: 1 }, { id: 2 }, { id: 3 }])).toBe(4);
+  });
+
+  test('handles non-sequential ids', () => {
+    expect(nextPostId([{ id: 1 }, { id: 5 }, { id: 3 }])).toBe(6);
+  });
+
+  test('ignores non-numeric ids', () => {
+    expect(nextPostId([{ id: 1 }, { id: 'welcome001' }])).toBe(2);
+  });
+
+  test('handles single post', () => {
+    expect(nextPostId([{ id: 7 }])).toBe(8);
   });
 });
