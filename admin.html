@@ -557,13 +557,18 @@ async function loadAndRender() {
   posts  = state.posts;
   config = state.config;
 
-  // Always fetch the canonical posts.json from GitHub if configured,
-  // so local state never diverges from the source of truth.
+  // Always fetch the canonical posts.json and config.json from GitHub if
+  // configured, so local state never diverges from the source of truth.
   const gh = AdminModule.getGHConfig();
   if (Utils.isGHConfigured(gh)) {
     try {
       showSyncStatus('loading', 'syncing with GitHub…');
-      posts = await AdminModule.fetchPostsFromGitHub(gh);
+      const [remotePosts, remoteConfig] = await Promise.all([
+        AdminModule.fetchPostsFromGitHub(gh),
+        AdminModule.fetchConfigFromGitHub(gh),
+      ]);
+      posts  = remotePosts;
+      config = remoteConfig;
       AdminModule.saveState(posts, config);
       showSyncStatus('success', '✓ synced with GitHub');
     } catch (e) {
@@ -892,16 +897,31 @@ function populateTimezoneSelect() {
   });
 }
 
-function saveConfig() {
+async function saveConfig() {
   config.title    = document.getElementById('cfg-title').value.trim()   || 'Journal';
   config.tagline  = document.getElementById('cfg-tagline').value.trim();
   config.author   = document.getElementById('cfg-author').value.trim();
   config.timezone = document.getElementById('cfg-timezone').value;
   AdminModule.saveState(posts, config);
-  toast('settings saved');
+
+  const gh = AdminModule.getGHConfig();
+  if (Utils.isGHConfigured(gh)) {
+    const btn = document.querySelector('[onclick="saveConfig()"]');
+    if (btn) btn.disabled = true;
+    try {
+      await AdminModule.commitFileToGitHub('config.json', JSON.stringify(config, null, 2), gh);
+      toast('settings saved & pushed to GitHub');
+    } catch (e) {
+      toast(`settings saved locally — GitHub push failed: ${e.message}`);
+    } finally {
+      if (btn) btn.disabled = false;
+    }
+  } else {
+    toast('settings saved locally');
+  }
 }
 
-function saveCloudinaryConfig() {
+async function saveCloudinaryConfig() {
   const cloudName    = document.getElementById('cfg-cloudinary-name').value.trim();
   const uploadPreset = document.getElementById('cfg-cloudinary-preset').value.trim();
   if (!cloudName || !uploadPreset) { toast('enter both cloud name and upload preset'); return; }
@@ -910,8 +930,21 @@ function saveCloudinaryConfig() {
   const status = document.getElementById('cloudinary-status');
   status.style.display = 'block';
   status.style.color   = 'var(--accent)';
-  status.textContent   = '✓ cloudinary config saved';
-  toast('cloudinary settings saved');
+
+  const gh = AdminModule.getGHConfig();
+  if (Utils.isGHConfigured(gh)) {
+    try {
+      await AdminModule.commitFileToGitHub('config.json', JSON.stringify(config, null, 2), gh);
+      status.textContent = '✓ cloudinary config saved & pushed to GitHub';
+      toast('cloudinary settings saved & pushed to GitHub');
+    } catch (e) {
+      status.textContent = '✓ cloudinary config saved locally — GitHub push failed';
+      toast(`saved locally — GitHub push failed: ${e.message}`);
+    }
+  } else {
+    status.textContent = '✓ cloudinary config saved locally';
+    toast('cloudinary settings saved locally');
+  }
 }
 
 function saveGitHubConfig() {

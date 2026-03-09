@@ -207,11 +207,10 @@
   }
 
   // ─── GitHub source-of-truth fetch ────────────────────────────────────────────
-  // Fetches posts.json directly from the repo contents API and returns the
-  // parsed posts array. Throws if the request fails.
-  async function fetchPostsFromGitHub(ghConfig, fetchFn) {
+  // Fetches a JSON file directly from the repo contents API and returns parsed content.
+  async function fetchJsonFromGitHub(filename, ghConfig, fetchFn) {
     const fn = fetchFn || fetch;
-    const url = `https://api.github.com/repos/${ghConfig.username}/${ghConfig.repo}/contents/posts.json?ref=${ghConfig.branch}`;
+    const url = `https://api.github.com/repos/${ghConfig.username}/${ghConfig.repo}/contents/${filename}?ref=${ghConfig.branch}`;
     const res = await fn(url, {
       headers: {
         'Authorization': `Bearer ${ghConfig.token}`,
@@ -223,9 +222,18 @@
       throw new Error(`${res.status}: ${err.message}`);
     }
     const data = await res.json();
-    // GitHub returns file content as base64
     const decoded = atob(data.content.replace(/\n/g, ''));
-    return JSON.parse(decoded).posts || [];
+    return JSON.parse(decoded);
+  }
+
+  async function fetchPostsFromGitHub(ghConfig, fetchFn) {
+    const data = await fetchJsonFromGitHub('posts.json', ghConfig, fetchFn);
+    return data.posts || [];
+  }
+
+  async function fetchConfigFromGitHub(ghConfig, fetchFn) {
+    const data = await fetchJsonFromGitHub('config.json', ghConfig, fetchFn);
+    return { ...DEFAULT_CONFIG, cloudinary: { ...DEFAULT_CONFIG.cloudinary }, ...data };
   }
 
   // ─── Export helpers ───────────────────────────────────────────────────────────
@@ -260,6 +268,7 @@
     // API
     fetchGitHubRepo,
     fetchPostsFromGitHub,
+    fetchConfigFromGitHub,
     commitFileToGitHub,
     uploadToCloudinary,
   };
