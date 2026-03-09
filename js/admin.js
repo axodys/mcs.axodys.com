@@ -206,6 +206,28 @@
     return data.secure_url;
   }
 
+  // ─── GitHub source-of-truth fetch ────────────────────────────────────────────
+  // Fetches posts.json directly from the repo contents API and returns the
+  // parsed posts array. Throws if the request fails.
+  async function fetchPostsFromGitHub(ghConfig, fetchFn) {
+    const fn = fetchFn || fetch;
+    const url = `https://api.github.com/repos/${ghConfig.username}/${ghConfig.repo}/contents/posts.json?ref=${ghConfig.branch}`;
+    const res = await fn(url, {
+      headers: {
+        'Authorization': `Bearer ${ghConfig.token}`,
+        'Accept': 'application/vnd.github+json',
+      },
+    });
+    if (!res.ok) {
+      const err = await res.json();
+      throw new Error(`${res.status}: ${err.message}`);
+    }
+    const data = await res.json();
+    // GitHub returns file content as base64
+    const decoded = atob(data.content.replace(/\n/g, ''));
+    return JSON.parse(decoded).posts || [];
+  }
+
   // ─── Export helpers ───────────────────────────────────────────────────────────
   // Returns a data-URL blob string — callers create the <a> and click it.
   function buildDownloadHref(text, type) {
@@ -237,6 +259,7 @@
     buildDownloadHref,
     // API
     fetchGitHubRepo,
+    fetchPostsFromGitHub,
     commitFileToGitHub,
     uploadToCloudinary,
   };

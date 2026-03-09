@@ -423,7 +423,10 @@
 
     <!-- ── Posts Tab ── -->
     <div id="tab-posts" class="tab-content">
-      <p class="section-title">all posts (<span id="post-count">0</span>)</p>
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:0.75rem;">
+        <p class="section-title" style="margin-bottom:0;">all posts (<span id="post-count">0</span>)</p>
+        <div id="sync-status" class="publish-status" style="display:none; margin-bottom:0;"></div>
+      </div>
       <div id="posts-list" class="posts-list"></div>
     </div>
 
@@ -549,10 +552,25 @@ applyTheme(savedTheme);
 let posts = [], config = { ...AdminModule.DEFAULT_CONFIG };
 let currentImageData = null, currentImageFile = null, editingId = null;
 
-function loadAndRender() {
+async function loadAndRender() {
   const state = AdminModule.loadState();
   posts  = state.posts;
   config = state.config;
+
+  // Always fetch the canonical posts.json from GitHub if configured,
+  // so local state never diverges from the source of truth.
+  const gh = AdminModule.getGHConfig();
+  if (Utils.isGHConfigured(gh)) {
+    try {
+      showSyncStatus('loading', 'syncing with GitHub…');
+      posts = await AdminModule.fetchPostsFromGitHub(gh);
+      AdminModule.saveState(posts, config);
+      showSyncStatus('success', '✓ synced with GitHub');
+    } catch (e) {
+      showSyncStatus('error', `⚠ could not sync with GitHub: ${e.message} — showing local data`);
+    }
+  }
+
   renderPostsList();
   fillConfigFields();
   fillGHFields();
@@ -778,6 +796,15 @@ function showPublishStatus(type, msg) {
   el.className = 'publish-status ' + type;
   el.textContent = msg;
   if (type === 'success') setTimeout(() => { el.style.display = 'none'; }, 5000);
+}
+
+function showSyncStatus(type, msg) {
+  const el = document.getElementById('sync-status');
+  if (!el) return;
+  el.className = 'publish-status ' + type;
+  el.textContent = msg;
+  el.style.display = '';
+  if (type === 'success') setTimeout(() => { el.style.display = 'none'; }, 3000);
 }
 
 // ─── Posts List ───────────────────────────────────────────────────────────────
