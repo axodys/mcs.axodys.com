@@ -2,10 +2,23 @@
 // generate-archives.js
 // Reads posts.json + config.json, writes YYYY/MM.html archive pages.
 // Run automatically by GitHub Actions on every deploy.
+//
+// Usage:
+//   node generate-archives.js                           # regenerate all months
+//   node generate-archives.js --months 2026/03,2026/02  # regenerate specific months only
+
+'use strict';
 
 const fs     = require('fs');
 const path   = require('path');
 const { marked } = require('./js/marked.umd.js');
+
+// ─── CLI: optional --months flag ─────────────────────────────────────────────
+const args       = process.argv.slice(2);
+const monthsFlag = args.indexOf('--months');
+const onlyMonths = monthsFlag !== -1 && args[monthsFlag + 1]
+  ? new Set(args[monthsFlag + 1].split(',').map(m => m.trim()).filter(Boolean))
+  : null; // null = regenerate all
 
 marked.setOptions({ breaks: true, gfm: true });
 
@@ -210,8 +223,9 @@ function archivePage(ym, monthPosts) {
 }
 
 // Write archive pages
-let count = 0;
+let count = 0, skipped = 0;
 for (const [ym, monthPosts] of Object.entries(byMonth)) {
+  if (onlyMonths && !onlyMonths.has(ym)) { skipped++; continue; }
   const [y, m] = ym.split('/');
   const dir = path.join(y);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
@@ -220,4 +234,5 @@ for (const [ym, monthPosts] of Object.entries(byMonth)) {
   console.log(`✓ ${outPath}  (${monthPosts.length} posts)`);
   count++;
 }
+if (skipped) console.log(`  ${skipped} unchanged month${skipped === 1 ? '' : 's'} skipped`);
 console.log(`\n✓ ${count} archive page${count === 1 ? '' : 's'} generated`);
