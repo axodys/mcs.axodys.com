@@ -1,11 +1,11 @@
 {
   "title": "Microcosm",
-  "tagline": "thoughts, unfiltered",
-  "author": "Your Name",
-  "siteUrl": "https://yourusername.github.io/yourrepo",
-  "timezone": "",
+  "tagline": "micro 'cause I'm at it",
+  "author": "Jason Gilman",
+  "timezone": "America/Los_Angeles",
   "cloudinary": {
     "cloudName": "",
     "uploadPreset": ""
-  }
+  },
+  "siteUrl": "https://yourusername.github.io/yourrepo"
 }
