@@ -1,6 +1,17 @@
 {
   "posts": [
     {
+      "id": 373,
+      "date": "2026-03-10T01:44:57.768Z",
+      "body": "Oops, just realized the Zags are playing in the WCC tournament semi-finals against Oregon St. right now. Guess I’d better see if I can find it on ESPN.",
+      "tags": [],
+      "emojis": [
+        "🏀"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 372,
       "date": "2026-03-10T00:14:21.749Z",
       "body": "Welp, got derailed by an emoji encoding bug and some kind of git filesystem chenanigans where it refused to acknowledge the updated file that Claude gave me, but I was eventually able to sort things out manually in VSCode. Fingers crossed that I can safely make some new posts through the web interface now.",
