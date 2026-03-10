@@ -4,8 +4,8 @@
   "author": "Jason Gilman",
   "timezone": "America/Los_Angeles",
   "cloudinary": {
-    "cloudName": "",
-    "uploadPreset": ""
+    "cloudName": "dkjzb0qbs",
+    "uploadPreset": "microcosm"
   },
   "siteUrl": "https://yourusername.github.io/yourrepo"
 }
