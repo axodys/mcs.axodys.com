@@ -1,6 +1,17 @@
 {
   "posts": [
     {
+      "id": 377,
+      "date": "2026-03-10T05:12:34.568Z",
+      "body": "Time for another check. Can we overcome GitHub's annoying page cache and free our archives?",
+      "tags": [],
+      "emojis": [
+        "⚙️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 376,
       "date": "2026-03-10T04:49:28.932Z",
       "body": "Going to try checking something momentarily. Is there a cache issue?",
