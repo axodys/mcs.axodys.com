@@ -53,6 +53,22 @@ if (fs.existsSync(configPath)) {
   config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
 }
 
+// ─── Emoji → tag mapping ──────────────────────────────────────────────────────
+const emojiTagsPath = path.join(__dirname, 'emoji-tags.json');
+let emojiTags = {};
+if (fs.existsSync(emojiTagsPath)) {
+  emojiTags = JSON.parse(fs.readFileSync(emojiTagsPath, 'utf8'));
+}
+
+function tagsFromEmojis(emojis) {
+  const tags = [];
+  for (const emoji of emojis) {
+    const tag = emojiTags[emoji];
+    if (tag && !tags.includes(tag)) tags.push(tag);
+  }
+  return tags;
+}
+
 // ─── Timezone resolution ──────────────────────────────────────────────────────
 function prompt(question) {
   const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
@@ -238,11 +254,13 @@ async function main() {
       process.exit(1);
     }
 
+    const tags = raw.tags.length ? raw.tags : tagsFromEmojis(raw.emojis);
+
     return {
       id:           i + 1,
       date,
       body:         raw.bodyLines.join('\n').trimEnd(),
-      tags:         raw.tags,
+      tags,
       emojis:       raw.emojis,
       image:        raw.image,
       imageCaption: raw.caption,
@@ -252,11 +270,17 @@ async function main() {
   // Reverse back to descending order for posts.json
   posts.reverse();
 
+  const autoTagged = posts.filter(p => p.tags.length > 0 && !chronological[posts.length - 1 - posts.indexOf(p)]?.tags.length).length;
+
   fs.writeFileSync(outputFile, JSON.stringify({ posts }, null, 2), 'utf8');
 
   console.log(`✓ imported ${posts.length} post${posts.length !== 1 ? 's' : ''} → ${outputFile}`);
-  console.log(`  timezone : ${tz}`);
-  console.log(`  id range : 1–${posts.length} (oldest → newest)`);
+  console.log(`  timezone  : ${tz}`);
+  console.log(`  id range  : 1–${posts.length} (oldest → newest)`);
+  if (Object.keys(emojiTags).length) {
+    const tagged = posts.filter(p => p.tags.length > 0).length;
+    console.log(`  tagged    : ${tagged}/${posts.length} posts have tags (emoji-tags.json applied)`);
+  }
 }
 
 main().catch(e => { console.error(e.message); process.exit(1); });
