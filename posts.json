@@ -1,6 +1,18 @@
 {
   "posts": [
     {
+      "id": 372,
+      "date": "2026-03-10T00:14:21.749Z",
+      "body": "Welp, got derailed by an emoji encoding bug and some kind of git filesystem chenanigans where it refused to acknowledge the updated file that Claude gave me, but I was eventually able to sort things out manually in VSCode. Fingers crossed that I can safely make some new posts through the web interface now.",
+      "tags": [],
+      "emojis": [
+        "🤖",
+        "⚙️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 371,
       "date": "2026-03-09T23:01:55.034Z",
       "body": "Finally got the static, GitHub Pages-hosted, personal microblogging system I've been thinking about forever, up and running with a lot of help from [Claude](https://claude.ai). It's still pretty rough, but it works, and I'm looking forward to building on it further.",
