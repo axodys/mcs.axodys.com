@@ -786,7 +786,14 @@ async function pushToGitHub() {
   btn.disabled = true;
   try {
     await AdminModule.commitFileToGitHub('posts.json', JSON.stringify({ posts }, null, 2), gh);
-    showPublishStatus('success', '✓ published — GitHub Actions will deploy in ~30 seconds');
+    showPublishStatus('loading', 'triggering deployment…');
+    try {
+      await AdminModule.triggerWorkflowDispatch(gh);
+      showPublishStatus('success', '✓ published — deploying now (~30 seconds)');
+    } catch (e) {
+      // Commit succeeded even if dispatch failed
+      showPublishStatus('success', '✓ published — trigger deploy manually if archives don\'t appear');
+    }
     toast('published to GitHub!');
   } catch (e) {
     showPublishStatus('error', `✗ GitHub error: ${e.message}`);

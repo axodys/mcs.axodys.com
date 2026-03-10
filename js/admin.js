@@ -4,7 +4,6 @@
 // Depends on js/utils.js being loaded first (window.Utils in browser,
 // require('./utils') in Jest).
 
-
 (function (exports) {
   // Resolve Utils — browser (window.Utils) or Node (require)
   const Utils = (typeof window !== 'undefined' && window.Utils) ||
@@ -223,7 +222,7 @@
       throw new Error(`${res.status}: ${err.message}`);
     }
     const data = await res.json();
-    const decoded = decodeURIComponent(escape(atob(data.content.replace(/\n/g, ''))));  
+    const decoded = decodeURIComponent(escape(atob(data.content.replace(/\n/g, ''))));
     return JSON.parse(decoded);
   }
 
@@ -235,6 +234,28 @@
   async function fetchConfigFromGitHub(ghConfig, fetchFn) {
     const data = await fetchJsonFromGitHub('config.json', ghConfig, fetchFn);
     return { ...DEFAULT_CONFIG, cloudinary: { ...DEFAULT_CONFIG.cloudinary }, ...data };
+  }
+
+  // ─── Workflow dispatch ────────────────────────────────────────────────────────
+  // Triggers a workflow_dispatch event on the deploy workflow, forcing a full
+  // Pages deployment and CDN cache invalidation after a post commit.
+  async function triggerWorkflowDispatch(ghConfig, workflowFile, fetchFn) {
+    const fn = fetchFn || fetch;
+    const url = `https://api.github.com/repos/${ghConfig.username}/${ghConfig.repo}/actions/workflows/${workflowFile || 'deploy.yml'}/dispatches`;
+    const res = await fn(url, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${ghConfig.token}`,
+        'Accept': 'application/vnd.github+json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ ref: ghConfig.branch || 'main' }),
+    });
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err.message || `HTTP ${res.status}`);
+    }
+    // 204 No Content on success
   }
 
   // ─── Export helpers ───────────────────────────────────────────────────────────
@@ -271,6 +292,7 @@
     fetchPostsFromGitHub,
     fetchConfigFromGitHub,
     commitFileToGitHub,
+    triggerWorkflowDispatch,
     uploadToCloudinary,
   };
 
