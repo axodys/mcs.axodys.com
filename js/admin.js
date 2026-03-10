@@ -18,19 +18,19 @@
     'Asia/Tokyo', 'Asia/Seoul', 'Australia/Sydney', 'Pacific/Auckland',
   ];
 
-  const GH_STORAGE_KEYS = ['gh_username', 'gh_repo', 'gh_branch', 'gh_token'];
-  const LOCAL_DATA_KEYS  = ['journal_posts', 'journal_config', ...GH_STORAGE_KEYS];
+  const GH_STORAGE_KEYS         = ['gh_username', 'gh_repo', 'gh_branch', 'gh_token'];
+  const CLOUDINARY_STORAGE_KEYS = ['cloudinary_name', 'cloudinary_preset'];
+  const LOCAL_DATA_KEYS         = ['journal_posts', 'journal_config', ...GH_STORAGE_KEYS, ...CLOUDINARY_STORAGE_KEYS];
 
   // ─── State helpers ────────────────────────────────────────────────────────────
   const DEFAULT_CONFIG = {
     title: 'Journal', tagline: '', author: '', timezone: '',
-    cloudinary: { cloudName: '', uploadPreset: '' },
   };
 
   function loadState(storage) {
     const s = storage || localStorage;
     let posts = [];
-    let config = { ...DEFAULT_CONFIG, cloudinary: { ...DEFAULT_CONFIG.cloudinary } };
+    let config = { ...DEFAULT_CONFIG };
     const rawPosts  = s.getItem('journal_posts');
     const rawConfig = s.getItem('journal_config');
     if (rawPosts)  posts  = JSON.parse(rawPosts);
@@ -70,6 +70,21 @@
   function clearAllLocalData(storage) {
     const s = storage || localStorage;
     LOCAL_DATA_KEYS.forEach(k => s.removeItem(k));
+  }
+
+  // ─── Cloudinary config (localStorage only — never committed to repo) ──────────
+  function getCloudinaryConfig(storage) {
+    const s = storage || localStorage;
+    return {
+      cloudName:    s.getItem('cloudinary_name')   || '',
+      uploadPreset: s.getItem('cloudinary_preset') || '',
+    };
+  }
+
+  function saveCloudinaryConfig(cloudinaryConfig, storage) {
+    const s = storage || localStorage;
+    s.setItem('cloudinary_name',   cloudinaryConfig.cloudName   || '');
+    s.setItem('cloudinary_preset', cloudinaryConfig.uploadPreset || '');
   }
 
   // ─── Post assembly ────────────────────────────────────────────────────────────
@@ -188,12 +203,12 @@
   }
 
   // ─── Cloudinary upload ────────────────────────────────────────────────────────
-  async function uploadToCloudinary(file, config, fetchFn) {
+  async function uploadToCloudinary(file, cloudinaryConfig, fetchFn) {
     const fn = fetchFn || fetch;
-    if (!Utils.isCloudinaryConfigured(config)) {
+    if (!Utils.isCloudinaryConfigured({ cloudinary: cloudinaryConfig })) {
       throw new Error('Cloudinary not configured — add cloud name and upload preset in Settings');
     }
-    const { cloudName, uploadPreset } = config.cloudinary;
+    const { cloudName, uploadPreset } = cloudinaryConfig;
     const formData = new FormData();
     formData.append('file', file);
     formData.append('upload_preset', uploadPreset);
@@ -233,7 +248,8 @@
 
   async function fetchConfigFromGitHub(ghConfig, fetchFn) {
     const data = await fetchJsonFromGitHub('config.json', ghConfig, fetchFn);
-    return { ...DEFAULT_CONFIG, cloudinary: { ...DEFAULT_CONFIG.cloudinary }, ...data };
+    const { cloudinary, ...rest } = data; // never pull cloudinary from remote
+    return { ...DEFAULT_CONFIG, ...rest };
   }
 
   // ─── Workflow dispatch ────────────────────────────────────────────────────────
@@ -269,6 +285,7 @@
     // constants
     TZ_LIST,
     GH_STORAGE_KEYS,
+    CLOUDINARY_STORAGE_KEYS,
     LOCAL_DATA_KEYS,
     DEFAULT_CONFIG,
     // state
@@ -279,6 +296,9 @@
     saveGHConfig,
     clearGHToken,
     clearAllLocalData,
+    // cloudinary config
+    getCloudinaryConfig,
+    saveCloudinaryConfig,
     // posts
     buildPost,
     applyPost,

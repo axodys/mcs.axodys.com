@@ -746,7 +746,7 @@ async function publishPost() {
   if (currentImageFile) {
     try {
       showPublishStatus('loading', 'uploading image…');
-      imageUrl = await AdminModule.uploadToCloudinary(currentImageFile, config);
+      imageUrl = await AdminModule.uploadToCloudinary(currentImageFile, AdminModule.getCloudinaryConfig());
     } catch (e) {
       showPublishStatus('error', `✗ ${e.message}`);
       btn.disabled = false;
@@ -873,11 +873,12 @@ function editPost(id) {
 
 // ─── Settings ─────────────────────────────────────────────────────────────────
 function fillConfigFields() {
-  document.getElementById('cfg-title').value             = config.title                       || '';
-  document.getElementById('cfg-tagline').value           = config.tagline                     || '';
-  document.getElementById('cfg-author').value            = config.author                      || '';
-  document.getElementById('cfg-cloudinary-name').value   = config.cloudinary?.cloudName       || '';
-  document.getElementById('cfg-cloudinary-preset').value = config.cloudinary?.uploadPreset    || '';
+  document.getElementById('cfg-title').value             = config.title    || '';
+  document.getElementById('cfg-tagline').value           = config.tagline  || '';
+  document.getElementById('cfg-author').value            = config.author   || '';
+  const cl = AdminModule.getCloudinaryConfig();
+  document.getElementById('cfg-cloudinary-name').value   = cl.cloudName    || '';
+  document.getElementById('cfg-cloudinary-preset').value = cl.uploadPreset || '';
   populateTimezoneSelect();
 }
 
@@ -916,7 +917,9 @@ async function saveConfig() {
     const btn = document.querySelector('[onclick="saveConfig()"]');
     if (btn) btn.disabled = true;
     try {
-      await AdminModule.commitFileToGitHub('config.json', JSON.stringify(config, null, 2), gh);
+      const { title, tagline, author, timezone, siteUrl } = config;
+      const safeConfig = { title, tagline, author, timezone, siteUrl };
+      await AdminModule.commitFileToGitHub('config.json', JSON.stringify(safeConfig, null, 2), gh);
       toast('settings saved & pushed to GitHub');
     } catch (e) {
       toast(`settings saved locally — GitHub push failed: ${e.message}`);
@@ -928,30 +931,16 @@ async function saveConfig() {
   }
 }
 
-async function saveCloudinaryConfig() {
+function saveCloudinaryConfig() {
   const cloudName    = document.getElementById('cfg-cloudinary-name').value.trim();
   const uploadPreset = document.getElementById('cfg-cloudinary-preset').value.trim();
   if (!cloudName || !uploadPreset) { toast('enter both cloud name and upload preset'); return; }
-  config.cloudinary = { cloudName, uploadPreset };
-  AdminModule.saveState(posts, config);
+  AdminModule.saveCloudinaryConfig({ cloudName, uploadPreset });
   const status = document.getElementById('cloudinary-status');
   status.style.display = 'block';
   status.style.color   = 'var(--accent)';
-
-  const gh = AdminModule.getGHConfig();
-  if (Utils.isGHConfigured(gh)) {
-    try {
-      await AdminModule.commitFileToGitHub('config.json', JSON.stringify(config, null, 2), gh);
-      status.textContent = '✓ cloudinary config saved & pushed to GitHub';
-      toast('cloudinary settings saved & pushed to GitHub');
-    } catch (e) {
-      status.textContent = '✓ cloudinary config saved locally — GitHub push failed';
-      toast(`saved locally — GitHub push failed: ${e.message}`);
-    }
-  } else {
-    status.textContent = '✓ cloudinary config saved locally';
-    toast('cloudinary settings saved locally');
-  }
+  status.textContent   = '✓ cloudinary config saved locally';
+  toast('cloudinary settings saved');
 }
 
 function saveGitHubConfig() {
