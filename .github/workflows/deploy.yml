@@ -23,53 +23,17 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 2
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - name: Detect changed archive months
-        id: changed_months
-        run: |
-          # Compare posts.json between this commit and the previous one.
-          # Extract any YYYY-MM values from lines that were added or removed,
-          # then pass them to generate-archives.js as --months YYYY/MM,...
-          # Falls back to regenerating all months if posts.json changed broadly
-          # or if this is the first commit (no parent).
-
-          if git show HEAD~1:posts.json > /dev/null 2>&1; then
-            MONTHS=$(git diff HEAD~1 HEAD -- posts.json \
-              | grep '^[+-]' \
-              | grep -oE '"date"\s*:\s*"[0-9]{4}-[0-9]{2}' \
-              | grep -oE '[0-9]{4}-[0-9]{2}' \
-              | sort -u \
-              | sed 's/-/\//' \
-              | paste -sd ',' -)
-          else
-            MONTHS=""
-          fi
-
-          echo "months=${MONTHS}" >> $GITHUB_OUTPUT
-          if [ -n "$MONTHS" ]; then
-            echo "Affected archive months: ${MONTHS}"
-          else
-            echo "No previous posts.json found or no date changes — regenerating all archive months"
-          fi
-
       - name: Generate site
         run: |
           node generate-index.js
           node generate-feed.js
-
-          MONTHS="${{ steps.changed_months.outputs.months }}"
-          if [ -n "$MONTHS" ]; then
-            node generate-archives.js --months "$MONTHS"
-          else
-            node generate-archives.js
-          fi
+          node generate-archives.js
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
