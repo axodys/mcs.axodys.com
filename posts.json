@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 382,
+      "date": "2026-03-10T18:06:41.023Z",
+      "body": "I didn't think that microblogs should publish titles, since the RSS spec doesn't actually require titles, but something occurred to me today, and now I want to try it out since I control my own publishing platform.",
+      "tags": [
+        "idea",
+        "thinking"
+      ],
+      "emojis": [
+        "💡",
+        "🤔"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 381,
       "date": "2026-03-10T16:45:55.733Z",
       "body": "Have a Super Mario day!",
