@@ -1,6 +1,17 @@
 {
   "posts": [
     {
+      "id": 381,
+      "date": "2026-03-10T16:45:55.733Z",
+      "body": "Have a Super Mario day!",
+      "tags": [],
+      "emojis": [
+        "😎"
+      ],
+      "image": "https://res.cloudinary.com/dkjzb0qbs/image/upload/v1773161155/mcs/llc8p2hkjs34hszoys7m.gif",
+      "imageCaption": "Breakdancing Mario"
+    },
+    {
       "id": 380,
       "date": "2026-03-10T16:09:04.388Z",
       "body": "One thing that working with Claude on my Microcosm microblog project has confirmed to me is that AI is very helpful, but not remotely infallible or close to being ready for full autonomy. It's an amplifier, and it will happily amplify mediocre people's mediocrity.",
