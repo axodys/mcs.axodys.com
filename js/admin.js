@@ -4,6 +4,7 @@
 // Depends on js/utils.js being loaded first (window.Utils in browser,
 // require('./utils') in Jest).
 
+
 (function (exports) {
   // Resolve Utils — browser (window.Utils) or Node (require)
   const Utils = (typeof window !== 'undefined' && window.Utils) ||
@@ -222,7 +223,7 @@
       throw new Error(`${res.status}: ${err.message}`);
     }
     const data = await res.json();
-    const decoded = atob(data.content.replace(/\n/g, ''));
+    const decoded = decodeURIComponent(escape(atob(data.content.replace(/\n/g, ''))));  
     return JSON.parse(decoded);
   }
 
