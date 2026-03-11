@@ -1,5 +1,9 @@
 ## 2026
 
+* #### 🤖⚙️ MAR 11 14:23
+Working on the tag filtering functionality write now. Just pushed a couple of commits through to github and now need to generate a little bit more content
+tags: ai, coding
+
 * #### ⚽️ MAR 10 13:24
 You can't make this kind of thing up. Spurs trail 3-0 thanks to two glaring mistakes from Kinsky and one from Van de Ven. Field is really slick and Spurs are just hapless so far.
 tags: spurs, update
