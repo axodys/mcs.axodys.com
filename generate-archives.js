@@ -52,6 +52,16 @@ function escapeHtml(str) {
     .replace(/"/g, '&quot;');
 }
 
+// ─── Permalink slug ───────────────────────────────────────────────────────────
+// Produces a stable, timezone-independent anchor from UTC date+time: 11T1423
+function postSlug(isoDate) {
+  const d   = new Date(isoDate);
+  const day = d.getUTCDate();
+  const h   = String(d.getUTCHours()).padStart(2, '0');
+  const m   = String(d.getUTCMinutes()).padStart(2, '0');
+  return `${day}T${h}${m}`;
+}
+
 function postCard(post) {
   const date = new Date(post.date);
   const formatted = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
@@ -71,13 +81,15 @@ function postCard(post) {
       ${post.imageCaption ? `<figcaption>${escapeHtml(post.imageCaption)}</figcaption>` : ''}
     </figure>` : '';
 
+  const slug = postSlug(post.date);
+
   return `
-  <article class="post" id="post-${post.id}" data-tags="${escapeHtml((post.tags||[]).join(','))}">
+  <article class="post" id="${slug}" data-tags="${escapeHtml((post.tags||[]).join(','))}">
     <div class="post-meta">
       <span>${formatted} · ${time}</span>
       ${emojiStr ? `<span class="post-emojis">${emojiStr}</span>` : ''}
       ${tags}
-      <a class="post-permalink" href="../../index.html#${post.id}" title="View on main feed">¶</a>
+      <a class="post-permalink" href="#${slug}" title="Permalink">¶</a>
     </div>
     <div class="post-body">${body}</div>
     ${image}
@@ -254,6 +266,14 @@ function setFilter(tag) {
     }
   });
 }
+
+// ─── Permalink: scroll to post if hash present ────────────────────────────────
+(function () {
+  const slug = window.location.hash.slice(1);
+  if (!slug) return;
+  const el = document.getElementById(slug);
+  if (el) requestAnimationFrame(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }));
+})();
 </script>
 </body>
 </html>`;

@@ -58,15 +58,33 @@ const archiveMonths = [...new Set(older.map(p => {
 // ─── Tags from visible (recent) posts only ───────────────────────────────────
 const allTags = [...new Set(recent.flatMap(p => p.tags || []))].sort();
 
-// ─── Post HTML ────────────────────────────────────────────────────────────────
+// ─── Permalink slug ───────────────────────────────────────────────────────────
+// Produces a stable, timezone-independent anchor from UTC date+time: 11T1423
+function postSlug(isoDate) {
+  const d   = new Date(isoDate);
+  const day = d.getUTCDate();
+  const h   = String(d.getUTCHours()).padStart(2, '0');
+  const m   = String(d.getUTCMinutes()).padStart(2, '0');
+  return `${day}T${h}${m}`;
+}
+
+// Archive page URL for a post (relative to site root)
+function archiveUrl(isoDate) {
+  const d = new Date(isoDate);
+  const y = d.getUTCFullYear();
+  const m = String(d.getUTCMonth() + 1).padStart(2, '0');
+  return `${y}/${m}.html`;
+}
 function postHTML(post) {
   const tags = (post.tags || []).map(t =>
     `<span class="post-tag" onclick="filterByTag('${escapeHtml(t)}')">${escapeHtml(t)}</span>`
   ).join('');
-  const emojiStr = (post.emojis || []).join('');
-  const dateStr  = formatPostDate(post.date);
-  const bodyHtml = marked.parse(post.body || '');
-  const image    = post.image ? `
+  const emojiStr  = (post.emojis || []).join('');
+  const dateStr   = formatPostDate(post.date);
+  const bodyHtml  = marked.parse(post.body || '');
+  const slug      = postSlug(post.date);
+  const permalink = `${archiveUrl(post.date)}#${slug}`;
+  const image     = post.image ? `
     <figure class="post-image">
       <img src="${escapeHtml(post.image)}" alt="${escapeHtml(post.imageCaption || '')}" loading="lazy">
       ${post.imageCaption ? `<figcaption>${escapeHtml(post.imageCaption)}</figcaption>` : ''}
@@ -84,7 +102,7 @@ function postHTML(post) {
         <div class="post-footer-left">
           <span class="post-date">${dateStr}</span>
         </div>
-        <a class="post-permalink" href="#${post.id}" title="Permalink">¶</a>
+        <a class="post-permalink" href="${permalink}" title="Permalink">¶</a>
       </div>
     </article>`;
 }
@@ -117,11 +135,6 @@ function archiveNavHTML() {
     </div>
   </div>`;
 }
-
-// ─── Inline post data for permalink + tag filtering ───────────────────────────
-// We embed a minimal data blob so the client can handle #hash permalinks and
-// tag filtering without fetching posts.json.
-const postIndex = JSON.stringify(recent.map(p => ({ id: p.id, tags: p.tags || [] })));
 
 // ─── Page template ────────────────────────────────────────────────────────────
 const html = `<!DOCTYPE html>
@@ -394,16 +407,6 @@ function setFilter(tag) {
 
 // Keep inline onclick handlers in post-tag spans working
 function filterByTag(tag) { setFilter(tag); }
-
-// ─── Permalink: scroll to post if hash present ────────────────────────────────
-(function () {
-  const id = window.location.hash.slice(1);
-  if (!id) return;
-  const el = document.getElementById('post-' + id);
-  if (el) {
-    requestAnimationFrame(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }));
-  }
-})();
 </script>
 </body>
 </html>`;
