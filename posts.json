@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 385,
+      "date": "2026-03-11T23:44:21.761Z",
+      "body": "Just had a moment where Claude raced into a fairly big coding task with one mistaken premise that saw immediately, but couldn't interrupt its process. Claude corrected the mistake pretty quickly after I prompted it, and now I've pushed up the change. Time to see if permalinks work as expected now.",
+      "tags": [
+        "ai",
+        "coding"
+      ],
+      "emojis": [
+        "🤖",
+        "⚙️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 384,
       "date": "2026-03-11T22:47:13.734Z",
       "body": "Doing another test post to see how everything is coming together in the Microcosm UI. The tag filtering is cool, and I'm pleased that it's functional in the index and all archives now.  Now I need to add permalinks to the post entries in the archive pages.",
