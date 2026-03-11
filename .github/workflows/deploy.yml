@@ -12,6 +12,9 @@ concurrency:
   group: pages
   cancel-in-progress: false
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   deploy:
     environment:
@@ -25,7 +28,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
 
       - name: Generate site
         run: |
@@ -39,7 +42,6 @@ jobs:
           cp index.html feed.xml admin.html _site/
           cp -r js icons _site/
           cp manifest.json favicon.ico _site/ 2>/dev/null || true
-          # Copy generated archive directories (YYYY/MM.html)
           find . -maxdepth 1 -type d -regex './[0-9][0-9][0-9][0-9]' | while read dir; do
             echo "copying archive dir: $dir"
             cp -r "$dir" _site/
