@@ -781,9 +781,29 @@ async function pushToGitHub() {
     showPublishStatus('loading', 'saved locally — configure GitHub in Settings to publish automatically');
     return;
   }
-  showPublishStatus('loading', 'pushing to GitHub…');
+
+  showPublishStatus('loading', 'verifying against GitHub…');
   const btn = document.getElementById('publish-btn');
   btn.disabled = true;
+
+  // ── Safety check: never overwrite GitHub with fewer posts than it already has
+  try {
+    const remotePosts = await AdminModule.fetchPostsFromGitHub(gh);
+    if (remotePosts.length > posts.length) {
+      const diff = remotePosts.length - posts.length;
+      showPublishStatus('error',
+        `✗ blocked — GitHub has ${remotePosts.length} posts but local has ${posts.length} (${diff} missing). Reload the page to re-sync before publishing.`
+      );
+      btn.disabled = false;
+      return;
+    }
+  } catch (e) {
+    // If we can't reach GitHub to verify, warn but don't block
+    showPublishStatus('loading', `⚠ could not verify against GitHub (${e.message}) — proceeding anyway…`);
+    await new Promise(r => setTimeout(r, 2000));
+  }
+
+  showPublishStatus('loading', 'pushing to GitHub…');
   try {
     await AdminModule.commitFileToGitHub('posts.json', JSON.stringify({ posts }, null, 2), gh);
     showPublishStatus('loading', 'triggering deployment…');
@@ -791,7 +811,6 @@ async function pushToGitHub() {
       await AdminModule.triggerWorkflowDispatch(gh);
       showPublishStatus('success', '✓ published — deploying now (~30 seconds)');
     } catch (e) {
-      // Commit succeeded even if dispatch failed
       showPublishStatus('success', '✓ published — trigger deploy manually if archives don\'t appear');
     }
     toast('published to GitHub!');
