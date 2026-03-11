@@ -55,8 +55,8 @@ const archiveMonths = [...new Set(older.map(p => {
   return `${d.getFullYear()}/${String(d.getMonth() + 1).padStart(2, '0')}`;
 }))].sort((a, b) => b.localeCompare(a));
 
-// ─── All tags across ALL posts (not just recent) ──────────────────────────────
-const allTags = [...new Set(posts.flatMap(p => p.tags || []))].sort();
+// ─── Tags from visible (recent) posts only ───────────────────────────────────
+const allTags = [...new Set(recent.flatMap(p => p.tags || []))].sort();
 
 // ─── Post HTML ────────────────────────────────────────────────────────────────
 function postHTML(post) {
