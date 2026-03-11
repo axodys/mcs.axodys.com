@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 386,
+      "date": "2026-03-11T23:57:41.994Z",
+      "body": "Just pushed out a few more permalink fixes to GitHub. Then I'm going to take a break before I start working on the RSS feed generation later tonight. Things are coming together.",
+      "tags": [
+        "ai",
+        "coding"
+      ],
+      "emojis": [
+        "🤖",
+        "⚙️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 385,
       "date": "2026-03-11T23:44:21.761Z",
       "body": "Just had a moment where Claude raced into a fairly big coding task with one mistaken premise that saw immediately, but couldn't interrupt its process. Claude corrected the mistake pretty quickly after I prompted it, and now I've pushed up the change. Time to see if permalinks work as expected now.",
