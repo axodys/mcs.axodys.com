@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 384,
+      "date": "2026-03-11T22:47:13.734Z",
+      "body": "Doing another test post to see how everything is coming together in the Microcosm UI. The tag filtering is cool, and I'm pleased that it's functional in the index and all archives now.  Now I need to add permalinks to the post entries in the archive pages.",
+      "tags": [
+        "blogging",
+        "meta"
+      ],
+      "emojis": [
+        "📝",
+        "⚙️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 383,
       "date": "2026-03-11T21:23:00.000Z",
       "body": "Working on the tag filtering functionality right now. Just pushed a couple of commits through to github and now need to generate a little bit more content",
