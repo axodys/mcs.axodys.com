@@ -58,7 +58,7 @@ function postCard(post) {
   const time = date.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
 
   const tags = (post.tags || [])
-    .map(t => `<span class="post-tag">${escapeHtml(t)}</span>`)
+    .map(t => `<span class="post-tag" onclick="setFilter('${escapeHtml(t)}')">${escapeHtml(t)}</span>`)
     .join('');
 
   const emojiStr = (post.emojis || []).join('');
@@ -72,7 +72,7 @@ function postCard(post) {
     </figure>` : '';
 
   return `
-  <article class="post" id="post-${post.id}">
+  <article class="post" id="post-${post.id}" data-tags="${escapeHtml((post.tags||[]).join(','))}">
     <div class="post-meta">
       <span>${formatted} · ${time}</span>
       ${emojiStr ? `<span class="post-emojis">${emojiStr}</span>` : ''}
@@ -82,6 +82,16 @@ function postCard(post) {
     <div class="post-body">${body}</div>
     ${image}
   </article>`;
+}
+
+function filterBarHTML(monthPosts) {
+  const tags = [...new Set(monthPosts.flatMap(p => p.tags || []))].sort();
+  if (!tags.length) return '';
+  const buttons = [
+    `<button class="filter-tag active" onclick="setFilter('all')">all</button>`,
+    ...tags.map(t => `<button class="filter-tag" onclick="setFilter('${escapeHtml(t)}')">${escapeHtml(t)}</button>`),
+  ];
+  return `<div id="filter-bar" class="filter-bar">\n      ${buttons.join('\n      ')}\n    </div>`;
 }
 
 function archivePage(ym, monthPosts) {
@@ -155,9 +165,20 @@ function archivePage(ym, monthPosts) {
     .post-tag {
       background: var(--accent-light); color: var(--accent);
       padding: 0.1rem 0.45rem; border-radius: 3px; font-size: 0.65rem;
+      cursor: pointer;
     }
+    .post-tag:hover { opacity: 0.8; }
     .post-permalink { font-family: var(--mono); font-size: 0.65rem; color: var(--border); text-decoration: none; margin-left: auto; }
     .post-permalink:hover { color: var(--muted); }
+
+    .filter-bar { margin-bottom: 2rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .filter-tag {
+      font-family: var(--mono); font-size: 0.65rem; padding: 0.25rem 0.6rem;
+      border: 1px solid var(--border); border-radius: 3px; background: transparent;
+      color: var(--muted); cursor: pointer;
+    }
+    .filter-tag:hover, .filter-tag.active { background: var(--accent); color: white; border-color: var(--accent); }
+    .hidden { display: none !important; }
 
     .post-body { font-size: 1rem; line-height: 1.75; color: var(--text); }
     .post-body p { margin-bottom: 0.75rem; }
@@ -207,6 +228,7 @@ function archivePage(ym, monthPosts) {
 </header>
 
 <main class="container">
+  ${filterBarHTML(monthPosts)}
   ${monthPosts.map(postCard).join('')}
 
   <nav class="month-nav">
@@ -218,6 +240,21 @@ function archivePage(ym, monthPosts) {
 <footer>
   <div class="container">${config.author ? `© ${escapeHtml(config.author)}` : ''}</div>
 </footer>
+<script>
+function setFilter(tag) {
+  document.querySelectorAll('.filter-tag').forEach(b =>
+    b.classList.toggle('active', b.textContent === tag || (tag === 'all' && b.textContent === 'all'))
+  );
+  document.querySelectorAll('.post').forEach(el => {
+    if (tag === 'all') {
+      el.classList.remove('hidden');
+    } else {
+      const tags = el.dataset.tags ? el.dataset.tags.split(',') : [];
+      el.classList.toggle('hidden', !tags.includes(tag));
+    }
+  });
+}
+</script>
 </body>
 </html>`;
 }
