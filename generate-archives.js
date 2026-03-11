@@ -25,7 +25,8 @@ marked.setOptions({ breaks: true, gfm: true });
 const posts  = JSON.parse(fs.readFileSync('posts.json',  'utf8')).posts  || [];
 const config = JSON.parse(fs.readFileSync('config.json', 'utf8'));
 
-const title  = config.title  || 'Journal';
+const title  = config.title    || 'Journal';
+const tz     = config.timezone || 'UTC';
 const accent = '#2d6a4f';
 
 // Group posts by YYYY/MM
@@ -62,18 +63,23 @@ function postSlug(isoDate) {
   return `${day}T${h}${m}`;
 }
 
-function postCard(post) {
-  const date = new Date(post.date);
-  const formatted = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-  const time = date.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+function formatPostDate(isoString) {
+  const d     = new Date(isoString);
+  const month = d.toLocaleDateString('en-US',  { month: 'short',   timeZone: tz });
+  const day   = d.toLocaleDateString('en-US',  { day: '2-digit',   timeZone: tz });
+  const time  = d.toLocaleTimeString('en-US',  { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: tz });
+  return `${month} ${day} ${time}`;
+}
 
+function postCard(post) {
   const tags = (post.tags || [])
     .map(t => `<span class="post-tag" onclick="setFilter('${escapeHtml(t)}')">${escapeHtml(t)}</span>`)
     .join('');
 
   const emojiStr = (post.emojis || []).join('');
-
-  const body = marked.parse(post.body || '');
+  const dateStr  = formatPostDate(post.date);
+  const body     = marked.parse(post.body || '');
+  const slug     = postSlug(post.date);
 
   const image = post.image ? `
     <figure class="post-image">
@@ -81,18 +87,20 @@ function postCard(post) {
       ${post.imageCaption ? `<figcaption>${escapeHtml(post.imageCaption)}</figcaption>` : ''}
     </figure>` : '';
 
-  const slug = postSlug(post.date);
-
   return `
   <article class="post" id="${slug}" data-tags="${escapeHtml((post.tags||[]).join(','))}">
     <div class="post-meta">
-      <span>${formatted} · ${time}</span>
       ${emojiStr ? `<span class="post-emojis">${emojiStr}</span>` : ''}
       ${tags}
-      <a class="post-permalink" href="#${slug}" title="Permalink">¶</a>
     </div>
     <div class="post-body">${body}</div>
     ${image}
+    <div class="post-footer">
+      <div class="post-footer-left">
+        <span class="post-date">${dateStr}</span>
+      </div>
+      <a class="post-permalink" href="#${slug}" title="Permalink">¶</a>
+    </div>
   </article>`;
 }
 
@@ -180,7 +188,13 @@ function archivePage(ym, monthPosts) {
       cursor: pointer;
     }
     .post-tag:hover { opacity: 0.8; }
-    .post-permalink { font-family: var(--mono); font-size: 0.65rem; color: var(--border); text-decoration: none; margin-left: auto; }
+    .post-footer {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-top: 0.65rem;
+    }
+    .post-footer-left { display: flex; align-items: center; gap: 0.75rem; }
+    .post-date { font-family: var(--mono); font-size: 0.7rem; color: var(--muted); }
+    .post-permalink { font-family: var(--mono); font-size: 0.65rem; color: var(--border); text-decoration: none; }
     .post-permalink:hover { color: var(--muted); }
 
     .filter-bar { margin-bottom: 2rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
