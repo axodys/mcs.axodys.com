@@ -117,8 +117,8 @@ function filterBarHTML() {
     ),
   ].join('\n      ');
   return `<div class="filter-bar">
-    <button class="filter-btn" id="filter-btn" onclick="toggleFilterDropdown()">all ▾</button>
-    <div class="filter-dropdown" id="filter-dropdown">
+    <button class="filter-btn" id="filter-btn" onclick="toggleFilterPopup()">all ▾</button>
+    <div class="filter-popup" id="filter-popup">
       ${options}
     </div>
   </div>`;
@@ -233,20 +233,23 @@ const html = `<!DOCTYPE html>
       color: var(--muted); cursor: pointer; transition: color 0.15s, border-color 0.15s;
     }
     .filter-btn:hover, .filter-btn.active { color: var(--accent); border-color: var(--accent); }
-    .filter-dropdown {
-      display: none; position: absolute; top: calc(100% + 4px); left: 0;
-      background: var(--surface); border: 1px solid var(--border); border-radius: 4px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1); z-index: 100;
-      min-width: 140px; padding: 0.35rem 0;
+    .filter-popup {
+      position: absolute; top: calc(100% + 6px); left: 0;
+      background: var(--surface); border: 1px solid var(--border); border-radius: 5px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12); z-index: 100;
+      padding: 0.6rem; display: none;
+      flex-wrap: wrap; gap: 0.4rem; max-width: 280px;
     }
-    .filter-dropdown.open { display: block; }
+    .filter-popup { display: none; }
+    .filter-popup.open { display: flex; }
     .filter-option {
-      display: block; width: 100%; text-align: left;
-      font-family: var(--mono); font-size: 0.68rem; padding: 0.4rem 0.85rem;
-      background: transparent; border: none; color: var(--muted); cursor: pointer;
+      font-family: var(--mono); font-size: 0.65rem; padding: 0.25rem 0.55rem;
+      border: 1px solid var(--border); border-radius: 3px; background: transparent;
+      color: var(--muted); cursor: pointer; white-space: nowrap;
+      transition: color 0.15s, border-color 0.15s, background 0.15s;
     }
-    .filter-option:hover { background: var(--accent-light); color: var(--accent); }
-    .filter-option.active { color: var(--accent); font-weight: 500; }
+    .filter-option:hover { color: var(--accent); border-color: var(--accent); }
+    .filter-option.active { background: var(--accent); color: white; border-color: var(--accent); }
 
     #posts-container { padding-bottom: 4rem; }
 
@@ -409,31 +412,27 @@ applyTheme(document.documentElement.getAttribute('data-theme'));
 
 // ─── Tag filtering ────────────────────────────────────────────────────────────
 // ─── Tag filter dropdown ──────────────────────────────────────────────────────
-function toggleFilterDropdown() {
-  document.getElementById('filter-dropdown').classList.toggle('open');
+function toggleFilterPopup() {
+  document.getElementById('filter-popup').classList.toggle('open');
 }
 
 document.addEventListener('click', function(e) {
   const bar = document.querySelector('.filter-bar');
   if (bar && !bar.contains(e.target)) {
-    document.getElementById('filter-dropdown')?.classList.remove('open');
+    document.getElementById('filter-popup')?.classList.remove('open');
   }
 });
 
 function setFilter(tag) {
-  // Update dropdown options
   document.querySelectorAll('.filter-option').forEach(b =>
     b.classList.toggle('active', b.textContent === tag || (tag === 'all' && b.textContent === 'all'))
   );
-  // Update button label
   const btn = document.getElementById('filter-btn');
   if (btn) {
     btn.textContent = (tag === 'all' ? 'all' : tag) + ' ▾';
     btn.classList.toggle('active', tag !== 'all');
   }
-  // Close dropdown
-  document.getElementById('filter-dropdown')?.classList.remove('open');
-  // Filter posts
+  document.getElementById('filter-popup')?.classList.remove('open');
   document.querySelectorAll('#posts-container .post').forEach(el => {
     if (tag === 'all') {
       el.classList.remove('hidden');
