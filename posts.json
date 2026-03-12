@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 396,
+      "date": "2026-03-12T20:48:21.790Z",
+      "body": "I didn't really even think about it until just now while reading something that Dave Winer wrote, but it's pretty cool that GitHub pages just gives you https support automatically.",
+      "tags": [
+        "web",
+        "mood"
+      ],
+      "emojis": [
+        "🌐",
+        "😎"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 395,
       "date": "2026-03-12T20:17:29.160Z",
       "body": "The \"Rubincon\" episode title seems to have thrown a lot of people (I had to edit my previous post after realizing my own Rubicon mistake), but it actually makes sense and was intentional, not a giant typo.",
