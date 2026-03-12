@@ -19,7 +19,8 @@
 
   <script src="js/marked.umd.js"></script>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+    html { font-size: 18px; }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -38,7 +39,7 @@
       --warning: #b7791f;
       --warning-bg: #fef9e7;
       --mono: 'JetBrains Mono', monospace;
-      --serif: 'Lora', Georgia, serif;
+      --serif: 'Noto Sans', sans-serif;
     }
 
     [data-theme="dark"] {
@@ -92,7 +93,7 @@
     input:focus, textarea:focus { border-color: var(--accent); }
 
     textarea {
-      font-family: var(--serif); font-size: 0.95rem;
+      font-family: var(--mono); font-size: 0.95rem;
       resize: vertical; line-height: 1.7;
     }
 
