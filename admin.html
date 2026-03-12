@@ -477,6 +477,10 @@
           <input type="text" id="cfg-author" placeholder="Your Name">
         </div>
         <div class="field-group">
+          <span class="field-label">site url</span>
+          <input type="text" id="cfg-site-url" placeholder="https://yourusername.github.io/yourrepo">
+        </div>
+        <div class="field-group">
           <span class="field-label">blog timezone</span>
           <select id="cfg-timezone" style="width:100%;padding:0.65rem 0.85rem;border:1px solid var(--border);border-radius:4px;font-family:var(--mono);font-size:0.8rem;background:var(--surface);color:var(--text);outline:none;-webkit-appearance:none;"></select>
         </div>
@@ -892,9 +896,10 @@ function editPost(id) {
 
 // ─── Settings ─────────────────────────────────────────────────────────────────
 function fillConfigFields() {
-  document.getElementById('cfg-title').value             = config.title    || '';
-  document.getElementById('cfg-tagline').value           = config.tagline  || '';
-  document.getElementById('cfg-author').value            = config.author   || '';
+  document.getElementById('cfg-title').value    = config.title    || '';
+  document.getElementById('cfg-tagline').value  = config.tagline  || '';
+  document.getElementById('cfg-author').value   = config.author   || '';
+  document.getElementById('cfg-site-url').value = config.siteUrl  || '';
   const cl = AdminModule.getCloudinaryConfig();
   document.getElementById('cfg-cloudinary-name').value   = cl.cloudName    || '';
   document.getElementById('cfg-cloudinary-preset').value = cl.uploadPreset || '';
@@ -925,9 +930,10 @@ function populateTimezoneSelect() {
 }
 
 async function saveConfig() {
-  config.title    = document.getElementById('cfg-title').value.trim()   || 'Journal';
-  config.tagline  = document.getElementById('cfg-tagline').value.trim();
-  config.author   = document.getElementById('cfg-author').value.trim();
+  config.title   = document.getElementById('cfg-title').value.trim()    || 'Journal';
+  config.tagline = document.getElementById('cfg-tagline').value.trim();
+  config.author  = document.getElementById('cfg-author').value.trim();
+  config.siteUrl = document.getElementById('cfg-site-url').value.trim();
   config.timezone = document.getElementById('cfg-timezone').value;
   AdminModule.saveState(posts, config);
 
