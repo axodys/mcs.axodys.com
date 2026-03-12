@@ -1,6 +1,19 @@
 {
   "posts": [
     {
+      "id": 391,
+      "date": "2026-03-12T13:42:59.196Z",
+      "body": "It was incredibly windy overnight, but it seems to have died down some this morning. I’m always wary of the tall pine trees in our backyard during these kinds of conditions.",
+      "tags": [
+        "weather"
+      ],
+      "emojis": [
+        "🌬️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 390,
       "date": "2026-03-12T13:32:12.635Z",
       "body": "Don’t fully trust Microcosm on my phone. It didn’t download the posts.json file to local storage after I connected successfully. There’s supposed to be a check if you try to publish a new post now with local data that doesn’t match GitHub, but if the logic is wrong it will overwrite posts.json. Syncing is tricky.",
