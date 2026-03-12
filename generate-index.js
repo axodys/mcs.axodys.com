@@ -107,38 +107,37 @@ function postHTML(post) {
     </article>`;
 }
 
-// ─── Filter bar HTML ──────────────────────────────────────────────────────────
-function filterBarHTML() {
-  if (!allTags.length) return '';
-  const options = [
-    `<button class="filter-option active" onclick="setFilter('all')">all</button>`,
-    ...allTags.map(t =>
-      `<button class="filter-option" onclick="setFilter('${escapeHtml(t)}')">${escapeHtml(t)}</button>`
-    ),
-  ].join('\n      ');
-  return `<div class="filter-bar">
-    <button class="filter-btn" id="filter-btn" onclick="toggleFilterPopup()">all ▾</button>
-    <div class="filter-popup" id="filter-popup">
-      ${options}
-    </div>
-  </div>`;
+// ─── Archive month label: J25, F25, etc. ─────────────────────────────────────
+function archiveLabel(ym) {
+  const [y, m] = ym.split('/');
+  const initial = 'JFMAMJJASOND'[parseInt(m, 10) - 1];
+  return `${initial}${String(y).slice(-2)}`;
 }
 
-// ─── Archive nav HTML ─────────────────────────────────────────────────────────
-function archiveNavHTML() {
-  if (!archiveMonths.length) return '';
-  const links = archiveMonths.map(ym => {
-    const [y, m] = ym.split('/');
-    const label  = new Date(y, m - 1, 1).toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
-    return `<a class="archive-link" href="${ym}.html">${label}</a>`;
-  }).join('\n        ');
-  return `
-  <div id="archive-nav" class="archive-nav">
-    <span class="archive-nav-label">archive</span>
-    <div class="archive-months">
-      ${links}
-    </div>
-  </div>`;
+// ─── Top bar: tags (left) + archive (right) ───────────────────────────────────
+function topBarHTML() {
+  const hasTags    = allTags.length > 0;
+  const hasArchive = archiveMonths.length > 0;
+  if (!hasTags && !hasArchive) return '';
+
+  const tagSection = hasTags ? `
+    <div class="top-bar-left">
+      <button class="filter-btn" id="filter-btn" onclick="togglePopup('filter')">all ▾</button>
+      <div class="filter-popup" id="filter-popup">
+        <button class="filter-option active" onclick="setFilter('all')">all</button>
+        ${allTags.map(t => `<button class="filter-option" onclick="setFilter('${escapeHtml(t)}')">${escapeHtml(t)}</button>`).join('\n        ')}
+      </div>
+    </div>` : '<div></div>';
+
+  const archiveSection = hasArchive ? `
+    <div class="top-bar-right">
+      <button class="archive-btn" id="archive-btn" onclick="togglePopup('archive')">archive ▾</button>
+      <div class="archive-popup" id="archive-popup">
+        ${archiveMonths.map(ym => `<a class="archive-option" href="${ym}.html">${archiveLabel(ym)}</a>`).join('\n        ')}
+      </div>
+    </div>` : '';
+
+  return `<div class="top-bar">${tagSection}${archiveSection}</div>`;
 }
 
 // ─── Page template ────────────────────────────────────────────────────────────
@@ -226,29 +225,34 @@ const html = `<!DOCTYPE html>
     }
     .theme-toggle:hover { color: var(--text); border-color: var(--muted); }
 
-    .filter-bar { margin-bottom: 0.5rem; position: relative; display: inline-block; }
-    .filter-btn {
+    .top-bar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem; }
+    .top-bar-left, .top-bar-right { position: relative; }
+    .filter-btn, .archive-btn {
       font-family: var(--mono); font-size: 0.7rem; padding: 0.3rem 0.75rem;
       border: 1px solid var(--border); border-radius: 3px; background: transparent;
       color: var(--muted); cursor: pointer; transition: color 0.15s, border-color 0.15s;
     }
     .filter-btn:hover, .filter-btn.active { color: var(--accent); border-color: var(--accent); }
-    .filter-popup {
-      position: absolute; top: calc(100% + 6px); left: 0;
+    .archive-btn:hover, .archive-btn.active { color: var(--accent); border-color: var(--accent); }
+    .filter-popup, .archive-popup {
+      position: absolute; top: calc(100% + 6px);
       background: var(--surface); border: 1px solid var(--border); border-radius: 5px;
       box-shadow: 0 4px 16px rgba(0,0,0,0.12); z-index: 100;
-      padding: 0.6rem; width: 320px; flex-wrap: wrap; gap: 0.4rem;
+      padding: 0.6rem; width: 260px; flex-wrap: wrap; gap: 0.4rem;
       display: none;
     }
-    .filter-popup.open { display: flex; }
-    .filter-option {
+    .filter-popup { left: 0; }
+    .archive-popup { right: 0; }
+    .filter-popup.open, .archive-popup.open { display: flex; }
+    .filter-option, .archive-option {
       flex: 0 0 auto;
       font-family: var(--mono); font-size: 0.65rem; padding: 0.25rem 0.55rem;
       border: 1px solid var(--border); border-radius: 3px; background: transparent;
       color: var(--muted); cursor: pointer; white-space: nowrap;
       transition: color 0.15s, border-color 0.15s, background 0.15s;
+      text-decoration: none; display: inline-block;
     }
-    .filter-option:hover { color: var(--accent); border-color: var(--accent); }
+    .filter-option:hover, .archive-option:hover { color: var(--accent); border-color: var(--accent); }
     .filter-option.active { background: var(--accent); color: white; border-color: var(--accent); }
 
     #posts-container { padding-bottom: 4rem; }
@@ -287,21 +291,6 @@ const html = `<!DOCTYPE html>
     }
     .post-footer-left { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; }
     .post-date { font-family: var(--mono); font-size: 0.68rem; color: var(--muted); }
-
-    .archive-nav {
-      padding: 2rem 0 1rem;
-      display: flex; align-items: center; justify-content: space-between;
-      flex-wrap: wrap; gap: 0.75rem;
-    }
-    .archive-nav-label { font-family: var(--mono); font-size: 0.72rem; color: var(--muted); }
-    .archive-months { display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: flex-end; }
-    .archive-link {
-      font-family: var(--mono); font-size: 0.7rem; color: var(--muted);
-      text-decoration: none; border: 1px solid var(--border);
-      padding: 0.2rem 0.55rem; border-radius: 3px; transition: all 0.15s;
-      white-space: nowrap;
-    }
-    .archive-link:hover { color: var(--accent); border-color: var(--accent); }
 
     .post-body { font-size: 1rem; line-height: 1.75; color: var(--text); }
     .post-body p { margin-bottom: 0.75rem; }
@@ -385,11 +374,10 @@ const html = `<!DOCTYPE html>
 </header>
 
 <main class="container">
-  ${allTags.length ? filterBarHTML() : ''}
+  ${topBarHTML()}
   <div id="posts-container">
     ${recent.length ? recent.map(postHTML).join('\n') : '<div class="empty">no posts yet.</div>'}
   </div>
-  ${archiveNavHTML()}
 </main>
 
 <footer>
@@ -411,15 +399,23 @@ function toggleTheme() {
 applyTheme(document.documentElement.getAttribute('data-theme'));
 
 // ─── Tag filtering ────────────────────────────────────────────────────────────
-// ─── Tag filter dropdown ──────────────────────────────────────────────────────
-function toggleFilterPopup() {
-  document.getElementById('filter-popup').classList.toggle('open');
+// ─── Popup toggle ─────────────────────────────────────────────────────────────
+function togglePopup(which) {
+  const filter  = document.getElementById('filter-popup');
+  const archive = document.getElementById('archive-popup');
+  if (which === 'filter') {
+    filter?.classList.toggle('open');
+    archive?.classList.remove('open');
+  } else {
+    archive?.classList.toggle('open');
+    filter?.classList.remove('open');
+  }
 }
 
 document.addEventListener('click', function(e) {
-  const bar = document.querySelector('.filter-bar');
-  if (bar && !bar.contains(e.target)) {
+  if (!e.target.closest('.top-bar-left') && !e.target.closest('.top-bar-right')) {
     document.getElementById('filter-popup')?.classList.remove('open');
+    document.getElementById('archive-popup')?.classList.remove('open');
   }
 });
 
@@ -441,8 +437,6 @@ function setFilter(tag) {
       el.classList.toggle('hidden', !tags.includes(tag));
     }
   });
-  const archiveNav = document.getElementById('archive-nav');
-  if (archiveNav) archiveNav.style.display = tag === 'all' ? '' : 'none';
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 

@@ -104,19 +104,38 @@ function postCard(post) {
   </article>`;
 }
 
-function filterBarHTML(monthPosts) {
+function archiveLabel(ym) {
+  const [y, m] = ym.split('/');
+  const initial = 'JFMAMJJASOND'[parseInt(m, 10) - 1];
+  return `${initial}${String(y).slice(-2)}`;
+}
+
+function topBarHTML(monthPosts, allMonths, currentYm) {
   const tags = [...new Set(monthPosts.flatMap(p => p.tags || []))].sort();
-  if (!tags.length) return '';
-  const options = [
-    `<button class="filter-option active" onclick="setFilter('all')">all</button>`,
-    ...tags.map(t => `<button class="filter-option" onclick="setFilter('${escapeHtml(t)}')">${escapeHtml(t)}</button>`),
-  ];
-  return `<div class="filter-bar">
-    <button class="filter-btn" id="filter-btn" onclick="toggleFilterPopup()">all ▾</button>
-    <div class="filter-popup" id="filter-popup">
-      ${options.join('\n      ')}
-    </div>
-  </div>`;
+
+  const tagSection = tags.length ? `
+    <div class="top-bar-left">
+      <button class="filter-btn" id="filter-btn" onclick="togglePopup('filter')">all ▾</button>
+      <div class="filter-popup" id="filter-popup">
+        <button class="filter-option active" onclick="setFilter('all')">all</button>
+        ${tags.map(t => `<button class="filter-option" onclick="setFilter('${escapeHtml(t)}')">${escapeHtml(t)}</button>`).join('\n        ')}
+      </div>
+    </div>` : '<div></div>';
+
+  const archiveOptions = allMonths
+    .filter(ym => ym !== currentYm)
+    .map(ym => `<a class="archive-option" href="../../${ym}.html">${archiveLabel(ym)}</a>`)
+    .join('\n        ');
+
+  const archiveSection = `
+    <div class="top-bar-right">
+      <button class="archive-btn" id="archive-btn" onclick="togglePopup('archive')">archive ▾</button>
+      <div class="archive-popup" id="archive-popup">
+        ${archiveOptions}
+      </div>
+    </div>`;
+
+  return `<div class="top-bar">${tagSection}${archiveSection}</div>`;
 }
 
 function archivePage(ym, monthPosts) {
@@ -203,29 +222,34 @@ function archivePage(ym, monthPosts) {
     .post-permalink { font-family: var(--mono); font-size: 0.65rem; color: var(--muted); text-decoration: none; }
     .post-permalink:hover { color: var(--text); }
 
-    .filter-bar { margin-bottom: 0.5rem; position: relative; display: inline-block; }
-    .filter-btn {
+    .top-bar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem; }
+    .top-bar-left, .top-bar-right { position: relative; }
+    .filter-btn, .archive-btn {
       font-family: var(--mono); font-size: 0.7rem; padding: 0.3rem 0.75rem;
       border: 1px solid var(--border); border-radius: 3px; background: transparent;
       color: var(--muted); cursor: pointer; transition: color 0.15s, border-color 0.15s;
     }
     .filter-btn:hover, .filter-btn.active { color: var(--accent); border-color: var(--accent); }
-    .filter-popup {
-      position: absolute; top: calc(100% + 6px); left: 0;
+    .archive-btn:hover { color: var(--accent); border-color: var(--accent); }
+    .filter-popup, .archive-popup {
+      position: absolute; top: calc(100% + 6px);
       background: var(--surface); border: 1px solid var(--border); border-radius: 5px;
       box-shadow: 0 4px 16px rgba(0,0,0,0.12); z-index: 100;
-      padding: 0.6rem; width: 320px; flex-wrap: wrap; gap: 0.4rem;
+      padding: 0.6rem; width: 260px; flex-wrap: wrap; gap: 0.4rem;
       display: none;
     }
-    .filter-popup.open { display: flex; }
-    .filter-option {
+    .filter-popup { left: 0; }
+    .archive-popup { right: 0; }
+    .filter-popup.open, .archive-popup.open { display: flex; }
+    .filter-option, .archive-option {
       flex: 0 0 auto;
       font-family: var(--mono); font-size: 0.65rem; padding: 0.25rem 0.55rem;
       border: 1px solid var(--border); border-radius: 3px; background: transparent;
       color: var(--muted); cursor: pointer; white-space: nowrap;
       transition: color 0.15s, border-color 0.15s, background 0.15s;
+      text-decoration: none; display: inline-block;
     }
-    .filter-option:hover { color: var(--accent); border-color: var(--accent); }
+    .filter-option:hover, .archive-option:hover { color: var(--accent); border-color: var(--accent); }
     .filter-option.active { background: var(--accent); color: white; border-color: var(--accent); }
     .hidden { display: none !important; }
 
@@ -277,7 +301,7 @@ function archivePage(ym, monthPosts) {
 </header>
 
 <main class="container">
-  ${filterBarHTML(monthPosts)}
+  ${topBarHTML(monthPosts, allMonths, ym)}
   ${monthPosts.map(postCard).join('')}
 
   <nav class="month-nav">
@@ -290,14 +314,22 @@ function archivePage(ym, monthPosts) {
   <div class="container">${config.author ? `© ${escapeHtml(config.author)}` : ''}</div>
 </footer>
 <script>
-function toggleFilterPopup() {
-  document.getElementById('filter-popup').classList.toggle('open');
+function togglePopup(which) {
+  const filter  = document.getElementById('filter-popup');
+  const archive = document.getElementById('archive-popup');
+  if (which === 'filter') {
+    filter?.classList.toggle('open');
+    archive?.classList.remove('open');
+  } else {
+    archive?.classList.toggle('open');
+    filter?.classList.remove('open');
+  }
 }
 
 document.addEventListener('click', function(e) {
-  const bar = document.querySelector('.filter-bar');
-  if (bar && !bar.contains(e.target)) {
+  if (!e.target.closest('.top-bar-left') && !e.target.closest('.top-bar-right')) {
     document.getElementById('filter-popup')?.classList.remove('open');
+    document.getElementById('archive-popup')?.classList.remove('open');
   }
 });
 
