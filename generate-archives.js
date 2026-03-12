@@ -169,7 +169,7 @@ function archivePage(ym, monthPosts) {
 
     body { font-family: var(--serif); background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.7; }
 
-    header { border-bottom: 1px solid var(--border); padding: 1.5rem 0; margin-bottom: 2.5rem; }
+    header { border-bottom: 1px solid var(--border); padding: 1.5rem 0; margin-bottom: 1.75rem; }
     .container { max-width: 640px; margin: 0 auto; padding: 0 1.5rem; }
     .header-inner { display: flex; align-items: flex-end; justify-content: space-between; }
 
@@ -203,7 +203,7 @@ function archivePage(ym, monthPosts) {
     .post-permalink { font-family: var(--mono); font-size: 0.65rem; color: var(--muted); text-decoration: none; }
     .post-permalink:hover { color: var(--text); }
 
-    .filter-bar { margin-bottom: 2rem; position: relative; display: inline-block; }
+    .filter-bar { margin-bottom: 0; position: relative; display: inline-block; }
     .filter-btn {
       font-family: var(--mono); font-size: 0.7rem; padding: 0.3rem 0.75rem;
       border: 1px solid var(--border); border-radius: 3px; background: transparent;

@@ -204,7 +204,7 @@ const html = `<!DOCTYPE html>
       transition: background 0.2s, color 0.2s;
     }
 
-    header { border-bottom: 1px solid var(--border); padding: 2rem 0 1.5rem; margin-bottom: 3rem; }
+    header { border-bottom: 1px solid var(--border); padding: 2rem 0 1.5rem; margin-bottom: 1.75rem; }
     .container { max-width: 640px; margin: 0 auto; padding: 0 1.5rem; }
 
     .site-name { font-family: var(--serif); font-size: 1.15rem; font-weight: 500; color: var(--text); text-decoration: none; }
@@ -226,7 +226,7 @@ const html = `<!DOCTYPE html>
     }
     .theme-toggle:hover { color: var(--text); border-color: var(--muted); }
 
-    .filter-bar { margin-bottom: 2rem; position: relative; display: inline-block; }
+    .filter-bar { margin-bottom: 0; position: relative; display: inline-block; }
     .filter-btn {
       font-family: var(--mono); font-size: 0.7rem; padding: 0.3rem 0.75rem;
       border: 1px solid var(--border); border-radius: 3px; background: transparent;
