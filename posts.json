@@ -1,6 +1,22 @@
 {
   "posts": [
     {
+      "id": 389,
+      "date": "2026-03-12T05:33:15.932Z",
+      "body": "Had a productive day working with Claude on the Microcosm static microblogging system. Fiddled around with tag filtering and unifying the post layouts across the home page and archives. Then got down to brass tacks this afternoon and sorted out the permalinks.  Finished up by updating the RSS generation logic to reflect the correct permalinks and subscribing in NetNewsWire.\n\nI like the way my emoji + [tags] titles look in NetNewsWire on iOS, but I'm not completely sold on them in the desktop application. I got the idea from how Microcosm displays posts (originally just on index.html, now all archives as well). Might turn it into an optional setting down the road.",
+      "tags": [
+        "ai",
+        "coding",
+        "rss"
+      ],
+      "emojis": [
+        "🤖",
+        "📡"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 388,
       "date": "2026-03-12T03:04:10.020Z",
       "body": "Paradise S2E5: The Mailman 👍👍 Good to finally see Teri's survival story. So much serendipity with Bean (which makes me think back to what the mysterious Professor Miller said to Billy in S2E3), but what a gut punch twist.",
