@@ -204,7 +204,7 @@ const html = `<!DOCTYPE html>
       transition: background 0.2s, color 0.2s;
     }
 
-    header { border-bottom: 1px solid var(--border); padding: 2rem 0 1.5rem; margin-bottom: 1.75rem; }
+    header { border-bottom: 1px solid var(--border); padding: 2rem 0 1.5rem; margin-bottom: 0.5rem; }
     .container { max-width: 640px; margin: 0 auto; padding: 0 1.5rem; }
 
     .site-name { font-family: var(--serif); font-size: 1.15rem; font-weight: 500; color: var(--text); text-decoration: none; }
@@ -226,7 +226,7 @@ const html = `<!DOCTYPE html>
     }
     .theme-toggle:hover { color: var(--text); border-color: var(--muted); }
 
-    .filter-bar { margin-bottom: 0; position: relative; display: inline-block; }
+    .filter-bar { margin-bottom: 0.5rem; position: relative; display: inline-block; }
     .filter-btn {
       font-family: var(--mono); font-size: 0.7rem; padding: 0.3rem 0.75rem;
       border: 1px solid var(--border); border-radius: 3px; background: transparent;
@@ -253,7 +253,7 @@ const html = `<!DOCTYPE html>
 
     #posts-container { padding-bottom: 4rem; }
 
-    .post { padding: 1.75rem 0; border-bottom: 1px solid var(--border); animation: fadeIn 0.3s ease; }
+    .post { padding: 0.5rem 0; border-bottom: 1px solid var(--border); animation: fadeIn 0.3s ease; }
     .post.hidden { display: none; }
 
     @keyframes fadeIn {
@@ -283,7 +283,7 @@ const html = `<!DOCTYPE html>
 
     .post-footer {
       display: flex; align-items: center; justify-content: space-between;
-      margin-top: 0.75rem; gap: 0.5rem;
+      margin-top: 0.5rem; gap: 0.5rem;
     }
     .post-footer-left { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; }
     .post-date { font-family: var(--mono); font-size: 0.68rem; color: var(--muted); }
