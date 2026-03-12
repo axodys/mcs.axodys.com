@@ -2,14 +2,15 @@
   "posts": [
     {
       "id": 392,
-      "date": "2026-03-12T14:52:33.316Z",
-      "body": "One thing I really like about [Paradise](https://en.wikipedia.org/wiki/Paradise_(2025_TV_series)) is the way it shows us characters behaving at their best, and also at their worst, depending on time and circumstances. Also, it has at least one character who's an outright chameleon, and I look forward to learning about her backstory and connection to Sinatra. There's still a lot of ground to cover on Sinatra's journey to ruthless bunker mastermind as well.",
+      "date": "2026-03-12T15:18:30.785Z",
+      "body": "This a test to see if adding a new post to out of date local post data will blow up the GitHub copy of posts.json.",
       "tags": [
-        "series",
+        "testing",
+        "meta",
         "mood"
       ],
       "emojis": [
-        "📺",
+        "⚙️",
         "🤔"
       ],
       "image": null,
