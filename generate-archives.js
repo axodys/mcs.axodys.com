@@ -107,11 +107,16 @@ function postCard(post) {
 function filterBarHTML(monthPosts) {
   const tags = [...new Set(monthPosts.flatMap(p => p.tags || []))].sort();
   if (!tags.length) return '';
-  const buttons = [
-    `<button class="filter-tag active" onclick="setFilter('all')">all</button>`,
-    ...tags.map(t => `<button class="filter-tag" onclick="setFilter('${escapeHtml(t)}')">${escapeHtml(t)}</button>`),
+  const options = [
+    `<button class="filter-option active" onclick="setFilter('all')">all</button>`,
+    ...tags.map(t => `<button class="filter-option" onclick="setFilter('${escapeHtml(t)}')">${escapeHtml(t)}</button>`),
   ];
-  return `<div id="filter-bar" class="filter-bar">\n      ${buttons.join('\n      ')}\n    </div>`;
+  return `<div class="filter-bar">
+    <button class="filter-btn" id="filter-btn" onclick="toggleFilterDropdown()">all ▾</button>
+    <div class="filter-dropdown" id="filter-dropdown">
+      ${options.join('\n      ')}
+    </div>
+  </div>`;
 }
 
 function archivePage(ym, monthPosts) {
@@ -144,15 +149,16 @@ function archivePage(ym, monthPosts) {
   <link rel="icon" type="image/png" sizes="32x32" href="../../icons/favicon-32.png">
   <link rel="shortcut icon" href="../../favicon.ico">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 18px; }
 
     :root {
       --bg: #faf9f7; --surface: #ffffff; --text: #1a1a1a; --muted: #6b6b6b;
       --border: #e8e6e1; --accent: ${accent}; --accent-light: #e8f4ee;
       --code-bg: #f0efeb;
-      --mono: 'JetBrains Mono', monospace; --serif: 'Lora', Georgia, serif;
+      --mono: 'JetBrains Mono', monospace; --serif: 'Noto Sans', sans-serif;
     }
     @media (prefers-color-scheme: dark) {
       :root {
@@ -197,13 +203,27 @@ function archivePage(ym, monthPosts) {
     .post-permalink { font-family: var(--mono); font-size: 0.65rem; color: var(--muted); text-decoration: none; }
     .post-permalink:hover { color: var(--text); }
 
-    .filter-bar { margin-bottom: 2rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
-    .filter-tag {
-      font-family: var(--mono); font-size: 0.65rem; padding: 0.25rem 0.6rem;
+    .filter-bar { margin-bottom: 2rem; position: relative; display: inline-block; }
+    .filter-btn {
+      font-family: var(--mono); font-size: 0.7rem; padding: 0.3rem 0.75rem;
       border: 1px solid var(--border); border-radius: 3px; background: transparent;
-      color: var(--muted); cursor: pointer;
+      color: var(--muted); cursor: pointer; transition: color 0.15s, border-color 0.15s;
     }
-    .filter-tag:hover, .filter-tag.active { background: var(--accent); color: white; border-color: var(--accent); }
+    .filter-btn:hover, .filter-btn.active { color: var(--accent); border-color: var(--accent); }
+    .filter-dropdown {
+      display: none; position: absolute; top: calc(100% + 4px); left: 0;
+      background: var(--surface); border: 1px solid var(--border); border-radius: 4px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1); z-index: 100;
+      min-width: 140px; padding: 0.35rem 0;
+    }
+    .filter-dropdown.open { display: block; }
+    .filter-option {
+      display: block; width: 100%; text-align: left;
+      font-family: var(--mono); font-size: 0.68rem; padding: 0.4rem 0.85rem;
+      background: transparent; border: none; color: var(--muted); cursor: pointer;
+    }
+    .filter-option:hover { background: var(--accent-light); color: var(--accent); }
+    .filter-option.active { color: var(--accent); font-weight: 500; }
     .hidden { display: none !important; }
 
     .post-body { font-size: 1rem; line-height: 1.75; color: var(--text); }
@@ -267,10 +287,27 @@ function archivePage(ym, monthPosts) {
   <div class="container">${config.author ? `© ${escapeHtml(config.author)}` : ''}</div>
 </footer>
 <script>
+function toggleFilterDropdown() {
+  document.getElementById('filter-dropdown').classList.toggle('open');
+}
+
+document.addEventListener('click', function(e) {
+  const bar = document.querySelector('.filter-bar');
+  if (bar && !bar.contains(e.target)) {
+    document.getElementById('filter-dropdown')?.classList.remove('open');
+  }
+});
+
 function setFilter(tag) {
-  document.querySelectorAll('.filter-tag').forEach(b =>
+  document.querySelectorAll('.filter-option').forEach(b =>
     b.classList.toggle('active', b.textContent === tag || (tag === 'all' && b.textContent === 'all'))
   );
+  const btn = document.getElementById('filter-btn');
+  if (btn) {
+    btn.textContent = (tag === 'all' ? 'all' : tag) + ' ▾';
+    btn.classList.toggle('active', tag !== 'all');
+  }
+  document.getElementById('filter-dropdown')?.classList.remove('open');
   document.querySelectorAll('.post').forEach(el => {
     if (tag === 'all') {
       el.classList.remove('hidden');

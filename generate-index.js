@@ -110,13 +110,18 @@ function postHTML(post) {
 // ─── Filter bar HTML ──────────────────────────────────────────────────────────
 function filterBarHTML() {
   if (!allTags.length) return '';
-  const buttons = [
-    `<button class="filter-tag active" onclick="setFilter('all')">all</button>`,
+  const options = [
+    `<button class="filter-option active" onclick="setFilter('all')">all</button>`,
     ...allTags.map(t =>
-      `<button class="filter-tag" onclick="setFilter('${escapeHtml(t)}')">${escapeHtml(t)}</button>`
+      `<button class="filter-option" onclick="setFilter('${escapeHtml(t)}')">${escapeHtml(t)}</button>`
     ),
   ].join('\n      ');
-  return `<div id="filter-bar" class="filter-bar">\n      ${buttons}\n    </div>`;
+  return `<div class="filter-bar">
+    <button class="filter-btn" id="filter-btn" onclick="toggleFilterDropdown()">all ▾</button>
+    <div class="filter-dropdown" id="filter-dropdown">
+      ${options}
+    </div>
+  </div>`;
 }
 
 // ─── Archive nav HTML ─────────────────────────────────────────────────────────
@@ -159,8 +164,9 @@ const html = `<!DOCTYPE html>
 
   <script src="js/marked.umd.js"></script>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
 
+    html { font-size: 18px; }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
@@ -174,7 +180,7 @@ const html = `<!DOCTYPE html>
       --tag-hover: #c8e6d4;
       --code-bg: #f0efeb;
       --mono: 'JetBrains Mono', monospace;
-      --serif: 'Lora', Georgia, serif;
+      --serif: 'Noto Sans', sans-serif;
     }
 
     [data-theme="dark"] {
@@ -220,13 +226,27 @@ const html = `<!DOCTYPE html>
     }
     .theme-toggle:hover { color: var(--text); border-color: var(--muted); }
 
-    .filter-bar { margin-bottom: 2rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
-    .filter-tag {
-      font-family: var(--mono); font-size: 0.7rem; padding: 0.25rem 0.6rem;
-      border-radius: 3px; border: 1px solid var(--border); background: none;
-      color: var(--muted); cursor: pointer; transition: all 0.15s;
+    .filter-bar { margin-bottom: 2rem; position: relative; display: inline-block; }
+    .filter-btn {
+      font-family: var(--mono); font-size: 0.7rem; padding: 0.3rem 0.75rem;
+      border: 1px solid var(--border); border-radius: 3px; background: transparent;
+      color: var(--muted); cursor: pointer; transition: color 0.15s, border-color 0.15s;
     }
-    .filter-tag:hover, .filter-tag.active { background: var(--accent); color: white; border-color: var(--accent); }
+    .filter-btn:hover, .filter-btn.active { color: var(--accent); border-color: var(--accent); }
+    .filter-dropdown {
+      display: none; position: absolute; top: calc(100% + 4px); left: 0;
+      background: var(--surface); border: 1px solid var(--border); border-radius: 4px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1); z-index: 100;
+      min-width: 140px; padding: 0.35rem 0;
+    }
+    .filter-dropdown.open { display: block; }
+    .filter-option {
+      display: block; width: 100%; text-align: left;
+      font-family: var(--mono); font-size: 0.68rem; padding: 0.4rem 0.85rem;
+      background: transparent; border: none; color: var(--muted); cursor: pointer;
+    }
+    .filter-option:hover { background: var(--accent-light); color: var(--accent); }
+    .filter-option.active { color: var(--accent); font-weight: 500; }
 
     #posts-container { padding-bottom: 4rem; }
 
@@ -388,10 +408,32 @@ function toggleTheme() {
 applyTheme(document.documentElement.getAttribute('data-theme'));
 
 // ─── Tag filtering ────────────────────────────────────────────────────────────
+// ─── Tag filter dropdown ──────────────────────────────────────────────────────
+function toggleFilterDropdown() {
+  document.getElementById('filter-dropdown').classList.toggle('open');
+}
+
+document.addEventListener('click', function(e) {
+  const bar = document.querySelector('.filter-bar');
+  if (bar && !bar.contains(e.target)) {
+    document.getElementById('filter-dropdown')?.classList.remove('open');
+  }
+});
+
 function setFilter(tag) {
-  document.querySelectorAll('.filter-tag').forEach(b =>
+  // Update dropdown options
+  document.querySelectorAll('.filter-option').forEach(b =>
     b.classList.toggle('active', b.textContent === tag || (tag === 'all' && b.textContent === 'all'))
   );
+  // Update button label
+  const btn = document.getElementById('filter-btn');
+  if (btn) {
+    btn.textContent = (tag === 'all' ? 'all' : tag) + ' ▾';
+    btn.classList.toggle('active', tag !== 'all');
+  }
+  // Close dropdown
+  document.getElementById('filter-dropdown')?.classList.remove('open');
+  // Filter posts
   document.querySelectorAll('#posts-container .post').forEach(el => {
     if (tag === 'all') {
       el.classList.remove('hidden');
@@ -405,7 +447,6 @@ function setFilter(tag) {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Keep inline onclick handlers in post-tag spans working
 function filterByTag(tag) { setFilter(tag); }
 </script>
 </body>
