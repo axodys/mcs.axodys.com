@@ -3,5 +3,6 @@
   "tagline": "micro 'cause I'm at it",
   "author": "Jason Gilman",
   "timezone": "America/Los_Angeles",
-  "siteUrl": "https://mcs.axodys.com/"
+  "siteUrl": "https://mcs.axodys.com/",
+  "feedLimit": 100
 }

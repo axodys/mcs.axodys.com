@@ -481,6 +481,10 @@
           <input type="text" id="cfg-site-url" placeholder="https://yourusername.github.io/yourrepo">
         </div>
         <div class="field-group">
+          <span class="field-label">feed items limit</span>
+          <input type="number" id="cfg-feed-limit" placeholder="leave blank for no limit" min="1" style="width:100%;">
+        </div>
+        <div class="field-group">
           <span class="field-label">blog timezone</span>
           <select id="cfg-timezone" style="width:100%;padding:0.65rem 0.85rem;border:1px solid var(--border);border-radius:4px;font-family:var(--mono);font-size:0.8rem;background:var(--surface);color:var(--text);outline:none;-webkit-appearance:none;"></select>
         </div>
@@ -896,10 +900,11 @@ function editPost(id) {
 
 // ─── Settings ─────────────────────────────────────────────────────────────────
 function fillConfigFields() {
-  document.getElementById('cfg-title').value    = config.title    || '';
-  document.getElementById('cfg-tagline').value  = config.tagline  || '';
-  document.getElementById('cfg-author').value   = config.author   || '';
-  document.getElementById('cfg-site-url').value = config.siteUrl  || '';
+  document.getElementById('cfg-title').value      = config.title     || '';
+  document.getElementById('cfg-tagline').value    = config.tagline   || '';
+  document.getElementById('cfg-author').value     = config.author    || '';
+  document.getElementById('cfg-site-url').value   = config.siteUrl   || '';
+  document.getElementById('cfg-feed-limit').value = config.feedLimit || '';
   const cl = AdminModule.getCloudinaryConfig();
   document.getElementById('cfg-cloudinary-name').value   = cl.cloudName    || '';
   document.getElementById('cfg-cloudinary-preset').value = cl.uploadPreset || '';
@@ -930,10 +935,12 @@ function populateTimezoneSelect() {
 }
 
 async function saveConfig() {
-  config.title   = document.getElementById('cfg-title').value.trim()    || 'Journal';
-  config.tagline = document.getElementById('cfg-tagline').value.trim();
-  config.author  = document.getElementById('cfg-author').value.trim();
-  config.siteUrl = document.getElementById('cfg-site-url').value.trim();
+  config.title    = document.getElementById('cfg-title').value.trim()    || 'Journal';
+  config.tagline  = document.getElementById('cfg-tagline').value.trim();
+  config.author   = document.getElementById('cfg-author').value.trim();
+  config.siteUrl  = document.getElementById('cfg-site-url').value.trim();
+  const feedLimit = parseInt(document.getElementById('cfg-feed-limit').value, 10);
+  config.feedLimit = feedLimit > 0 ? feedLimit : undefined;
   config.timezone = document.getElementById('cfg-timezone').value;
   AdminModule.saveState(posts, config);
 
@@ -942,8 +949,11 @@ async function saveConfig() {
     const btn = document.querySelector('[onclick="saveConfig()"]');
     if (btn) btn.disabled = true;
     try {
-      const { title, tagline, author, timezone, siteUrl } = config;
-      const safeConfig = { title, tagline, author, timezone, siteUrl };
+      const { title, tagline, author, timezone, siteUrl, feedLimit, recentLimit } = config;
+      const safeConfig = Object.fromEntries(
+        Object.entries({ title, tagline, author, timezone, siteUrl, feedLimit, recentLimit })
+          .filter(([, v]) => v !== undefined)
+      );
       await AdminModule.commitFileToGitHub('config.json', JSON.stringify(safeConfig, null, 2), gh);
       toast('settings saved & pushed to GitHub');
     } catch (e) {
