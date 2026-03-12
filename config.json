@@ -3,9 +3,5 @@
   "tagline": "micro 'cause I'm at it",
   "author": "Jason Gilman",
   "timezone": "America/Los_Angeles",
-  "cloudinary": {
-    "cloudName": "dkjzb0qbs",
-    "uploadPreset": "microcosm"
-  },
-  "siteUrl": "https://yourusername.github.io/yourrepo"
+  "siteUrl": "https://mcs.axodys.com/"
 }
