@@ -1,6 +1,20 @@
 {
   "posts": [
     {
+      "id": 394,
+      "date": "2026-03-12T19:49:59.296Z",
+      "body": "Star Trek: Starfleet Academy S1E10: Rubicon 👍👍 Everything a Trek fan could possibly want in a season finale. A Federation-wide threat, a giant show trial, and a chance for a ragtag crew of cadets and their mentors to save the day against terrible odds. Such a great cast, but Tig Notaro, really took Jett Reno to another level this season. I know we've got 10 more episodes already in the can, but I'm worried that Paramount's new ownership is going to screw this up for future seasons beyond that.",
+      "tags": [
+        "episode",
+        "review"
+      ],
+      "emojis": [
+        "📺"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 393,
       "date": "2026-03-12T15:18:00.000Z",
       "body": "This a test to see if adding a new post to out of date local post data will blow up the GitHub copy of posts.json.\n\n*It did!*\n\nSo I added a manual sync button.",
