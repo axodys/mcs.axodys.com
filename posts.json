@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 387,
+      "date": "2026-03-12T00:07:22.788Z",
+      "body": "Testing one last permalink UI tweak to improve visibility.",
+      "tags": [
+        "ai",
+        "coding"
+      ],
+      "emojis": [
+        "🤖",
+        "⚙️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 386,
       "date": "2026-03-11T23:57:41.994Z",
       "body": "Just pushed out a few more permalink fixes to GitHub. Then I'm going to take a break before I start working on the RSS feed generation later tonight. Things are coming together.",
