@@ -237,12 +237,12 @@ const html = `<!DOCTYPE html>
       position: absolute; top: calc(100% + 6px); left: 0;
       background: var(--surface); border: 1px solid var(--border); border-radius: 5px;
       box-shadow: 0 4px 16px rgba(0,0,0,0.12); z-index: 100;
-      padding: 0.6rem; display: none;
-      flex-wrap: wrap; gap: 0.4rem; max-width: 280px;
+      padding: 0.6rem; width: 320px; flex-wrap: wrap; gap: 0.4rem;
+      display: none;
     }
-    .filter-popup { display: none; }
     .filter-popup.open { display: flex; }
     .filter-option {
+      flex: 0 0 auto;
       font-family: var(--mono); font-size: 0.65rem; padding: 0.25rem 0.55rem;
       border: 1px solid var(--border); border-radius: 3px; background: transparent;
       color: var(--muted); cursor: pointer; white-space: nowrap;
