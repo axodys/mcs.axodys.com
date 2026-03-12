@@ -194,8 +194,8 @@ function archivePage(ym, monthPosts) {
     }
     .post-footer-left { display: flex; align-items: center; gap: 0.75rem; }
     .post-date { font-family: var(--mono); font-size: 0.7rem; color: var(--muted); }
-    .post-permalink { font-family: var(--mono); font-size: 0.65rem; color: var(--border); text-decoration: none; }
-    .post-permalink:hover { color: var(--muted); }
+    .post-permalink { font-family: var(--mono); font-size: 0.65rem; color: var(--muted); text-decoration: none; }
+    .post-permalink:hover { color: var(--text); }
 
     .filter-bar { margin-bottom: 2rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
     .filter-tag {

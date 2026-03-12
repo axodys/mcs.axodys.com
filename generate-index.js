@@ -251,10 +251,10 @@ const html = `<!DOCTYPE html>
     .post-tag:hover { background: var(--tag-hover); }
 
     .post-permalink {
-      font-family: var(--mono); font-size: 0.65rem; color: var(--border);
+      font-family: var(--mono); font-size: 0.65rem; color: var(--muted);
       text-decoration: none; transition: color 0.15s; margin-left: auto;
     }
-    .post-permalink:hover { color: var(--muted); }
+    .post-permalink:hover { color: var(--text); }
 
     .post-emojis { font-size: 1rem; letter-spacing: 0.05em; }
 
