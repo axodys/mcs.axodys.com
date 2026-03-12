@@ -106,6 +106,9 @@
     .btn-primary { background: var(--accent); color: white; }
     .btn-primary:hover { filter: brightness(1.1); }
     .btn-primary:disabled { opacity: 0.45; cursor: not-allowed; }
+    .btn-secondary { background: transparent; color: var(--muted); border-color: var(--border); }
+    .btn-secondary:hover { color: var(--text); border-color: var(--muted); }
+    .btn-secondary:disabled { opacity: 0.45; cursor: not-allowed; }
 
     .btn-ghost { background: none; border: 1px solid var(--border); color: var(--muted); }
     .btn-ghost:hover { border-color: var(--text); color: var(--text); }
@@ -425,7 +428,10 @@
     <div id="tab-posts" class="tab-content">
       <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:0.75rem;">
         <p class="section-title" style="margin-bottom:0;">all posts (<span id="post-count">0</span>)</p>
-        <div id="sync-status" class="publish-status" style="display:none; margin-bottom:0;"></div>
+        <div style="display:flex; align-items:center; gap:0.75rem;">
+          <div id="sync-status" class="publish-status" style="display:none; margin-bottom:0;"></div>
+          <button class="btn-secondary" onclick="syncFromGitHub()" id="sync-btn" title="Re-sync posts from GitHub">↺ sync</button>
+        </div>
       </div>
       <div id="posts-list" class="posts-list"></div>
     </div>
@@ -559,6 +565,33 @@ applyTheme(savedTheme);
 // ─── App state ────────────────────────────────────────────────────────────────
 let posts = [], config = { ...AdminModule.DEFAULT_CONFIG };
 let currentImageData = null, currentImageFile = null, editingId = null;
+
+async function syncFromGitHub() {
+  const gh = AdminModule.getGHConfig();
+  if (!Utils.isGHConfigured(gh)) {
+    showSyncStatus('error', '⚠ GitHub not configured');
+    return;
+  }
+  const btn = document.getElementById('sync-btn');
+  btn.disabled = true;
+  try {
+    showSyncStatus('loading', 'syncing…');
+    const [remotePosts, remoteConfig] = await Promise.all([
+      AdminModule.fetchPostsFromGitHub(gh),
+      AdminModule.fetchConfigFromGitHub(gh),
+    ]);
+    posts  = remotePosts;
+    config = remoteConfig;
+    AdminModule.saveState(posts, config);
+    renderPostsList();
+    fillConfigFields();
+    showSyncStatus('success', `✓ synced — ${posts.length} posts`);
+  } catch (e) {
+    showSyncStatus('error', `⚠ sync failed: ${e.message}`);
+  } finally {
+    btn.disabled = false;
+  }
+}
 
 async function loadAndRender() {
   const state = AdminModule.loadState();
