@@ -253,7 +253,7 @@ const html = `<!DOCTYPE html>
 
     #posts-container { padding-bottom: 4rem; }
 
-    .post { padding: 0.5rem 0; border-bottom: 1px solid var(--border); animation: fadeIn 0.3s ease; }
+    .post { padding: 0.9rem 0 0.5rem; border-bottom: 1px solid var(--border); animation: fadeIn 0.3s ease; }
     .post.hidden { display: none; }
 
     @keyframes fadeIn {
@@ -263,7 +263,7 @@ const html = `<!DOCTYPE html>
 
     .post-meta {
       font-family: var(--mono); font-size: 0.7rem; color: var(--muted);
-      margin-bottom: 0.65rem; display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;
+      margin-bottom: 0.3rem; display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;
     }
     .post-meta:empty { display: none; margin: 0; }
 

@@ -182,10 +182,10 @@ function archivePage(ym, monthPosts) {
     }
     .back-link:hover { color: var(--text); }
 
-    .post { padding: 0.5rem 0; border-bottom: 1px solid var(--border); }
+    .post { padding: 0.9rem 0 0.5rem; border-bottom: 1px solid var(--border); }
     .post-meta {
       font-family: var(--mono); font-size: 0.7rem; color: var(--muted);
-      margin-bottom: 0.65rem; display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;
+      margin-bottom: 0.3rem; display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;
     }
     .post-emojis { font-size: 1rem; letter-spacing: 0.05em; }
     .post-tag {
