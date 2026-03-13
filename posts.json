@@ -1,6 +1,22 @@
 {
   "posts": [
     {
+      "id": 403,
+      "date": "2026-03-13T15:12:51.097Z",
+      "body": "Just noticed that when editing an existing post in Microcosm (I forgot tags on my previous post), there was no cancel button. Whipped up a fix with Claude and will use this post to test it.",
+      "tags": [
+        "ai",
+        "coding",
+        "meta"
+      ],
+      "emojis": [
+        "🗓",
+        "⚙️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 402,
       "date": "2026-03-13T14:56:00.000Z",
       "body": "[Spokane Valley Performing Arts Center director asks city for millions to help finish theater](https://www.spokesman.com/stories/2026/mar/12/spokane-valley-performing-arts-center-director-ask/)\n\n> Phase one of building the new performing arts center is predicted to cost $32 million and would be 45,000 square feet, with 463 seats at the main stage, 220 seats in a studio theater and an acting conservatory area, according to Johnson.\n\n> Lembeck Appraisal and Consulting found that SVST’s revenue projections and historical data were inaccurate. The appraisal found that the theater was overengineered and would only be worth much less than its construction cost.\n\nYeah, this project is dead in the water, considering there are already two 700-seat venues in downtown Spokane (The Bing and Myrtle Woldson Performing Arts Center at Gonzaga) directly competing with it to bring in outside acts. There's no way a 453 seat community theater venue can produce the yearly revenue required to pay back the amount of construction debt they're talking about, and the fiscally conservative Spokane Valley City Council is going to laugh in their faces.",
