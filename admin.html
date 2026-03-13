@@ -376,6 +376,7 @@
           <div class="compose-actions">
             <button class="btn-ghost" onclick="togglePanel('image-panel')">📷</button>
             <button class="btn-ghost" onclick="togglePanel('tag-panel')"># tag</button>
+            <button class="btn-secondary" id="cancel-btn" onclick="resetCompose()" style="display:none;">cancel</button>
             <button class="btn-primary" id="publish-btn" onclick="publishPost()">publish</button>
           </div>
         </div>
@@ -774,6 +775,7 @@ function resetCompose() {
   editingId = null;
   document.getElementById('publish-btn').textContent = 'publish';
   document.getElementById('publish-btn').onclick = publishPost;
+  document.getElementById('cancel-btn').style.display = 'none';
 }
 
 // ─── Publish ──────────────────────────────────────────────────────────────────
@@ -928,6 +930,7 @@ function editPost(id) {
 
   document.getElementById('publish-btn').textContent = 'update';
   document.getElementById('publish-btn').onclick = publishPost;
+  document.getElementById('cancel-btn').style.display = '';
   window.scrollTo({ top: 0, behavior: 'smooth' });
   toast('editing post — make changes and click update');
 }
