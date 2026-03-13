@@ -1,9 +1,24 @@
 {
   "posts": [
     {
+      "id": 407,
+      "date": "2026-03-13T22:06:34.733Z",
+      "body": "[How to love comics](https://buttondown.com/monteiro/archive/how-to-love-comics/) - Mike Monteiro with a very relatable piece on his love of comics.\n\n>Comics were 25¢ when I started going to Mister Grocer after school. Which meant all I had to do to get a comic was to find a quarter somewhere. And quarters were kinda magical as a kid. They didn’t come around every day. But every few days you’d come across one in between the couch cushions, or just minding its business on the kitchen table, or left on the edge of the bathroom sink by my father as he prepared to go out for the evening. Quarters weren’t given. They appeared. And they quickly disappeared. Into my pocket. To be traded for a comic at Mister Grocer the next day.\n\nComic books were still in the 65¢ to 75¢ range when I fell in love in the 80s. I spent a lot of lawn mowing money on my collection.",
+      "tags": [
+        "comics",
+        "nostalgia"
+      ],
+      "emojis": [
+        "🦸🏻‍♂️",
+        "💰"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 406,
-      "date": "2026-03-13T20:46:00.000Z",
-      "body": "Just came up with a pretty big usability improvement to the posts tab in the Microcosm admin page.\n\n*Worked out even better than I expected!*",
+      "date": "2026-03-13T20:46:22.156Z",
+      "body": "Just came up with a pretty big usability improvement to the posts tab in the Microcosm admin page.",
       "tags": [
         "ai",
         "coding"
