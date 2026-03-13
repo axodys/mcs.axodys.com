@@ -2,8 +2,8 @@
   "posts": [
     {
       "id": 403,
-      "date": "2026-03-13T15:12:51.097Z",
-      "body": "Just noticed that when editing an existing post in Microcosm (I forgot tags on my previous post), there was no cancel button. Whipped up a fix with Claude and will use this post to test it.",
+      "date": "2026-03-13T15:12:00.000Z",
+      "body": "Just noticed that when editing an existing post in Microcosm (I forgot tags on my previous post), there was no cancel button. Whipped up a fix with Claude and will use this post to test it.\n\n*It worked!*",
       "tags": [
         "ai",
         "coding",
