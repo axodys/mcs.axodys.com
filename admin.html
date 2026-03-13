@@ -272,15 +272,28 @@
 
     /* Posts list */
     .posts-list { display: flex; flex-direction: column; }
+    .posts-filter-option {
+      font-family: var(--mono); font-size: 0.65rem; padding: 0.2rem 0.45rem;
+      border: 1px solid var(--border); border-radius: 3px; background: transparent;
+      color: var(--muted); cursor: pointer; white-space: nowrap; text-align: center;
+      transition: color 0.15s, border-color 0.15s, background 0.15s;
+    }
+    .posts-filter-option:hover { color: var(--accent); border-color: var(--accent); }
+    .posts-filter-option.active { background: var(--accent); color: white; border-color: var(--accent); }
     .post-item {
       padding: 1rem 0; border-bottom: 1px solid var(--border);
       display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: start;
     }
     .post-item-date { font-family: var(--mono); font-size: 0.65rem; color: var(--muted); margin-bottom: 0.3rem; }
     .post-item-body {
-      font-size: 0.9rem; color: var(--text); line-height: 1.5;
-      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+      font-size: 0.85rem; color: var(--text); line-height: 1.55;
     }
+    .post-item-body p { margin-bottom: 0.4rem; }
+    .post-item-body p:last-child { margin-bottom: 0; }
+    .post-item-body a { color: var(--accent); }
+    .post-item-body strong { font-weight: 600; }
+    .post-item-body em { font-style: italic; }
+    .post-item-body code { font-family: var(--mono); font-size: 0.8em; background: var(--code-bg); padding: 0.1em 0.3em; border-radius: 3px; }
     .post-item-tags { display: flex; gap: 0.3rem; flex-wrap: wrap; margin-top: 0.4rem; }
     .post-tag-badge {
       font-family: var(--mono); font-size: 0.6rem;
@@ -428,8 +441,18 @@
 
     <!-- ── Posts Tab ── -->
     <div id="tab-posts" class="tab-content">
-      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:0.75rem;">
-        <p class="section-title" style="margin-bottom:0;">all posts (<span id="post-count">0</span>)</p>
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:0.75rem; flex-wrap:wrap; gap:0.5rem;">
+        <div style="display:flex; align-items:center; gap:0.5rem;">
+          <div style="position:relative;">
+            <button class="btn-secondary" id="filter-month-btn" onclick="togglePostsFilter('month')" style="min-width:3.5rem;">Jan</button>
+            <div id="filter-month-popup" style="display:none; position:absolute; top:calc(100% + 4px); left:0; background:var(--surface); border:1px solid var(--border); border-radius:4px; box-shadow:0 4px 12px rgba(0,0,0,0.1); z-index:100; padding:0.4rem; flex-wrap:wrap; gap:3px; width:176px;"></div>
+          </div>
+          <div style="position:relative;">
+            <button class="btn-secondary" id="filter-year-btn" onclick="togglePostsFilter('year')" style="min-width:3rem;">2026</button>
+            <div id="filter-year-popup" style="display:none; position:absolute; top:calc(100% + 4px); left:0; background:var(--surface); border:1px solid var(--border); border-radius:4px; box-shadow:0 4px 12px rgba(0,0,0,0.1); z-index:100; padding:0.4rem; flex-direction:column; gap:2px; min-width:4rem;"></div>
+          </div>
+          <span class="section-title" style="margin-bottom:0;">posts <span id="post-count-filtered" style="font-size:0.7rem; color:var(--muted);"></span></span>
+        </div>
         <div style="display:flex; align-items:center; gap:0.75rem;">
           <div id="sync-status" class="publish-status" style="display:none; margin-bottom:0;"></div>
           <button class="btn-secondary" onclick="syncFromGitHub()" id="sync-btn" title="Re-sync posts from GitHub">↺ sync</button>
@@ -585,6 +608,7 @@ async function syncFromGitHub() {
     posts  = remotePosts;
     config = remoteConfig;
     AdminModule.saveState(posts, config);
+    initPostsFilter();
     renderPostsList();
     fillConfigFields();
     showSyncStatus('success', `✓ synced — ${posts.length} posts`);
@@ -619,6 +643,7 @@ async function loadAndRender() {
     }
   }
 
+  initPostsFilter();
   renderPostsList();
   fillConfigFields();
   fillGHFields();
@@ -706,7 +731,7 @@ function switchTab(name, el) {
   document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
   document.getElementById('tab-' + name).classList.add('active');
   if (el) el.classList.add('active');
-  if (name === 'posts') renderPostsList();
+  if (name === 'posts') { initPostsFilter(); renderPostsList(); }
 }
 
 function switchComposeTabs(tab) {
@@ -883,10 +908,106 @@ function showSyncStatus(type, msg) {
 }
 
 // ─── Posts List ───────────────────────────────────────────────────────────────
+// ─── Posts filter state ───────────────────────────────────────────────────────
+let filterMonth = null; // 0-11
+let filterYear  = null; // full year int
+
+function postLocalDate(isoDate) {
+  const tz = (config && config.timezone) || 'UTC';
+  const parts = new Intl.DateTimeFormat('en-US', {
+    timeZone: tz, year: 'numeric', month: 'numeric', day: 'numeric'
+  }).formatToParts(new Date(isoDate));
+  const get = t => parseInt(parts.find(p => p.type === t).value, 10);
+  return { year: get('year'), month: get('month') - 1 }; // month 0-indexed
+}
+
+const MONTHS_SHORT = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+function initPostsFilter() {
+  const tz = (config && config.timezone) || 'UTC';
+  const now = new Intl.DateTimeFormat('en-US', { timeZone: tz, year: 'numeric', month: 'numeric' })
+    .formatToParts(new Date());
+  const nowMonth = parseInt(now.find(p => p.type === 'month').value, 10) - 1;
+  const nowYear  = parseInt(now.find(p => p.type === 'year').value, 10);
+
+  filterMonth = nowMonth;
+  filterYear  = nowYear;
+
+  // Build year options from posts
+  const years = [...new Set(posts.map(p => postLocalDate(p.date).year))].sort((a,b) => b - a);
+
+  // Month popup: 4 columns of Jan–Dec
+  const monthPopup = document.getElementById('filter-month-popup');
+  monthPopup.innerHTML = MONTHS_SHORT.map((m, i) =>
+    `<button class="posts-filter-option${i === filterMonth ? ' active' : ''}" onclick="setPostsFilter('month',${i})">${m}</button>`
+  ).join('');
+  monthPopup.style.display = 'none';
+
+  // Year popup
+  const yearPopup = document.getElementById('filter-year-popup');
+  yearPopup.innerHTML = years.map(y =>
+    `<button class="posts-filter-option${y === filterYear ? ' active' : ''}" style="width:100%;" onclick="setPostsFilter('year',${y})">${y}</button>`
+  ).join('');
+  yearPopup.style.display = 'none';
+
+  document.getElementById('filter-month-btn').textContent = MONTHS_SHORT[filterMonth] + ' ▾';
+  document.getElementById('filter-year-btn').textContent  = filterYear + ' ▾';
+}
+
+function togglePostsFilter(which) {
+  const monthPopup = document.getElementById('filter-month-popup');
+  const yearPopup  = document.getElementById('filter-year-popup');
+  if (which === 'month') {
+    const open = monthPopup.style.display === 'flex';
+    monthPopup.style.display = open ? 'none' : 'flex';
+    yearPopup.style.display  = 'none';
+  } else {
+    const open = yearPopup.style.display === 'flex';
+    yearPopup.style.display  = open ? 'none' : 'flex';
+    monthPopup.style.display = 'none';
+  }
+}
+
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('#tab-posts .posts-filter-option') &&
+      !e.target.closest('#filter-month-btn') &&
+      !e.target.closest('#filter-year-btn')) {
+    const mp = document.getElementById('filter-month-popup');
+    const yp = document.getElementById('filter-year-popup');
+    if (mp) mp.style.display = 'none';
+    if (yp) yp.style.display = 'none';
+  }
+});
+
+function setPostsFilter(type, value) {
+  if (type === 'month') {
+    filterMonth = value;
+    document.getElementById('filter-month-btn').textContent = MONTHS_SHORT[value] + ' ▾';
+    document.getElementById('filter-month-popup').querySelectorAll('.posts-filter-option')
+      .forEach((b, i) => b.classList.toggle('active', i === value));
+    document.getElementById('filter-month-popup').style.display = 'none';
+  } else {
+    filterYear = value;
+    document.getElementById('filter-year-btn').textContent = value + ' ▾';
+    document.getElementById('filter-year-popup').querySelectorAll('.posts-filter-option')
+      .forEach(b => b.classList.toggle('active', parseInt(b.textContent, 10) === value));
+    document.getElementById('filter-year-popup').style.display = 'none';
+  }
+  renderPostsList();
+}
+
 function renderPostsList() {
   const list = document.getElementById('posts-list');
-  document.getElementById('post-count').textContent = posts.length;
-  list.innerHTML = AdminModule.renderPostsList(posts, config);
+  const sorted = [...posts].sort((a, b) => new Date(b.date) - new Date(a.date));
+  const filtered = sorted.filter(p => {
+    const { year, month } = postLocalDate(p.date);
+    return year === filterYear && month === filterMonth;
+  });
+  const countEl = document.getElementById('post-count-filtered');
+  if (countEl) countEl.textContent = `(${filtered.length}/${posts.length})`;
+  list.innerHTML = filtered.length
+    ? AdminModule.renderPostsList(filtered, config)
+    : '<div style="font-family:var(--mono);font-size:0.8rem;color:var(--muted);padding:2rem 0;">no posts this month.</div>';
 }
 
 function deletePost(id) {

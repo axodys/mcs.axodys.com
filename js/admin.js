@@ -129,12 +129,14 @@
     const date     = Utils.formatPostDate(post.date, config);
     const tags     = (post.tags   || []).map(t => `<span class="post-tag-badge">${t}</span>`).join('');
     const emojiStr = (post.emojis || []).join('');
-    const preview  = Utils.postPreview(post.body);
+    const bodyHtml = typeof marked !== 'undefined'
+      ? marked.parse(post.body || '')
+      : Utils.postPreview(post.body);
     return `
       <div class="post-item">
         <div>
           <div class="post-item-date">${date}${post.image ? ' · 📷' : ''}${emojiStr ? ' · ' + emojiStr : ''}</div>
-          <div class="post-item-body">${preview}</div>
+          <div class="post-item-body">${bodyHtml}</div>
           ${tags ? `<div class="post-item-tags">${tags}</div>` : ''}
         </div>
         <div class="post-item-actions">
