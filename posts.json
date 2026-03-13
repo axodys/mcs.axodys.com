@@ -2,11 +2,12 @@
   "posts": [
     {
       "id": 404,
-      "date": "2026-03-13T15:37:36.721Z",
+      "date": "2026-03-13T15:37:00.000Z",
       "body": "Not only did it snow overnight, it’s still snowing this morning. Classic Spokane March!",
       "tags": [
         "spokane",
-        "weather"
+        "weather",
+        "photo"
       ],
       "emojis": [
         "❄️",
