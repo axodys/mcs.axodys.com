@@ -104,14 +104,31 @@ function postCard(post) {
   </article>`;
 }
 
-function archiveLabel(ym) {
-  const [y, m] = ym.split('/');
-  const initial = 'JFMAMJJASOND'[parseInt(m, 10) - 1];
-  return `${initial}${String(y).slice(-2)}`;
+const MONTH_ABR = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+function archivePopupContent(months, baseHref) {
+  const byYear = {};
+  for (const ym of months) {
+    const [y, m] = ym.split('/');
+    if (!byYear[y]) byYear[y] = [];
+    byYear[y].push({ ym, m: parseInt(m, 10) });
+  }
+  return Object.keys(byYear).sort((a, b) => b - a).map(y => {
+    const tiles = byYear[y]
+      .sort((a, b) => b.m - a.m)
+      .map(({ ym, m }) =>
+        `<a class="archive-option" href="${baseHref(ym)}">${MONTH_ABR[m - 1]}</a>`
+      ).join('');
+    return `<div class="archive-year-group">
+          <span class="archive-year-label">${y}</span>
+          <div class="archive-year-grid">${tiles}</div>
+        </div>`;
+  }).join('\n        ');
 }
 
 function topBarHTML(monthPosts, allMonths, currentYm) {
   const tags = [...new Set(monthPosts.flatMap(p => p.tags || []))].sort();
+  const otherMonths = allMonths.filter(ym => ym !== currentYm);
 
   const tagSection = tags.length ? `
     <div class="top-bar-left">
@@ -122,16 +139,11 @@ function topBarHTML(monthPosts, allMonths, currentYm) {
       </div>
     </div>` : '<div></div>';
 
-  const archiveOptions = allMonths
-    .filter(ym => ym !== currentYm)
-    .map(ym => `<a class="archive-option" href="../../${ym}.html">${archiveLabel(ym)}</a>`)
-    .join('\n        ');
-
   const archiveSection = `
     <div class="top-bar-right">
       <button class="archive-btn" id="archive-btn" onclick="togglePopup('archive')">archive ▾</button>
       <div class="archive-popup" id="archive-popup">
-        ${archiveOptions}
+        ${otherMonths.length ? archivePopupContent(otherMonths, ym => `../../${ym}.html`) : '<span style="font-family:var(--mono);font-size:0.65rem;color:var(--muted)">no other months</span>'}
       </div>
     </div>`;
 
@@ -235,12 +247,12 @@ function archivePage(ym, monthPosts) {
       position: absolute; top: calc(100% + 6px);
       background: var(--surface); border: 1px solid var(--border); border-radius: 5px;
       box-shadow: 0 4px 16px rgba(0,0,0,0.12); z-index: 100;
-      padding: 0.6rem; width: 260px; flex-wrap: wrap; gap: 0.4rem;
-      display: none;
+      padding: 0.6rem; display: none;
     }
-    .filter-popup { left: 0; }
-    .archive-popup { right: 0; }
-    .filter-popup.open, .archive-popup.open { display: flex; }
+    .filter-popup { left: 0; width: 260px; flex-wrap: wrap; gap: 0.4rem; }
+    .archive-popup { right: 0; width: 246px; }
+    .filter-popup.open { display: flex; }
+    .archive-popup.open { display: block; }
     .filter-option, .archive-option {
       flex: 0 0 auto;
       font-family: var(--mono); font-size: 0.65rem; padding: 0.25rem 0.55rem;
@@ -251,6 +263,14 @@ function archivePage(ym, monthPosts) {
     }
     .filter-option:hover, .archive-option:hover { color: var(--accent); border-color: var(--accent); }
     .filter-option.active { background: var(--accent); color: white; border-color: var(--accent); }
+    .archive-year-group { margin-bottom: 0.5rem; }
+    .archive-year-group:last-child { margin-bottom: 0; }
+    .archive-year-label {
+      font-family: var(--mono); font-size: 0.6rem; color: var(--muted);
+      text-transform: uppercase; letter-spacing: 0.06em;
+      display: block; margin-bottom: 0.3rem;
+    }
+    .archive-year-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 3px; }
     .hidden { display: none !important; }
 
     .post-body { font-size: 1rem; line-height: 1.75; color: var(--text); }
