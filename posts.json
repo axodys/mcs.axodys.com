@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 404,
+      "date": "2026-03-13T15:37:36.721Z",
+      "body": "Not only did it snow overnight, it’s still snowing this morning. Classic Spokane March!",
+      "tags": [
+        "spokane",
+        "weather"
+      ],
+      "emojis": [
+        "❄️",
+        "📷"
+      ],
+      "image": "https://res.cloudinary.com/dkjzb0qbs/image/upload/v1773416256/mcs/stas6hatutcsyladp8qy.jpg",
+      "imageCaption": "Snowy backyard view out my window."
+    },
+    {
       "id": 403,
       "date": "2026-03-13T15:12:00.000Z",
       "body": "Just noticed that when editing an existing post in Microcosm (I forgot tags on my previous post), there was no cancel button. Whipped up a fix with Claude and will use this post to test it.\n\n*It worked!*",
