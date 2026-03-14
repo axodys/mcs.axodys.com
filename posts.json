@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 410,
+      "date": "2026-03-14T20:05:42.687Z",
+      "body": "Big 1-0 win for Eddie Howe and Newcastle over Chelsea at Stanford Bridge today. Love to see it.",
+      "tags": [
+        "epl",
+        "result",
+        "mood"
+      ],
+      "emojis": [
+        "⚽️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 409,
       "date": "2026-03-14T17:38:25.594Z",
       "body": "Productive morning. Caught up on my last three Week Notes and two Microcosm posts on my Bear Blog ([so.axodys.com](https://so.axodys.com)), which tends to be more of a periodically updated archive than a blog with daily activity. The next Microcosm post (Microcosm 2026 - Mar 8-15) will be interesting because it also contains mini-posts that should get standalone posts in Bear. I think I'll update `posts-exports.js` with a couple of flags to strip tags and simplify making those posts.",
