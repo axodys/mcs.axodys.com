@@ -20,11 +20,12 @@ if (args[0] === '--help') {
     'Usage: node export-posts.js [options]',
     '',
     'Options:',
-    '  --input <path>        Source posts.json (default: posts.json)',
-    '  --output <path>       Output file (default: posts.md)',
-    '  --striptags           Omit tags: lines from output',
+    '  --input <path>          Source posts.json (default: posts.json)',
+    '  --output <path>         Output file (default: posts.md)',
+    '  --striptags             Omit tags: lines from output',
     '  --startdate YYYY-MM-DD  Begin export from this date (inclusive)',
-    '  --days <n>            Limit export to n days from start date',
+    '  --days <n>              Limit export to n days from start date',
+    '  --mdimages              Inline images as ![](url "caption") instead of image:/caption: lines',
   ].join('\n'));
   process.exit(0);
 }
@@ -38,7 +39,8 @@ const inputFile  = flagValue('--input')     || path.join(__dirname, 'posts.json'
 const outputFile = flagValue('--output')    || path.join(__dirname, 'posts.md');
 const startDateArg = flagValue('--startdate');
 const daysArg      = flagValue('--days');
-const stripTags    = args.includes('--striptags');
+const stripTags = args.includes('--striptags');
+const mdImages  = args.includes('--mdimages');
 
 if (!fs.existsSync(inputFile)) {
   console.error(`Error: file not found — ${inputFile}`);
@@ -173,13 +175,19 @@ function buildDocument(posts, tz) {
     lines.push(`* #### ${emojiStr}${emojiStr ? ' ' : ''}${dateStr}`);
 
     const body = (post.body || '').trimEnd();
-    if (body) lines.push(body);
+    if (mdImages && post.image) {
+      const caption = post.imageCaption ? ` "${post.imageCaption}"` : '';
+      const imgTag  = `![](${post.image}${caption})`;
+      lines.push(body ? `${imgTag}\n${body}` : imgTag);
+    } else {
+      if (body) lines.push(body);
+    }
 
     if (!stripTags && post.tags && post.tags.length) {
       lines.push(`tags: ${post.tags.join(', ')}`);
     }
-    if (post.image)        lines.push(`image: ${post.image}`);
-    if (post.imageCaption) lines.push(`caption: ${post.imageCaption}`);
+    if (!mdImages && post.image)        lines.push(`image: ${post.image}`);
+    if (!mdImages && post.imageCaption) lines.push(`caption: ${post.imageCaption}`);
   }
 
   lines.push('');
@@ -219,6 +227,7 @@ async function main() {
   console.log(`  timezone  : ${tz}`);
   console.log(`  date range: ${dateRange}`);
   if (stripTags) console.log(`  tags      : stripped`);
+  if (mdImages)  console.log(`  images    : inlined as markdown`);
 }
 
 main().catch(e => { console.error(e.message); process.exit(1); });
