@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 412,
+      "date": "2026-03-14T21:11:45.983Z",
+      "body": "The post tagging functionality in Microcosm is a happy accident that I didn't fully appreciate until after I had been working with the system for a few days. Now I've realized it allows me to filter to exactly the output I need for a given task.",
+      "tags": [
+        "meta",
+        "mood"
+      ],
+      "emojis": [
+        "🗓",
+        "⚙️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 411,
       "date": "2026-03-14T20:20:23.973Z",
       "body": "Thinking of a feature, describing it to Claude and having it build it in a minute or so is pretty magical. Updated `export-posts.js` to be able to specify posts from a specific range of days in the markdown format I use and render any associated images in markdown format. Exporting microcosm and image posts to [so.axodys.com](https://so.axodys.com) just got way easier.",
