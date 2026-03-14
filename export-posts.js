@@ -26,6 +26,8 @@ if (args[0] === '--help') {
     '  --startdate YYYY-MM-DD  Begin export from this date (inclusive)',
     '  --days <n>              Limit export to n days from start date',
     '  --mdimages              Inline images as ![](url "caption") instead of image:/caption: lines',
+    '  --filter <tag>          Only export posts containing this tag (repeatable)',
+    '  --exclude <tag>         Skip posts containing this tag (repeatable)',
   ].join('\n'));
   process.exit(0);
 }
@@ -39,8 +41,19 @@ const inputFile  = flagValue('--input')     || path.join(__dirname, 'posts.json'
 const outputFile = flagValue('--output')    || path.join(__dirname, 'posts.md');
 const startDateArg = flagValue('--startdate');
 const daysArg      = flagValue('--days');
-const stripTags = args.includes('--striptags');
-const mdImages  = args.includes('--mdimages');
+const stripTags  = args.includes('--striptags');
+const mdImages   = args.includes('--mdimages');
+
+// Collect all --filter and --exclude values (each may be repeated)
+function allFlagValues(flag) {
+  const values = [];
+  for (let i = 0; i < args.length; i++) {
+    if (args[i] === flag && args[i + 1]) values.push(args[i + 1]);
+  }
+  return values;
+}
+const filterTags  = allFlagValues('--filter');
+const excludeTags = allFlagValues('--exclude');
 
 if (!fs.existsSync(inputFile)) {
   console.error(`Error: file not found — ${inputFile}`);
@@ -138,21 +151,26 @@ function filterPosts(posts, tz) {
   let endDate   = null;
 
   if (daysLimit) {
-    // endDate is startDate + (days - 1), inclusive
     const d = new Date(startDate + 'T00:00:00Z');
     d.setUTCDate(d.getUTCDate() + daysLimit - 1);
     endDate = d.toISOString().slice(0, 10);
   }
 
   const filtered = sorted.filter(p => {
+    // Date range
     const d = localDateString(p.date, tz);
     if (d < startDate) return false;
     if (endDate && d > endDate) return false;
+
+    // Tag filters
+    const postTags = p.tags || [];
+    if (filterTags.length  && !filterTags.every(t => postTags.includes(t)))  return false;
+    if (excludeTags.length &&  excludeTags.some(t  => postTags.includes(t))) return false;
+
     return true;
   });
 
-  // Return newest-first to match posts.json ordering
-  return filtered.reverse();
+  return filtered.reverse(); // newest-first
 }
 
 // ─── Document builder ─────────────────────────────────────────────────────────
@@ -206,10 +224,11 @@ async function main() {
     process.exit(1);
   }
 
-  const posts = (startDateArg || daysLimit) ? filterPosts(allPosts, tz) : allPosts;
+  const needsFilter = startDateArg || daysLimit || filterTags.length || excludeTags.length;
+  const posts = needsFilter ? filterPosts(allPosts, tz) : allPosts;
 
   if (!posts.length) {
-    console.error('No posts matched the specified date range.');
+    console.error('No posts matched the specified filters.');
     process.exit(1);
   }
 
@@ -226,8 +245,10 @@ async function main() {
   console.log(`✓ exported ${posts.length} of ${allPosts.length} post${allPosts.length !== 1 ? 's' : ''} → ${outputFile}`);
   console.log(`  timezone  : ${tz}`);
   console.log(`  date range: ${dateRange}`);
-  if (stripTags) console.log(`  tags      : stripped`);
-  if (mdImages)  console.log(`  images    : inlined as markdown`);
+  if (stripTags)        console.log(`  tags      : stripped`);
+  if (mdImages)         console.log(`  images    : inlined as markdown`);
+  if (filterTags.length)  console.log(`  filter    : ${filterTags.join(', ')}`);
+  if (excludeTags.length) console.log(`  exclude   : ${excludeTags.join(', ')}`);
 }
 
 main().catch(e => { console.error(e.message); process.exit(1); });
