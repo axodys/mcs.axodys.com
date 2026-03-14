@@ -1,6 +1,22 @@
 {
   "posts": [
     {
+      "id": 411,
+      "date": "2026-03-14T20:20:23.973Z",
+      "body": "Thinking of a feature, describing it to Claude and having it build it in a minute or so is pretty magical. Updated `export-posts.js` to be able to specify posts from a specific range of days in the markdown format I use and render any associated images in markdown format. Exporting microcosm and image posts to [so.axodys.com](https://so.axodys.com) just got way easier.",
+      "tags": [
+        "ai",
+        "coding",
+        "blogging"
+      ],
+      "emojis": [
+        "🤖",
+        "⚙️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 410,
       "date": "2026-03-14T20:05:42.687Z",
       "body": "Big 1-0 win for Eddie Howe and Newcastle over Chelsea at Stanford Bridge today. Love to see it.",
