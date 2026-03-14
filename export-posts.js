@@ -2,6 +2,7 @@
 // export-posts.js — export posts.json to a posts.md file in the import format
 //
 // Usage: node export-posts.js [--input <path>] [--output <path>]
+//                             [--striptags] [--startdate YYYY-MM-DD] [--days <n>]
 //
 // Output format mirrors the import format exactly so the file can be
 // round-tripped back through import-posts.js without data loss.
@@ -15,17 +16,45 @@ const readline = require('readline');
 // ─── CLI args ─────────────────────────────────────────────────────────────────
 const args = process.argv.slice(2);
 if (args[0] === '--help') {
-  console.log('Usage: node export-posts.js [--input <path>] [--output <path>]');
+  console.log([
+    'Usage: node export-posts.js [options]',
+    '',
+    'Options:',
+    '  --input <path>        Source posts.json (default: posts.json)',
+    '  --output <path>       Output file (default: posts.md)',
+    '  --striptags           Omit tags: lines from output',
+    '  --startdate YYYY-MM-DD  Begin export from this date (inclusive)',
+    '  --days <n>            Limit export to n days from start date',
+  ].join('\n'));
   process.exit(0);
 }
 
-const inputFlag  = args.indexOf('--input');
-const outputFlag = args.indexOf('--output');
-const inputFile  = inputFlag  !== -1 ? args[inputFlag  + 1] : path.join(__dirname, 'posts.json');
-const outputFile = outputFlag !== -1 ? args[outputFlag + 1] : path.join(__dirname, 'posts.md');
+function flagValue(flag) {
+  const i = args.indexOf(flag);
+  return i !== -1 ? args[i + 1] : null;
+}
+
+const inputFile  = flagValue('--input')     || path.join(__dirname, 'posts.json');
+const outputFile = flagValue('--output')    || path.join(__dirname, 'posts.md');
+const startDateArg = flagValue('--startdate');
+const daysArg      = flagValue('--days');
+const stripTags    = args.includes('--striptags');
 
 if (!fs.existsSync(inputFile)) {
   console.error(`Error: file not found — ${inputFile}`);
+  process.exit(1);
+}
+
+// Validate --startdate
+if (startDateArg && !/^\d{4}-\d{2}-\d{2}$/.test(startDateArg)) {
+  console.error('Error: --startdate must be in YYYY-MM-DD format');
+  process.exit(1);
+}
+
+// Validate --days
+const daysLimit = daysArg ? parseInt(daysArg, 10) : null;
+if (daysArg && (isNaN(daysLimit) || daysLimit < 1)) {
+  console.error('Error: --days must be a positive integer');
   process.exit(1);
 }
 
@@ -59,14 +88,13 @@ async function resolveTimezone() {
   return localTz;
 }
 
-// ─── Date formatting ──────────────────────────────────────────────────────────
+// ─── Date helpers ─────────────────────────────────────────────────────────────
 const MONTH_NAMES = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN',
                      'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
 
 function formatPostHeader(isoDate, tz) {
   const date = new Date(isoDate);
 
-  // Get local time components in the target timezone
   const parts = new Intl.DateTimeFormat('en-US', {
     timeZone: tz,
     year:     'numeric',
@@ -79,12 +107,10 @@ function formatPostHeader(isoDate, tz) {
 
   const get = type => parts.find(p => p.type === type).value;
   const year   = parseInt(get('year'),   10);
-  const month  = parseInt(get('month'),  10) - 1; // 0-indexed
+  const month  = parseInt(get('month'),  10) - 1;
   const day    = parseInt(get('day'),    10);
   const hour   = get('hour').padStart(2, '0');
   const minute = get('minute').padStart(2, '0');
-
-  // Handle midnight hour reported as '24' by some implementations
   const displayHour = hour === '24' ? '00' : hour;
 
   return {
@@ -93,47 +119,70 @@ function formatPostHeader(isoDate, tz) {
   };
 }
 
+// Returns a YYYY-MM-DD string for a post date in the given timezone
+function localDateString(isoDate, tz) {
+  const parts = new Intl.DateTimeFormat('en-CA', {
+    timeZone: tz, year: 'numeric', month: '2-digit', day: '2-digit',
+  }).formatToParts(new Date(isoDate));
+  return parts.map(p => p.value).join(''); // en-CA gives YYYY-MM-DD
+}
+
+// ─── Post filtering ───────────────────────────────────────────────────────────
+function filterPosts(posts, tz) {
+  // posts.json is newest-first; sort oldest-first for date-range logic
+  const sorted = [...posts].sort((a, b) => new Date(a.date) - new Date(b.date));
+
+  let startDate = startDateArg || localDateString(sorted[0].date, tz);
+  let endDate   = null;
+
+  if (daysLimit) {
+    // endDate is startDate + (days - 1), inclusive
+    const d = new Date(startDate + 'T00:00:00Z');
+    d.setUTCDate(d.getUTCDate() + daysLimit - 1);
+    endDate = d.toISOString().slice(0, 10);
+  }
+
+  const filtered = sorted.filter(p => {
+    const d = localDateString(p.date, tz);
+    if (d < startDate) return false;
+    if (endDate && d > endDate) return false;
+    return true;
+  });
+
+  // Return newest-first to match posts.json ordering
+  return filtered.reverse();
+}
+
 // ─── Document builder ─────────────────────────────────────────────────────────
 function buildDocument(posts, tz) {
-  // posts.json is descending (newest first) — that's the order we want in the doc
   const lines = [];
   let currentYear = null;
 
   for (const post of posts) {
     const { year, dateStr } = formatPostHeader(post.date, tz);
 
-    // Emit year header when year changes
     if (year !== currentYear) {
-      if (currentYear !== null) lines.push(''); // blank line before new year
+      if (currentYear !== null) lines.push('');
       lines.push(`## ${year}`);
       currentYear = year;
     }
 
     lines.push('');
 
-    // Post header: * #### <emojis><dateStr>
     const emojiStr = (post.emojis || []).join('');
     lines.push(`* #### ${emojiStr}${emojiStr ? ' ' : ''}${dateStr}`);
 
-    // Body
     const body = (post.body || '').trimEnd();
-    if (body) {
-      lines.push(body);
-    }
+    if (body) lines.push(body);
 
-    // Optional metadata lines
-    if (post.tags && post.tags.length) {
+    if (!stripTags && post.tags && post.tags.length) {
       lines.push(`tags: ${post.tags.join(', ')}`);
     }
-    if (post.image) {
-      lines.push(`image: ${post.image}`);
-    }
-    if (post.imageCaption) {
-      lines.push(`caption: ${post.imageCaption}`);
-    }
+    if (post.image)        lines.push(`image: ${post.image}`);
+    if (post.imageCaption) lines.push(`caption: ${post.imageCaption}`);
   }
 
-  lines.push(''); // trailing newline
+  lines.push('');
   return lines.join('\n');
 }
 
@@ -142,20 +191,34 @@ async function main() {
   const tz = await resolveTimezone();
 
   const data  = JSON.parse(fs.readFileSync(inputFile, 'utf8'));
-  const posts = data.posts || [];
+  const allPosts = data.posts || [];
+
+  if (!allPosts.length) {
+    console.error('No posts found in posts.json.');
+    process.exit(1);
+  }
+
+  const posts = (startDateArg || daysLimit) ? filterPosts(allPosts, tz) : allPosts;
 
   if (!posts.length) {
-    console.error('No posts found in posts.json.');
+    console.error('No posts matched the specified date range.');
     process.exit(1);
   }
 
   const doc = buildDocument(posts, tz);
   fs.writeFileSync(outputFile, doc, 'utf8');
 
-  console.log(`✓ exported ${posts.length} post${posts.length !== 1 ? 's' : ''} → ${outputFile}`);
-  console.log(`  timezone : ${tz}`);
-  const years = [...new Set(posts.map(p => new Date(p.date).getFullYear()))];
-  console.log(`  years    : ${years.sort((a, b) => b - a).join(', ')}`);
+  const dateRange = (() => {
+    const sorted = [...posts].sort((a, b) => new Date(a.date) - new Date(b.date));
+    const first = localDateString(sorted[0].date, tz);
+    const last  = localDateString(sorted[sorted.length - 1].date, tz);
+    return first === last ? first : `${first} → ${last}`;
+  })();
+
+  console.log(`✓ exported ${posts.length} of ${allPosts.length} post${allPosts.length !== 1 ? 's' : ''} → ${outputFile}`);
+  console.log(`  timezone  : ${tz}`);
+  console.log(`  date range: ${dateRange}`);
+  if (stripTags) console.log(`  tags      : stripped`);
 }
 
 main().catch(e => { console.error(e.message); process.exit(1); });
