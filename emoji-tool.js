@@ -17,28 +17,26 @@ const args = process.argv.slice(2);
 
 if (!args.length || args[0] === '--help') {
   console.log([
-    'Usage: node emoji-tool.js <--export|--import> [options]',
+    'Usage: node emoji-tool.js <--export|--import|--report> [options]',
     '',
     'Commands:',
     '  --export   Convert emoji_data.json → emoji_data.md',
     '  --import   Convert emoji_data.md  → emoji_data.json',
+    '  --report   Count emoji frequency in posts.json → emoji-report.md',
     '',
     'Options:',
-    '  --input <path>   Input file (default: emoji_data.json or emoji_data.md)',
-    '  --output <path>  Output file (default: emoji_data.md or emoji_data.json)',
+    '  --input <path>   Input file (default depends on command)',
+    '  --output <path>  Output file (default depends on command)',
   ].join('\n'));
   process.exit(0);
 }
 
 const doExport = args.includes('--export');
 const doImport = args.includes('--import');
+const doReport = args.includes('--report');
 
-if (doExport && doImport) {
-  console.error('Error: specify either --export or --import, not both');
-  process.exit(1);
-}
-if (!doExport && !doImport) {
-  console.error('Error: specify --export or --import');
+if ([doExport, doImport, doReport].filter(Boolean).length !== 1) {
+  console.error('Error: specify exactly one of --export, --import, or --report');
   process.exit(1);
 }
 
@@ -144,6 +142,56 @@ function runImport() {
   console.log(`✓ imported ${sectionCount} sections, ${emojiCount} emoji → ${outputFile}`);
 }
 
+// ─── Report: posts.json → emoji-report.md ────────────────────────────────────
+function runReport() {
+  const inputFile  = flagValue('--input')  || path.join(__dirname, 'posts.json');
+  const outputFile = flagValue('--output') || path.join(__dirname, 'emoji-report.md');
+
+  if (!fs.existsSync(inputFile)) {
+    console.error(`Error: file not found — ${inputFile}`);
+    process.exit(1);
+  }
+
+  const data  = JSON.parse(fs.readFileSync(inputFile, 'utf8'));
+  const posts = data.posts || [];
+
+  if (!posts.length) {
+    console.error('Error: no posts found in posts.json');
+    process.exit(1);
+  }
+
+  // Count emoji from the emojis arrays
+  const counts = {};
+  for (const post of posts) {
+    for (const emoji of (post.emojis || [])) {
+      counts[emoji] = (counts[emoji] || 0) + 1;
+    }
+  }
+
+  const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+
+  if (!sorted.length) {
+    console.error('Error: no emoji found in posts');
+    process.exit(1);
+  }
+
+  const lines = [
+    '# Emoji Report',
+    '',
+    `${sorted.length} unique emoji across ${posts.length} posts`,
+    '',
+    '| emoji | count |',
+    '|-------|-------|',
+    ...sorted.map(([emoji, count]) => `| ${emoji} | ${count} |`),
+    '',
+  ];
+
+  fs.writeFileSync(outputFile, lines.join('\n'), 'utf8');
+  console.log(`✓ ${sorted.length} unique emoji found across ${posts.length} posts → ${outputFile}`);
+  console.log(`  top 5: ${sorted.slice(0, 5).map(([e, n]) => `${e} (${n})`).join(', ')}`);
+}
+
 // ─── Run ──────────────────────────────────────────────────────────────────────
-if (doExport) runExport();
-else          runImport();
+if (doExport)      runExport();
+else if (doImport) runImport();
+else               runReport();
