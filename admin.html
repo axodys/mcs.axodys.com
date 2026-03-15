@@ -655,36 +655,30 @@ async function loadAndRender() {
 }
 
 // ─── Emoji Picker ────────────────────────────────────────────────────────────
-const EMOJI_DATA = {
-  'favorites': ['📺','🍿','📚','🎙','🎶','🌐','😐','🙄','🤐','😡','🥱','🪦','🍏','⚙️','🤖','🐶','🧙','⛏️','🎮','👾','🦸🏻‍♂️','🏆','🏃','⚽️','🏀','🗓','📝','🗽','🏡','🚙'],
-  'mood':       ['😊','😄','😂','🥰','😍','🤔','😌','😎','🥳','😢','😤','😠','😴','🤯','😬','🙃','😇','🤗','😶','😏','🫠','😑','🥺','😮','😱','🤭','🥴','😒','😔','🤩'],
-  'nature':     ['🌞','🌝','🌙','🌛','⭐','🌟','💫','🌈','🌊','🌿','🍃','🌱','🌸','🌼','🌻','🌺','🌹','🍀','🍁','🍂','❄️','🔥','⚡','🌧️','🌩️','🌪️','🌫️','🌬️','🌤️','⛅'],
-  'animals':    ['🐶','🐱','🐭','🐹','🐰','🦊','🐻','🐼','🐨','🐯','🦁','🐮','🐷','🐸','🐵','🐔','🐧','🐦','🦆','🦉','🦇','🐺','🐗','🦄','🐝','🦋','🐛','🐌','🐞','🐠'],
-  'food':       ['☕','🍵','🧃','🥤','🍺','🍷','🥂','🍸','🧋','🍕','🍔','🌮','🌯','🥗','🍜','🍣','🍱','🍩','🍰','🎂','🍫','🍿','🥐','🧁','🍎','🍊','🍋','🍇','🍓','🥑'],
-  'travel':     ['✈️','🚀','🛸','🚂','🚗','🚢','🏖️','🏔️','🗻','🏕️','🏡','🏯','🗼','🗽','⛩️','🌁','🌃','🌆','🌇','🌉','🗺️','🧭','🏝️','🏜️','🌋','🛤️','🛣️','🚦','⛽','🎡'],
-  'activities': ['🎵','🎸','🎹','🥁','🎺','🎨','🖌️','📚','📖','✏️','🖊️','💻','🎮','🕹️','🏃','🧘','🏋️','⚽','🏀','🎾','🎯','🎲','♟️','🎭','🎬','📷','🔭','🧩','🎻','🧗'],
-  'objects':    ['💡','🔦','🕯️','📱','⌚','🎒','👓','🔑','🔒','🔧','🔨','⚙️','🧲','💊','🩺','📡','🔬','🧪','🧬','💰','📦','📫','📰','📝','📌','📎','✂️','🗑️','🛋️','🪴'],
-  'symbols':    ['❤️','🧡','💛','💚','💙','💜','🖤','🤍','💔','❣️','💕','💞','💓','💗','💖','💘','💝','✨','🌀','♾️','✅','❌','❓','❗','💯','🔔','🔕','💤','🚩','🎌'],
-};
-
 let activePickerField = null;
 
 const _picker = document.createElement('div');
 _picker.className = 'emoji-picker';
 _picker.id = 'emoji-picker-global';
-_picker.innerHTML = Object.entries(EMOJI_DATA).map(([label, emojis]) => `
-  <div class="emoji-picker-section">
-    <span class="emoji-picker-label">${label}</span>
-    <div class="emoji-picker-grid">
-      ${emojis.map(e => `<button class="emoji-picker-btn" data-emoji="${e}">${e}</button>`).join('')}
-    </div>
-  </div>`).join('');
 document.body.appendChild(_picker);
 
 _picker.addEventListener('click', e => {
   const btn = e.target.closest('.emoji-picker-btn');
   if (btn) selectEmoji(btn.dataset.emoji);
 });
+
+fetch('emoji_data.json')
+  .then(r => r.json())
+  .then(EMOJI_DATA => {
+    _picker.innerHTML = Object.entries(EMOJI_DATA).map(([label, emojis]) => `
+  <div class="emoji-picker-section">
+    <span class="emoji-picker-label">${label}</span>
+    <div class="emoji-picker-grid">
+      ${emojis.map(e => `<button class="emoji-picker-btn" data-emoji="${e}">${e}</button>`).join('')}
+    </div>
+  </div>`).join('');
+  })
+  .catch(() => console.warn('emoji_data.json not found — emoji picker unavailable'));
 
 function positionPicker(inputEl) {
   const rect = inputEl.getBoundingClientRect();
