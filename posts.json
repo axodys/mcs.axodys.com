@@ -1,6 +1,20 @@
 {
   "posts": [
     {
+      "id": 414,
+      "date": "2026-03-15T16:17:27.571Z",
+      "body": "Refactored some emoji picker code this morning and set up some other emoji related tools. The current picker works great, but is missing some emojis I need and also contains a bunch I'll never use.",
+      "tags": [
+        "coding",
+        "meta"
+      ],
+      "emojis": [
+        "⚙️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 413,
       "date": "2026-03-15T04:21:47.475Z",
       "body": "In 2012 comedian Tig Notaro nearly died from an abdominal infection, her mother died suddenly, and not long after that, Tig was diagnosed with breast cancer that required a double mastectomy. *Tig* 👍👍 is the 2015 documentary about what came next, and it's incredibly real, sad, moving, funny, and ultimately inspirational.",
