@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 418,
+      "date": "2026-03-16T20:44:57.227Z",
+      "body": "Cold, rainy day today, and it didn't help that I was feeling under the weather. Ended up working the first half in the office. and now I'm finishing the day working remotely from home.",
+      "tags": [
+        "weather",
+        "work",
+        "mood"
+      ],
+      "emojis": [
+        "🌧️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 417,
       "date": "2026-03-15T18:30:25.611Z",
       "body": "LIV 1-1 TOT FT Richarlison gets it done late with the equalizer. I actually missed it because I was checking something for Mary, who's off at work right now. *Doing my part!*",
