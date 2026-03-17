@@ -1,6 +1,22 @@
 {
   "posts": [
     {
+      "id": 419,
+      "date": "2026-03-17T04:30:22.149Z",
+      "body": "Just took my first crack at updating `emoji_data.json` since factoring it out of `admin.html`. Definitely not the final form, but it should be an improvement. Can't actually test and take advantage of it until my next post.",
+      "tags": [
+        "meta",
+        "ui",
+        "emoji"
+      ],
+      "emojis": [
+        "⚙️",
+        "🤔"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 418,
       "date": "2026-03-16T20:44:57.227Z",
       "body": "Cold, rainy day today, and it didn't help that I was feeling under the weather. Ended up working the first half in the office. and now I'm finishing the day working remotely from home.",
