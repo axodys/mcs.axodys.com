@@ -97,11 +97,12 @@ function runImport() {
   let currentLabel = null;
 
   // Match complete emoji sequences including:
+  // - Regional indicator pairs (flags, e.g. 🇺🇸)
   // - Simple emoji with optional VS16 (U+FE0F)
-  // - Emoji + skin tone modifier (U+1F3FB–1F3FF) 
+  // - Emoji + skin tone modifier (U+1F3FB–1F3FF)
   // - ZWJ sequences (e.g. 🦸🏻‍♂️ = base + skintone + ZWJ + gender + VS16)
   // - Keycap sequences (digit + U+FE0F + U+20E3)
-  const emojiRe = /\p{Emoji}(?:\uFE0F|\u20E3|\p{EMod})?(?:\u200D\p{Emoji}(?:\uFE0F|\u20E3|\p{EMod})?)*\uFE0F?/gu;
+  const emojiRe = /\p{Regional_Indicator}\p{Regional_Indicator}|\p{Emoji}(?:\uFE0F|\u20E3|\p{EMod})?(?:\u200D\p{Emoji}(?:\uFE0F|\u20E3|\p{EMod})?)*\uFE0F?/gu;
 
   for (const line of lines) {
     const trimmed = line.trim();
