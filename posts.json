@@ -1,6 +1,22 @@
 {
   "posts": [
     {
+      "id": 420,
+      "date": "2026-03-17T05:10:20.656Z",
+      "body": "Emoji handling is hard, flags need special code. Had to do a quick bug fix to get the US flag to resolve in the holidays section.",
+      "tags": [
+        "meta",
+        "emoji",
+        "bug"
+      ],
+      "emojis": [
+        "⚙️",
+        "🤔"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 419,
       "date": "2026-03-17T04:30:22.149Z",
       "body": "Just took my first crack at updating `emoji_data.json` since factoring it out of `admin.html`. Definitely not the final form, but it should be an improvement. Can't actually test and take advantage of it until my next post.",
