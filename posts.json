@@ -1,6 +1,22 @@
 {
   "posts": [
     {
+      "id": 427,
+      "date": "2026-03-18T23:55:12.311Z",
+      "body": "Got an unexpected task at work this morning, particularly suited to my unique set of skills, so that was good and made the day go by way faster.",
+      "tags": [
+        "work",
+        "config",
+        "mood"
+      ],
+      "emojis": [
+        "🍏",
+        "⚙️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 426,
       "date": "2026-03-18T15:42:57.582Z",
       "body": "[‘It’s time’: After 44 years, iconic Spokane event Pig Out in the Park comes to an end](https://www.spokesman.com/stories/2026/mar/17/after-44-years-iconic-spokane-event-pig-out-in-the/)\n\nIt's wild to me that this been dependent on one guy, Bill Burke, the entire time. A long established and successful community event like this should have transitioned to a sustainable model with multiple contributors and shared governance that could continue on indefinitely years ago.",
