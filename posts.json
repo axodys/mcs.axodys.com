@@ -1,6 +1,22 @@
 {
   "posts": [
     {
+      "id": 429,
+      "date": "2026-03-19T03:43:09.268Z",
+      "body": "I was pleased to discover that Passwords auto-filled my GitHub token when I set up the admin.html page on a work computer that I've never posted from before today thanks to iCloud keychain.",
+      "tags": [
+        "macos",
+        "config",
+        "mood"
+      ],
+      "emojis": [
+        "🍏",
+        "⚙️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 428,
       "date": "2026-03-19T03:38:33.360Z",
       "body": "I'm feeling better and improving, but still completely fed up with this congestion, nagging cough, and sore back muscles that are very uncomfortable when I cough.",
