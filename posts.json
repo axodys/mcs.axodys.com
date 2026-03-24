@@ -2,15 +2,14 @@
   "posts": [
     {
       "id": 444,
-      "date": "2026-03-23T13:35:19.683Z",
-      "body": "Just checked my work bracket contest and discovered that I'm tied for first place. I imagine that it's all downhill from here, so maybe I should take a screenshot!",
+      "date": "2026-03-24T18:33:45.136Z",
+      "body": "Claude gave me a fairly brief amount of help on a task today before letting me know I had to wait until 1 pm for additional assistance on the free tier. Makes me think that I was on some kind of intro mode for a few weeks to get me hooked because I had to have been using way more tokens while working on building Microcosm than I did this morning trying to solve a macOS scripting problem!",
       "tags": [
-        "work",
-        "ncaa",
+        "ai",
         "mood"
       ],
       "emojis": [
-        "🏀",
+        "🤖",
         "🤔"
       ],
       "image": null,
