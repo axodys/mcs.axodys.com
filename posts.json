@@ -1,6 +1,22 @@
 {
   "posts": [
     {
+      "id": 449,
+      "date": "2026-03-26T16:56:12.248Z",
+      "body": "Working on a few more M4 Mac mini Zoom Room installations this morning. I think we'll have at least twenty in use on campus within a few weeks.",
+      "tags": [
+        "work",
+        "macos",
+        "config"
+      ],
+      "emojis": [
+        "🍏",
+        "⚙️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 448,
       "date": "2026-03-26T02:58:54.202Z",
       "body": "Daredevil: Born Again S2E1: The Northern Star 👍👍 Great return to action for Matt Murdoch and friends with a particularly fraught ending. Looking forward to finding out more about the juicy details of the Kingpin being in bed with the CIA.",
