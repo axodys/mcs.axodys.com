@@ -1,6 +1,22 @@
 {
   "posts": [
     {
+      "id": 454,
+      "date": "2026-03-27T17:52:48.694Z",
+      "body": "I was so focused on a batch of new Mac Minis that shipped with macOS Tahoe that I failed to notice Sequoia 15.7.5 came out this week. Time to start update testing.",
+      "tags": [
+        "work",
+        "macos",
+        "config"
+      ],
+      "emojis": [
+        "🍏",
+        "⚙️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 453,
       "date": "2026-03-27T16:51:22.189Z",
       "body": "Cleaning up my browser tabs, as you do.",
