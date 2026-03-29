@@ -2,14 +2,15 @@
   "posts": [
     {
       "id": 457,
-      "date": "2026-03-29T16:53:10.336Z",
+      "date": "2026-03-29T16:53:00.000Z",
       "body": "No rain, but kind of a gloomy morning. Mary's given me about three different tasks to complete around the house today so trying to be productive.",
       "tags": [
         "weather",
         "mood"
       ],
       "emojis": [
-        "☁️"
+        "☁️",
+        "🏡"
       ],
       "image": null,
       "imageCaption": null
