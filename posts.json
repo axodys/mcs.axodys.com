@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 464,
+      "date": "2026-04-01T01:27:03.224Z",
+      "body": "Finished rebuilding the problem fence section in our backyard. Dogs shouldn't be breaking out of that spot again, at least.",
+      "tags": [
+        "home",
+        "repair"
+      ],
+      "emojis": [
+        "🏡",
+        "🔨"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 463,
       "date": "2026-03-31T21:21:32.372Z",
       "body": "Looks like Mark Few finally got voted into the Naismith Hall of Fame this year. Totally deserved for a guy who has never missed an NCAA tournament during his coaching career, and has a shot to reach 800 career victories next season.",
