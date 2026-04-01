@@ -1,6 +1,22 @@
 {
   "posts": [
     {
+      "id": 468,
+      "date": "2026-04-01T22:53:19.137Z",
+      "body": "Successful (and impressive) launch, sounds like they're just coasting for a bit now, and will deploy solar panels in about an hour. Pleased that everything is going smoothly so far.",
+      "tags": [
+        "nasa",
+        "news",
+        "mood"
+      ],
+      "emojis": [
+        "🚀",
+        "🤔"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 467,
       "date": "2026-04-01T19:09:09.278Z",
       "body": "Not going to lie, as cool as Artemis II and going back to the moon is I'm very worried about the [risks](https://docs.google.com/document/d/1ddi792xdfNXcBwF8qpDUxmZzIksrs0jy/edit?pli=1) NASA management is taking with the lives of the crew.",
