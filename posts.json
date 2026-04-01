@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 467,
+      "date": "2026-04-01T19:09:09.278Z",
+      "body": "Not going to lie, as cool as Artemis II and going back to the moon is I'm very worried about the [risks](https://docs.google.com/document/d/1ddi792xdfNXcBwF8qpDUxmZzIksrs0jy/edit?pli=1) NASA management is taking with the lives of the crew.",
+      "tags": [
+        "nasa",
+        "mood"
+      ],
+      "emojis": [
+        "🚀",
+        "😐"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 466,
       "date": "2026-04-01T18:03:09.123Z",
       "body": "Nice rainy day to welcome April. Looks like it's going to take a break during my drive home, but continue most of the day otherwise.",
