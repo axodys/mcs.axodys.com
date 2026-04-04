@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 476,
+      "date": "2026-04-04T23:36:55.749Z",
+      "body": "The video quality from the recent astronaut briefing onboard Artemis II was solid, and there's a live feed with a lot of interesting shots as well when they have bandwidth available. Pretty cool that we can get glitch-free HD imagery from that far away.",
+      "tags": [
+        "nasa",
+        "mood"
+      ],
+      "emojis": [
+        "🚀",
+        "😎"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 475,
       "date": "2026-04-04T22:21:16.675Z",
       "body": "Exported all of my March microcosm posts into [so.axodys.com](https://so.axodys.com) with minimal effort thanks to all of the export tooling Claude and I created. Still working out the kinks of my image and link posts process since I don't do those types of posts that often currently.",
