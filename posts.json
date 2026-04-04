@@ -346,11 +346,12 @@
     },
     {
       "id": 451,
-      "date": "2026-03-27T15:24:36.836Z",
+      "date": "2026-03-27T15:24:00.000Z",
       "body": "[Claude Code can now /dream](https://www.reddit.com/r/ClaudeCode/comments/1s2ci4f/claude_code_can_now_dream/)\n\nTo summarize, Claude will now periodically try to clean up and organize the notes and information accumulated by the \"Auto Memory\" functionality to reduce accumulated noise, vague references, and contradictions. \n\nIt seems like a sensible approach to maintaining quality, but as some pointed out on Reddit, yet another automated background process to burn through your tokens.",
       "tags": [
         "ai",
-        "feature"
+        "feature",
+        "link"
       ],
       "emojis": [
         "🤖",
