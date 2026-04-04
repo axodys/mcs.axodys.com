@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 475,
+      "date": "2026-04-04T22:21:16.675Z",
+      "body": "Exported all of my March microcosm posts into [so.axodys.com](https://so.axodys.com) with minimal effort thanks to all of the export tooling Claude and I created. Still working out the kinks of my image and link posts process since I don't do those types of posts that often currently.",
+      "tags": [
+        "meta",
+        "blogging"
+      ],
+      "emojis": [
+        "🗓",
+        "⚙️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 474,
       "date": "2026-04-04T16:44:07.330Z",
       "body": "For All Mankind S5E2: The Hard Six 👍👍 Baldwins being Baldwins (and even a cameo for the crime-against-pasta cheese powder Ed insists on), gotta love it. Kind of hilarious that Kelly wasn't even really angling for the Titan mission for herself, until the doofus project lead pissed her off. Seems likely that events are going to fully galvanize Alex, who was already showing interest in the cause, and I'm looking forward to more corporate conspiracy discoveries from Boyd.",
