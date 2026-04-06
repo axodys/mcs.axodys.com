@@ -44,8 +44,8 @@
 
   // ─── Archive month grouping ─────────────────────────────────────────────────
   function getArchiveMonths(sortedPosts, recentLimit) {
-    const older = sortedPosts.slice(recentLimit);
-    return [...new Set(older.map(p => {
+    if (sortedPosts.length <= recentLimit) return [];
+    return [...new Set(sortedPosts.map(p => {
       const d = new Date(p.date);
       return `${d.getFullYear()}/${String(d.getMonth() + 1).padStart(2, '0')}`;
     }))].sort((a, b) => b.localeCompare(a));
