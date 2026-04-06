@@ -106,19 +106,21 @@ function postCard(post) {
 
 const MONTH_ABR = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 
-function archivePopupContent(months, baseHref) {
+function archivePopupContent(months, baseHref, currentYm) {
   const byYear = {};
   for (const ym of months) {
-    const [y, m] = ym.split('/');
-    if (!byYear[y]) byYear[y] = [];
+    const [y, m] = ym.split('/');\n    if (!byYear[y]) byYear[y] = [];
     byYear[y].push({ ym, m: parseInt(m, 10) });
   }
   return Object.keys(byYear).sort((a, b) => b - a).map(y => {
     const tiles = byYear[y]
       .sort((a, b) => b.m - a.m)
-      .map(({ ym, m }) =>
-        `<a class="archive-option" href="${baseHref(ym)}">${MONTH_ABR[m - 1]}</a>`
-      ).join('');
+      .map(({ ym, m }) => {
+        if (ym === currentYm) {
+          return `<span class="archive-option current">${MONTH_ABR[m - 1]}</span>`;
+        }
+        return `<a class="archive-option" href="${baseHref(ym)}">${MONTH_ABR[m - 1]}</a>`;
+      }).join('');
     return `<div class="archive-year-group">
           <span class="archive-year-label">${y}</span>
           <div class="archive-year-grid">${tiles}</div>
@@ -128,7 +130,6 @@ function archivePopupContent(months, baseHref) {
 
 function topBarHTML(monthPosts, allMonths, currentYm) {
   const tags = [...new Set(monthPosts.flatMap(p => p.tags || []))].sort();
-  const otherMonths = allMonths.filter(ym => ym !== currentYm);
 
   const tagSection = tags.length ? `
     <div class="top-bar-left">
@@ -143,7 +144,7 @@ function topBarHTML(monthPosts, allMonths, currentYm) {
     <div class="top-bar-right">
       <button class="archive-btn" id="archive-btn" onclick="togglePopup('archive')">archive ▾</button>
       <div class="archive-popup" id="archive-popup">
-        ${otherMonths.length ? archivePopupContent(otherMonths, ym => `../../${ym}.html`) : '<span style="font-family:var(--mono);font-size:0.65rem;color:var(--muted)">no other months</span>'}
+        ${allMonths.length ? archivePopupContent(allMonths, ym => `../../${ym}.html`, currentYm) : '<span style="font-family:var(--mono);font-size:0.65rem;color:var(--muted)">no other months</span>'}
       </div>
     </div>`;
 
@@ -263,6 +264,7 @@ function archivePage(ym, monthPosts) {
     }
     .filter-option:hover, .archive-option:hover { color: var(--accent); border-color: var(--accent); }
     .filter-option.active { background: var(--accent); color: white; border-color: var(--accent); }
+    .archive-option.current { color: var(--accent); border-color: var(--accent); background: var(--accent-light); cursor: default; }
     .archive-year-group { margin-bottom: 0.5rem; }
     .archive-year-group:last-child { margin-bottom: 0; }
     .archive-year-label {

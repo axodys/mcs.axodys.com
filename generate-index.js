@@ -50,7 +50,7 @@ const recent = sorted.slice(0, RECENT_LIMIT);
 const older  = sorted.slice(RECENT_LIMIT);
 
 // ─── Archive months (for nav) ─────────────────────────────────────────────────
-const archiveMonths = [...new Set(older.map(p => {
+const archiveMonths = [...new Set(sorted.map(p => {
   const d = new Date(p.date);
   return `${d.getFullYear()}/${String(d.getMonth() + 1).padStart(2, '0')}`;
 }))].sort((a, b) => b.localeCompare(a));
@@ -271,6 +271,7 @@ const html = `<!DOCTYPE html>
     }
     .filter-option:hover, .archive-option:hover { color: var(--accent); border-color: var(--accent); }
     .filter-option.active { background: var(--accent); color: white; border-color: var(--accent); }
+    .archive-option.current { color: var(--accent); border-color: var(--accent); background: var(--accent-light); cursor: default; }
     .archive-year-group { margin-bottom: 0.5rem; }
     .archive-year-group:last-child { margin-bottom: 0; }
     .archive-year-label {
