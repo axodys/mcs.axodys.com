@@ -2,8 +2,8 @@
   "posts": [
     {
       "id": 485,
-      "date": "2026-04-06T23:30:31.136Z",
-      "body": "Looks like something is broken in the rendering code, investigating further.",
+      "date": "2026-04-06T23:30:00.000Z",
+      "body": "Looks like something is broken in the rendering code, investigating further. Think we located the issue, which VSCode had actually complained about as well and I didn't fully understand.",
       "tags": [
         "meta",
         "mood"
