@@ -1,6 +1,22 @@
 {
   "posts": [
     {
+      "id": 483,
+      "date": "2026-04-06T19:36:04.011Z",
+      "body": "Noticed an archive picker UI bug on `index.html` where there was no entry for the current month (Apr at the moment), so worked with Claude to correct the issue. Should go live once this post is published.",
+      "tags": [
+        "ai",
+        "coding",
+        "meta"
+      ],
+      "emojis": [
+        "🤖",
+        "⚙️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 482,
       "date": "2026-04-06T15:17:28.042Z",
       "body": "The trouble with post tagging for me is all the freedom and conceptual drift over time. I prefer minimalist tags, and it always takes me a while to figure out best practices. This is also exacerbated when I go back and tag previously untagged archives, and inevitably, I end up with tagging schisms.",
