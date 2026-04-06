@@ -109,7 +109,8 @@ const MONTH_ABR = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','
 function archivePopupContent(months, baseHref, currentYm) {
   const byYear = {};
   for (const ym of months) {
-    const [y, m] = ym.split('/');\n    if (!byYear[y]) byYear[y] = [];
+    const [y, m] = ym.split('/');
+    if (!byYear[y]) byYear[y] = [];
     byYear[y].push({ ym, m: parseInt(m, 10) });
   }
   return Object.keys(byYear).sort((a, b) => b - a).map(y => {
