@@ -2,8 +2,8 @@
   "posts": [
     {
       "id": 484,
-      "date": "2026-04-06T20:00:10.003Z",
-      "body": "One more try on the UI fix. Didn't quite have it right the first time around.",
+      "date": "2026-04-06T20:00:00.000Z",
+      "body": "One more try on the UI fix. Didn't quite have it right the first time around. Just noticed this post hadn't published so editing and trying again.",
       "tags": [
         "meta",
         "blogging"
