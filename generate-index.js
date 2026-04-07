@@ -258,7 +258,7 @@ const html = `<!DOCTYPE html>
       padding: 0.6rem; display: none;
     }
     .filter-popup { left: 0; width: 260px; flex-wrap: wrap; gap: 0.4rem; }
-    .archive-popup { right: 0; width: 246px; }
+    .archive-popup { right: 0; width: fit-content; }
     .filter-popup.open { display: flex; }
     .archive-popup.open { display: block; }
     .filter-option, .archive-option {
