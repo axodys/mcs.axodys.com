@@ -1,6 +1,22 @@
 {
   "posts": [
     {
+      "id": 486,
+      "date": "2026-04-07T01:21:11.036Z",
+      "body": "In light of the Artemis II mission, I'm kind of curious about the NASA moon base proposals. Instead of futzing around with manned missions to the surface, I feel like we should be doing a ton with robots to establish a long-term presence.",
+      "tags": [
+        "nasa",
+        "robotics",
+        "mood"
+      ],
+      "emojis": [
+        "🚀",
+        "🤔"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 485,
       "date": "2026-04-06T23:30:00.000Z",
       "body": "Looks like something is broken in the rendering code, investigating further. Think we located the issue, which VSCode had actually complained about as well and I didn't fully understand.",
