@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 495,
+      "date": "2026-04-08T19:06:06.122Z",
+      "body": "I'm fascinated by the intersection between software engineering practices and effectively working with agentic AI. I have yet to do anything with the latter, and I've certainly never been a software architect or manager, but I'm interested in the whole process.",
+      "tags": [
+        "ai",
+        "coding"
+      ],
+      "emojis": [
+        "🤖",
+        "🤔"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 494,
       "date": "2026-04-08T16:12:18.884Z",
       "body": "Just went through and deleted a bunch of podcasts I'm never going to listen to from Overcast. Noticed it was using 7GB+ worth of storage last night, now it's more like 2GB.",
