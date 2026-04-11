@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 503,
+      "date": "2026-04-11T01:12:57.348Z",
+      "body": "I do find it weird that they're taking so long to set up the stabilization ring and front porch, and that they didn't do it before they opened the hatch. It's only supposed to take 10 minutes or so to set it up, according to the sailors in charge.",
+      "tags": [
+        "nasa",
+        "mood"
+      ],
+      "emojis": [
+        "🚀",
+        "🤔"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 502,
       "date": "2026-04-11T00:36:10.538Z",
       "body": "Integrity splashed down successfully, they've powered down, and we're just waiting for crew extraction by the Navy recovery team that's circling nearby.",
