@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 504,
+      "date": "2026-04-11T01:59:45.945Z",
+      "body": "The astronaut helicopter ride back to the ship is cool and all, but seems kind of extra all things considered. All four are now safely on the USS John Murtha.",
+      "tags": [
+        "nasa",
+        "mood"
+      ],
+      "emojis": [
+        "🚀",
+        "😎"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 503,
       "date": "2026-04-11T01:12:57.348Z",
       "body": "I do find it weird that they're taking so long to set up the stabilization ring and front porch, and that they didn't do it before they opened the hatch. It's only supposed to take 10 minutes or so to set it up, according to the sailors in charge.",
