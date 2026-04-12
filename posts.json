@@ -1,8 +1,8 @@
 {
   "posts": [
     {
-      "id": 508,
-      "date": "2026-04-12T15:39:11.559Z",
+      "id": 510,
+      "date": "2026-04-12T15:39:00.000Z",
       "body": "Wasn't expecting such a foggy morning. Not what I would call typical Spokane spring weather.",
       "tags": [
         "weather",
@@ -16,7 +16,7 @@
       "imageCaption": null
     },
     {
-      "id": 507,
+      "id": 509,
       "date": "2026-04-12T15:08:00.000Z",
       "body": "**SUN 1-0 TOT FT**  \nSaw some promising build-up, and Kolo Muani looks rejuvenated under De Zerbi, but no calls, no goals, and no points.",
       "tags": [
@@ -30,8 +30,35 @@
       "imageCaption": null
     },
     {
+      "id": 508,
+      "date": "2026-04-12T14:24:00.000Z",
+      "body": "**SUN 1-0 TOT** '61\nAbsolute garbage deflection goal.",
+      "tags": [
+        "soccer"
+      ],
+      "emojis": [
+        "⚽️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
+      "id": 507,
+      "date": "2026-04-12T14:00:00.000Z",
+      "body": "**SUN 0 - 0 TOT HT**\nCan't complain too much about the start to the De Zerbi era. Spurs have been aggressive and had good chances. Kinsky's been fine. EPL refs are still EPL refs, making the usual EPL ref calls against Spurs.",
+      "tags": [
+        "spurs",
+        "update"
+      ],
+      "emojis": [
+        "⚽️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 506,
-      "date": "2026-04-12T02:01:18.881Z",
+      "date": "2026-04-12T02:01:00.000Z",
       "body": "The biggest surprise of the day, that's simultaneously unsurprising, was how much AI came up.",
       "tags": [
         "ai",
@@ -47,7 +74,7 @@
     },
     {
       "id": 505,
-      "date": "2026-04-12T01:57:48.286Z",
+      "date": "2026-04-12T01:57:00.000Z",
       "body": "Had a great time at Gonzaga Experience Live (GEL) with Mary and my son Nathan (who will be attending in the fall). We didn't need to be sold on Gonzaga, but I was really impressed with the program that they've put together to help close the deal for accepted students and their parents considering Gonzaga. As a long-time employee, it was very cool to see an entirely different, student-centric perspective on things for a change.",
       "tags": [
         "family",
@@ -63,7 +90,7 @@
     },
     {
       "id": 504,
-      "date": "2026-04-11T01:59:45.945Z",
+      "date": "2026-04-11T01:59:00.000Z",
       "body": "The astronaut helicopter ride back to the ship is cool and all, but seems kind of extra all things considered. All four are now safely on the USS John Murtha.",
       "tags": [
         "nasa",
@@ -78,7 +105,7 @@
     },
     {
       "id": 503,
-      "date": "2026-04-11T01:12:57.348Z",
+      "date": "2026-04-11T01:12:00.000Z",
       "body": "I do find it weird that they're taking so long to set up the stabilization ring and front porch, and that they didn't do it before they opened the hatch. It's only supposed to take 10 minutes or so to set it up, according to the sailors in charge.",
       "tags": [
         "nasa",
@@ -108,7 +135,7 @@
     },
     {
       "id": 501,
-      "date": "2026-04-10T20:30:24.006Z",
+      "date": "2026-04-10T20:30:00.000Z",
       "body": "WHU 3 - 0 WOL 68'. \nThink I can safely turn this one off now that the Hammers have added two more in the last couple of minutes. Spurs in 18th.",
       "tags": [
         "epl",
@@ -123,7 +150,7 @@
     },
     {
       "id": 500,
-      "date": "2026-04-10T15:14:51.475Z",
+      "date": "2026-04-10T15:14:00.000Z",
       "body": "Emmanuel Innocenti hitting the transfer portal is a fascinating one to me. He started most of Gonzaga's games this season, was an absolute glue guy that I personally valued way more than some of our flaky \"high talent\" transfers because you could count on him every game, yet he's one of the first to look for a move.",
       "tags": [
         "gonzaga",
@@ -138,7 +165,7 @@
     },
     {
       "id": 499,
-      "date": "2026-04-10T14:15:51.052Z",
+      "date": "2026-04-10T14:15:00.000Z",
       "body": "I'd heard of Old Enough! (👍), the Japanese show where they send young kids out in the world to do a grownup task while a camera person follows them wihout them knowing, but I'd never watched it before last night. It's cute and funny, but a little bit uncomfortable at times. The second episode, where a little boy had to do a lot of heavy lifting while the little girl \"helping\" him was a complete flake most of the journey was pretty frustrating. The epilogs at the end where we saw the kids again in adulthood was pretty poignant too.",
       "tags": [
         "series",
@@ -153,9 +180,11 @@
     },
     {
       "id": 498,
-      "date": "2026-04-10T01:41:10.602Z",
+      "date": "2026-04-10T01:41:00.000Z",
       "body": "Artemis II returns to Earth tomorrow around 5 pm Pacific. It's been an amazing mission, but still really worried about the heat shield.",
-      "tags": [],
+      "tags": [
+        "space"
+      ],
       "emojis": [
         "🚀",
         "😬"
@@ -165,7 +194,7 @@
     },
     {
       "id": 497,
-      "date": "2026-04-10T01:36:39.531Z",
+      "date": "2026-04-10T01:36:00.000Z",
       "body": "Fought through my sore muscles to do another round of ball passing practice with two of my daughters. How can you say no when they ask you to do it? On a funny note, the one who wasn't feeling it had sore muscles of her own!",
       "tags": [
         "workout",
@@ -180,7 +209,7 @@
     },
     {
       "id": 496,
-      "date": "2026-04-09T15:16:38.552Z",
+      "date": "2026-04-09T15:16:00.000Z",
       "body": "You know you're getting old when passing a soccer ball around with your daughters the last couple of nights has left you stiff, sore, and achy. Also doesn't help that I was sick and sedentary for most of March.",
       "tags": [
         "workout",
@@ -195,7 +224,7 @@
     },
     {
       "id": 495,
-      "date": "2026-04-08T19:06:06.122Z",
+      "date": "2026-04-08T19:06:00.000Z",
       "body": "I'm fascinated by the intersection between software engineering practices and effectively working with agentic AI. I have yet to do anything with the latter, and I've certainly never been a software architect or manager, but I'm interested in the whole process.",
       "tags": [
         "ai",
@@ -210,7 +239,7 @@
     },
     {
       "id": 494,
-      "date": "2026-04-08T16:12:18.884Z",
+      "date": "2026-04-08T16:12:00.000Z",
       "body": "Just went through and deleted a bunch of podcasts I'm never going to listen to from Overcast. Noticed it was using 7GB+ worth of storage last night, now it's more like 2GB.",
       "tags": [
         "chore",
@@ -225,7 +254,7 @@
     },
     {
       "id": 493,
-      "date": "2026-04-08T14:57:47.281Z",
+      "date": "2026-04-08T14:57:00.000Z",
       "body": "Not sure if I've forgotten how to use [Scryfall](https://scryfall.com) or if something's up with the site because simple set/card queries that I swear I've done in the past are just hanging this morning.",
       "tags": [
         "web",
@@ -241,7 +270,7 @@
     },
     {
       "id": 492,
-      "date": "2026-04-08T02:38:13.851Z",
+      "date": "2026-04-08T02:38:00.000Z",
       "body": "Daredevil: Born Again S2E4: Gloves Off 👍👍 We're all winners when Bullseye gets an entire episode to unleash his special talents on Fisk and his AVTF goons. Can't wait to see the fallout from this one because it seems likely that Kingpin is going to start lashing out.",
       "tags": [
         "episode",
@@ -255,7 +284,7 @@
     },
     {
       "id": 491,
-      "date": "2026-04-07T22:53:55.056Z",
+      "date": "2026-04-07T22:53:00.000Z",
       "body": "Daredevil: Born Again S2E3: The Scales & the Sword 👍 Didn't realize this one was released back-to-back with last week's episode, so kind of late to the game. There were some good moments related to the Swordsman, but felt a little bit let down overall. I'm definitely ready for some of Matt's old super friends to start helping out.",
       "tags": [
         "episode",
@@ -269,7 +298,7 @@
     },
     {
       "id": 490,
-      "date": "2026-04-07T20:46:57.759Z",
+      "date": "2026-04-07T20:46:00.000Z",
       "body": "Just had a really promising meeting about a topic that could save Gonzaga a lot of money annually and improve some other issues at the same time. Already in a better mood than I was earlier.",
       "tags": [
         "work",
@@ -285,7 +314,7 @@
     },
     {
       "id": 489,
-      "date": "2026-04-07T19:53:15.057Z",
+      "date": "2026-04-07T19:53:00.000Z",
       "body": "Beautiful day outside, but I feel pretty meh at the moment. Attempting to push through and have a productive afternoon.",
       "tags": [
         "weather",
@@ -300,7 +329,7 @@
     },
     {
       "id": 488,
-      "date": "2026-04-07T03:38:58.060Z",
+      "date": "2026-04-07T03:38:00.000Z",
       "body": "Michigan wins its second national title in 37 years. I'm old enough to remember the first one, an overtime thriller over Seton Hall back in 1989 at the Kingdome, no less. I was rooting for bearded coach, P.J. Carlisimo, and his star Australian guard, Andrew Gaze.",
       "tags": [
         "ncaa",
@@ -315,7 +344,7 @@
     },
     {
       "id": 487,
-      "date": "2026-04-07T03:16:51.168Z",
+      "date": "2026-04-07T03:16:00.000Z",
       "body": "Refs missing a lot of sliding pivot foot travels this game. I wanted Michigan to just dominate the game, but since they haven't done that, I'm rooting for UConn to come back. 63-67 with 29.9 to go.",
       "tags": [
         "ncaa",
@@ -329,7 +358,7 @@
     },
     {
       "id": 486,
-      "date": "2026-04-07T01:21:11.036Z",
+      "date": "2026-04-07T01:21:00.000Z",
       "body": "In light of the Artemis II mission, I'm kind of curious about the NASA moon base proposals. Instead of futzing around with manned missions to the surface, I feel like we should be doing a ton with robots to establish a long-term presence.",
       "tags": [
         "nasa",
@@ -375,7 +404,7 @@
     },
     {
       "id": 483,
-      "date": "2026-04-06T19:36:04.011Z",
+      "date": "2026-04-06T19:36:00.000Z",
       "body": "Noticed an archive picker UI bug on `index.html` where there was no entry for the current month (Apr at the moment), so worked with Claude to correct the issue. Should go live once this post is published.",
       "tags": [
         "ai",
@@ -391,7 +420,7 @@
     },
     {
       "id": 482,
-      "date": "2026-04-06T15:17:28.042Z",
+      "date": "2026-04-06T15:17:00.000Z",
       "body": "The trouble with post tagging for me is all the freedom and conceptual drift over time. I prefer minimalist tags, and it always takes me a while to figure out best practices. This is also exacerbated when I go back and tag previously untagged archives, and inevitably, I end up with tagging schisms.",
       "tags": [
         "meta",
@@ -406,7 +435,7 @@
     },
     {
       "id": 481,
-      "date": "2026-04-06T03:14:20.515Z",
+      "date": "2026-04-06T03:14:00.000Z",
       "body": "Had a nice Easter dinner of ham and scalloped potatoes at Mary's parents' house tonight, but unfortunately, Mary had to stay home with L, who has been sick the last couple of days.",
       "tags": [
         "family",
@@ -422,7 +451,7 @@
     },
     {
       "id": 480,
-      "date": "2026-04-05T23:44:14.549Z",
+      "date": "2026-04-05T23:44:00.000Z",
       "body": "Made a fair amount of progress on tagging all of my old 2025 microblog.php posts today, and working on 2024 now with an eye towards importing everything into Microcosm in the near future.",
       "tags": [
         "meta",
@@ -437,7 +466,7 @@
     },
     {
       "id": 479,
-      "date": "2026-04-05T19:09:55.791Z",
+      "date": "2026-04-05T19:09:00.000Z",
       "body": "[Tommy Lloyd's surest shot: Arizona coach built a behemoth and bond through his lifelong Beastie Boys fandom](https://www.cbssports.com/college-basketball/news/tommy-lloyd-arizona-beastie-boys-final-four-mix-master-mike/)\n\n>It's the late 1980s, and a rambunctious teenager with limbs like twigs is shooting hoops by himself in his driveway in Kelso, Washington, mere miles from the Oregon border. Up in the second-floor bedroom window, a boombox is blaring a cassette of  \"Licensed to Ill,\" the groundbreaking debut Beastie Boys record. Young Tommy can play \"Brass Monkey,\" \"Paul Revere\" and \"She's Crafty\" as loud as he wants; there's not a neighbor within 300 yards of the Lloyd family home. \n\n>\"In the country, the sticks,\" Lloyd said, thinking back on the first album he ever loved. \"I would listen to it all the time.\"\n\n>The Beasties were Lloyd's first musical love, and nothing's changed since. The NYC trio's punky appeal to a lanky kid in Kelso was similarly felt for millions across the country in the 1980s. Diehard Arizona fans know the nod to his fandom that is the unofficial start to every Wildcats home game, when \"(You Gotta) Fight for Your Right (To Party!)\" is played on the loudspeaker as he emerges from the locker room and walks onto the floor. \n\nI had no idea about this side of Tommy Lloyd, and I already liked him, but this adds a whole new layer to my appreciation of who he is. It's particularly cool to find out that he's been able to develop a genuine friendship with the Beastie Boy's long time DJ, Mix Master Mike in recent years.",
       "tags": [
         "ncaa",
@@ -453,7 +482,7 @@
     },
     {
       "id": 478,
-      "date": "2026-04-05T04:26:34.441Z",
+      "date": "2026-04-05T04:26:00.000Z",
       "body": "This Michigan team handed Mark Few the worst defeat of his career, so not shocked at all by what happened tonight, just disappointed that Tommy Lloyd and his team didn't have an answer either.",
       "tags": [
         "ncaa",
@@ -468,7 +497,7 @@
     },
     {
       "id": 477,
-      "date": "2026-04-05T02:19:46.081Z",
+      "date": "2026-04-05T02:19:00.000Z",
       "body": "Michigan - Arizona going way too similarly to Michigan - Gonzaga went. AZ completely out of sorts and trail 48-32 at the half. Thinking about skipping the rest.",
       "tags": [
         "ncaa",
@@ -482,7 +511,7 @@
     },
     {
       "id": 476,
-      "date": "2026-04-04T23:36:55.749Z",
+      "date": "2026-04-04T23:36:00.000Z",
       "body": "The video quality from the recent astronaut briefing onboard Artemis II was solid, and there's a live feed with a lot of interesting shots as well when they have bandwidth available. Pretty cool that we can get glitch-free HD imagery from that far away.",
       "tags": [
         "nasa",
@@ -497,7 +526,7 @@
     },
     {
       "id": 475,
-      "date": "2026-04-04T22:21:16.675Z",
+      "date": "2026-04-04T22:21:00.000Z",
       "body": "Exported all of my March microcosm posts into [so.axodys.com](https://so.axodys.com) with minimal effort thanks to all of the export tooling Claude and I created. Still working out the kinks of my image and link posts process since I don't do those types of posts that often currently.",
       "tags": [
         "meta",
@@ -512,7 +541,7 @@
     },
     {
       "id": 474,
-      "date": "2026-04-04T16:44:07.330Z",
+      "date": "2026-04-04T16:44:00.000Z",
       "body": "For All Mankind S5E2: The Hard Six 👍👍 Baldwins being Baldwins (and even a cameo for the crime-against-pasta cheese powder Ed insists on), gotta love it. Kind of hilarious that Kelly wasn't even really angling for the Titan mission for herself, until the doofus project lead pissed her off. Seems likely that events are going to fully galvanize Alex, who was already showing interest in the cause, and I'm looking forward to more corporate conspiracy discoveries from Boyd.",
       "tags": [
         "episode",
@@ -527,7 +556,7 @@
     },
     {
       "id": 473,
-      "date": "2026-04-04T15:42:23.798Z",
+      "date": "2026-04-04T15:42:00.000Z",
       "body": "Caught up on my dailies this morning and made it to Gold 4 in Ranked after not playing for a few days. I've played less this set, but I think I'm still on track to complete the Mastery Pass (even though I didn't buy it) before Secrets of Strixhaven drops.",
       "tags": [
         "mtga",
@@ -542,7 +571,7 @@
     },
     {
       "id": 472,
-      "date": "2026-04-03T18:41:56.284Z",
+      "date": "2026-04-03T18:41:00.000Z",
       "body": "Feeling kind of sleepy. Might take a nap this afternoon or at least lay down and read for a while.",
       "tags": [
         "mood"
@@ -556,7 +585,7 @@
     },
     {
       "id": 471,
-      "date": "2026-04-02T21:16:00.670Z",
+      "date": "2026-04-02T21:16:00.000Z",
       "body": "Went for a quick afternoon walk by the river. Flow is strong and the water level is still above a couple of the stanchion bases for the Don Kardong bridge. Enjoyed the fresh air and looking forward to the weekend.",
       "tags": [
         "weather",
@@ -570,7 +599,7 @@
     },
     {
       "id": 470,
-      "date": "2026-04-02T14:21:18.543Z",
+      "date": "2026-04-02T14:21:00.000Z",
       "body": "Listening to [The Talk Show 445:'Apple at 50', with John Siracusa](https://daringfireball.net/thetalkshow/2026/04/01/ep-445) 👍👍 You simply can't beat two and a half hours worth of Apple history discussion between two of the top Apple-centric podcasters in my age range.",
       "tags": [
         "episode",
@@ -585,7 +614,7 @@
     },
     {
       "id": 469,
-      "date": "2026-04-02T14:06:38.007Z",
+      "date": "2026-04-02T14:06:00.000Z",
       "body": "Campus felt completely dead this morning as I walked from my car to my building. I wonder if a lot of people have left a day early for the four day Easter holiday?",
       "tags": [
         "work",
@@ -599,7 +628,7 @@
     },
     {
       "id": 468,
-      "date": "2026-04-01T22:53:19.137Z",
+      "date": "2026-04-01T22:53:00.000Z",
       "body": "Successful (and impressive) launch, sounds like they're just coasting for a bit now, and will deploy solar panels in about an hour. Pleased that everything is going smoothly so far.",
       "tags": [
         "nasa",
@@ -615,7 +644,7 @@
     },
     {
       "id": 467,
-      "date": "2026-04-01T19:09:09.278Z",
+      "date": "2026-04-01T19:09:00.000Z",
       "body": "Not going to lie, as cool as Artemis II and going back to the moon is I'm very worried about the [risks](https://docs.google.com/document/d/1ddi792xdfNXcBwF8qpDUxmZzIksrs0jy/edit?pli=1) NASA management is taking with the lives of the crew.",
       "tags": [
         "nasa",
@@ -630,7 +659,7 @@
     },
     {
       "id": 466,
-      "date": "2026-04-01T18:03:09.123Z",
+      "date": "2026-04-01T18:03:00.000Z",
       "body": "Nice rainy day to welcome April. Looks like it's going to take a break during my drive home, but continue most of the day otherwise.",
       "tags": [
         "weather",
@@ -644,7 +673,7 @@
     },
     {
       "id": 465,
-      "date": "2026-04-01T02:37:07.302Z",
+      "date": "2026-04-01T02:37:00.000Z",
       "body": "Daredevil: Born Again S2E2: Shoot the Moon 👍👍 Very ripped from ICE headlines vibe as Kingpin and his AVTF lackeys start arresting and harassing community members, but resistance is growing. Meanwhile, Bullseye remains an agent of chaos who may be stalking Vanessa, and we get a surprising reveal about who's doing the Masked Mayor Kingpin videos all over social media.",
       "tags": [
         "episode",
@@ -659,7 +688,7 @@
     },
     {
       "id": 464,
-      "date": "2026-04-01T01:27:03.224Z",
+      "date": "2026-04-01T01:27:00.000Z",
       "body": "Finished rebuilding the problem fence section in our backyard. Dogs shouldn't be breaking out of that spot again, at least.",
       "tags": [
         "home",
@@ -674,7 +703,7 @@
     },
     {
       "id": 463,
-      "date": "2026-03-31T21:21:32.372Z",
+      "date": "2026-03-31T21:21:00.000Z",
       "body": "Looks like Mark Few finally got voted into the Naismith Hall of Fame this year. Totally deserved for a guy who has never missed an NCAA tournament during his coaching career, and has a shot to reach 800 career victories next season.",
       "tags": [
         "gonzaga",
@@ -705,7 +734,7 @@
     },
     {
       "id": 461,
-      "date": "2026-03-31T01:41:27.683Z",
+      "date": "2026-03-31T01:41:00.000Z",
       "body": "Came home to a dog-escape disaster, so spent the rest of the evening repairing an entire section of fence in the corner of our yard behind our shed. Unfortunately, I had to pause halfway through to charge up my drill's battery. Hopefully, the sheet of plywood I put down to block the gap will keep them in for now.",
       "tags": [
         "pets",
@@ -720,7 +749,7 @@
     },
     {
       "id": 460,
-      "date": "2026-03-30T18:40:09.343Z",
+      "date": "2026-03-30T18:40:00.000Z",
       "body": "Cool to see that my custom microblogging system has doubled the number of posts that I do in a month. I averaged about 60 posts in January and February when I was doing it by hand.",
       "tags": [
         "meta",
@@ -735,7 +764,7 @@
     },
     {
       "id": 459,
-      "date": "2026-03-30T17:44:54.858Z",
+      "date": "2026-03-30T17:44:00.000Z",
       "body": "Impressed that one of my coworkers picked 3 seed Illinois to make the Final Four and would have had all four if not for the wild UConn - Duke finish. Arizona is my sentimental favorite because of Tommy Lloyd, Michigan seems like the rational choice, but rooting for Illinois for the pure chaos of it.",
       "tags": [
         "work",
@@ -751,7 +780,7 @@
     },
     {
       "id": 458,
-      "date": "2026-03-30T04:50:27.143Z",
+      "date": "2026-03-30T04:50:00.000Z",
       "body": "Now that Igor Tudor has departed Spurs by mutual agreement, my favorite wild replacement rumor by far is Ben Davies. He has his coaching badges, knows the squad, and is fully COYS. Probably makes too much sense at this point for Vinai and Johan to actually get on board with it.",
       "tags": [
         "spurs",
@@ -781,7 +810,7 @@
     },
     {
       "id": 456,
-      "date": "2026-03-29T03:53:38.334Z",
+      "date": "2026-03-29T03:53:00.000Z",
       "body": "For All Mankind S5E1: First Light 👍👍 A solid return to one of my favorite shows, and some interesting cast additions. It's also pretty wild how the casting works since they skip a decade every season. Sean Kaufman, the perfectly cast actor who plays the aged-up Alex Baldwin, is two years younger than Cynthia Wu, who plays his mom, Kelly Baldwin! Ruby Cruz, who I recognized from the Willow series, is a similar age profile in real life, and plays Lily Dale, Miles Dale's daughter, a classmate/love interest for Alex. It all just works, and the Aleida/Margo prison scene was probably my favorite scene between a couple of seriously aged-up old cast members and friends.",
       "tags": [
         "episode",
@@ -795,7 +824,7 @@
     },
     {
       "id": 455,
-      "date": "2026-03-29T01:21:22.245Z",
+      "date": "2026-03-29T01:21:00.000Z",
       "body": "Mary and I spent a couple of hours at urgent care this afternoon getting her earlobe stitched up. One of our pups is prone to lunging at faces when excited (it's completely inappropriate, friendly behavior we've actively tried to discourage with limited success), accidentally caught one of Mary's hoop earrings on a tooth, and ripped a diagonal gash through her lobe.",
       "tags": [
         "pets",
@@ -811,7 +840,7 @@
     },
     {
       "id": 454,
-      "date": "2026-03-28T02:29:49.025Z",
+      "date": "2026-03-28T02:29:00.000Z",
       "body": "Put down a deposit to reserve the car we test drove last Friday, and it looks like we can pick it up tomorrow. Going to be a real relief to have enough cars to go around once again.",
       "tags": [
         "car",
@@ -826,7 +855,7 @@
     },
     {
       "id": 453,
-      "date": "2026-03-27T16:51:22.189Z",
+      "date": "2026-03-27T16:51:00.000Z",
       "body": "Cleaning up my browser tabs, as you do.",
       "tags": [
         "mood"
@@ -840,7 +869,7 @@
     },
     {
       "id": 452,
-      "date": "2026-03-27T15:48:45.363Z",
+      "date": "2026-03-27T15:48:00.000Z",
       "body": "Arizona absolutely smoked Arkansas last night 109-88 in a game I kind of wish I had watched now. If I'm Tommy Lloyd, I'm not really sure that Carolina is all that interesting, especially if he wins the title with U of A this year.",
       "tags": [
         "ncaa",
@@ -887,7 +916,7 @@
     },
     {
       "id": 449,
-      "date": "2026-03-26T16:56:12.248Z",
+      "date": "2026-03-26T16:56:00.000Z",
       "body": "Working on a few more M4 Mac mini Zoom Room installations this morning. I think we'll have at least twenty in use on campus within a few weeks.",
       "tags": [
         "work",
@@ -903,7 +932,7 @@
     },
     {
       "id": 448,
-      "date": "2026-03-26T02:58:54.202Z",
+      "date": "2026-03-26T02:58:00.000Z",
       "body": "Daredevil: Born Again S2E1: The Northern Star 👍👍 Great return to action for Matt Murdoch and friends with a particularly fraught ending. Looking forward to finding out more about the juicy details of the Kingpin being in bed with the CIA.",
       "tags": [
         "episode",
@@ -918,7 +947,7 @@
     },
     {
       "id": 447,
-      "date": "2026-03-25T17:27:45.267Z",
+      "date": "2026-03-25T17:27:00.000Z",
       "body": "Just heard that Paradise has been renewed for season 3. It was originally planned as a 3 season story arc so this is great news. It's such a well-crafted show that carrying out the original vision as intended sounds like the best possible outcome.",
       "tags": [
         "tv",
@@ -934,7 +963,7 @@
     },
     {
       "id": 446,
-      "date": "2026-03-25T16:13:59.057Z",
+      "date": "2026-03-25T16:13:00.000Z",
       "body": "Updating Zoom Room Mac minis this morning. 26.4 came out in the last couple of days and want them to be as up to date as possible on deployment. Pretty happy with how they’re working in this role so far.",
       "tags": [
         "work",
@@ -949,7 +978,7 @@
     },
     {
       "id": 445,
-      "date": "2026-03-25T02:16:57.626Z",
+      "date": "2026-03-25T02:16:00.000Z",
       "body": "Paradise S2E7: The Final Countdown 👍👍 Banger penultimate episode to a highly entertaining season with a little bit of resolution, and a couple of major new questions. Oh, and things are looking grim for the bunker. Can't wait to see how it all plays out.",
       "tags": [
         "episode",
@@ -965,7 +994,7 @@
     },
     {
       "id": 444,
-      "date": "2026-03-24T18:33:45.136Z",
+      "date": "2026-03-24T18:33:00.000Z",
       "body": "Claude gave me a fairly brief amount of help on a task today before letting me know I had to wait until 1 pm for additional assistance on the free tier. Makes me think that I was on some kind of intro mode for a few weeks to get me hooked because I had to have been using way more tokens while working on building Microcosm than I did this morning trying to solve a macOS scripting problem!",
       "tags": [
         "ai",
@@ -980,7 +1009,7 @@
     },
     {
       "id": 443,
-      "date": "2026-03-23T03:57:50.229Z",
+      "date": "2026-03-23T03:57:00.000Z",
       "body": "*Is This Thing On?* 👍 With his marriage to Laura Dern dissolving, Will Arnett stumbles into stand-up comedy as a means of coping with his issues. Impressed with how believable Dern and Arnett were in playing a married couple at least a decade younger than their actual ages.",
       "tags": [
         "movie",
@@ -994,9 +1023,11 @@
     },
     {
       "id": 442,
-      "date": "2026-03-22T16:24:44.578Z",
+      "date": "2026-03-22T16:24:00.000Z",
       "body": "Spurs lose 0-3 to Forest and drop below them on the edge of the relegation zone. Gray and Tel were good in the first half, but it was all downhill after giving up the late first-half corner goal to go behind. Udogie did nothing of note when he swapped for Van de Ven. They might just sack Tudor after this one.",
-      "tags": [],
+      "tags": [
+        "soccer"
+      ],
       "emojis": [
         "⚽️",
         "😡"
@@ -1006,9 +1037,12 @@
     },
     {
       "id": 441,
-      "date": "2026-03-22T15:09:31.453Z",
+      "date": "2026-03-22T15:09:00.000Z",
       "body": "Spurs lead 8 corners to 2 and trail 0-1 to Forest. So frustrating, but they're playing well offensively.",
-      "tags": [],
+      "tags": [
+        "soccer",
+        "mood"
+      ],
       "emojis": [
         "⚽️",
         "🙄"
@@ -1018,7 +1052,7 @@
     },
     {
       "id": 440,
-      "date": "2026-03-22T01:34:22.883Z",
+      "date": "2026-03-22T01:34:00.000Z",
       "body": "Zags inexplicably let Texas dribble down the last 30 seconds of the game while down 1, then give up yet another dagger 3. I would have fouled early in the shot clock to prevent a 3 and have possession with time at the end of the game.",
       "tags": [
         "gonzaga",
@@ -1034,7 +1068,7 @@
     },
     {
       "id": 439,
-      "date": "2026-03-21T05:51:59.565Z",
+      "date": "2026-03-21T05:51:00.000Z",
       "body": "Paradise S2E6: Jane 👍👍 Every time I'm ready for Paradise to answer some questions I have they seem to do it in the next episode. I'm guessing we're going to have to wait a little longer to learn about the \"Killer\" texts, but I'm bettings it's related to the mystery company Billy helped Sinatra acquire.",
       "tags": [
         "episode",
@@ -1048,7 +1082,7 @@
     },
     {
       "id": 438,
-      "date": "2026-03-21T02:18:57.965Z",
+      "date": "2026-03-21T02:18:00.000Z",
       "body": "Test drove a really promising car with Mary this afternoon, but financing is a little tricky because it's a repaired insurance auction car. Figuring out if we have some different options with our credit union.",
       "tags": [
         "car",
@@ -1064,7 +1098,7 @@
     },
     {
       "id": 437,
-      "date": "2026-03-20T14:43:19.297Z",
+      "date": "2026-03-20T14:43:00.000Z",
       "body": "On a happy note, my bracket in the group contest we have at work, is tied for second after yesterday. I'm the only person who has picked Houston. A lot of people have Arizona as their number one choice because of the Tommy Lloyd, Gonzaga connection. 6 people picked GU. I would love that, but just getting to the Sweet 16 will be a major accomplishment if they can pull it off.",
       "tags": [
         "work",
@@ -1080,7 +1114,7 @@
     },
     {
       "id": 436,
-      "date": "2026-03-20T14:23:15.402Z",
+      "date": "2026-03-20T14:23:00.000Z",
       "body": "I'm working from home today, but still miserable with this cold and cough I've had all month. At least I'm taking the afternoon off.",
       "tags": [
         "health",
@@ -1095,7 +1129,7 @@
     },
     {
       "id": 435,
-      "date": "2026-03-20T04:52:39.861Z",
+      "date": "2026-03-20T04:52:00.000Z",
       "body": "Zags get it done in the final couple of minutes and win 73 - 64 over a very tenacious and physical Kennesaw State. It wasn't pretty, but I'll take it.",
       "tags": [
         "gonzaga",
@@ -1111,7 +1145,7 @@
     },
     {
       "id": 434,
-      "date": "2026-03-20T04:33:13.689Z",
+      "date": "2026-03-20T04:33:00.000Z",
       "body": "Refs and commentators are killing the vibe with the Kennesaw favoritism at the end of the game. 69-62 Zags with 1:45 to go.",
       "tags": [
         "gonzaga",
@@ -1127,7 +1161,7 @@
     },
     {
       "id": 433,
-      "date": "2026-03-20T03:22:54.039Z",
+      "date": "2026-03-20T03:22:00.000Z",
       "body": "Solid offensive push in the final couple of minutes allows the Zags to go on a 10-0 run and take a 33-27 lead into the half. No real surprise that the Zags also completely flipped the rebounding margin during their run.",
       "tags": [
         "gonzaga",
@@ -1143,9 +1177,12 @@
     },
     {
       "id": 432,
-      "date": "2026-03-20T03:00:51.378Z",
+      "date": "2026-03-20T03:00:00.000Z",
       "body": "Kennesaw State is crushing the rebounding battle, particularly on the offensive glass. Now I'm going to check the stats to confirm my evaluation. 19-13 with 6 OR vs 3 for GU.",
-      "tags": [],
+      "tags": [
+        "basketball",
+        "mood"
+      ],
       "emojis": [
         "🏀",
         "🙄"
@@ -1155,7 +1192,7 @@
     },
     {
       "id": 431,
-      "date": "2026-03-20T02:47:21.255Z",
+      "date": "2026-03-20T02:47:00.000Z",
       "body": "7 - 14 Kennesaw St at the 11 minute mark. Mark Few calls timeout. Pretty disappointing start.",
       "tags": [
         "gonzaga",
@@ -1171,7 +1208,7 @@
     },
     {
       "id": 430,
-      "date": "2026-03-20T02:33:31.074Z",
+      "date": "2026-03-20T02:33:00.000Z",
       "body": "Got a Sling 3-Day pass so I can watch the Zags play today and hopefully Saturday. Zags started okay defensively with a lot of deflections, but trail 2-6 early.",
       "tags": [
         "Gonzaga",
@@ -1187,7 +1224,7 @@
     },
     {
       "id": 429,
-      "date": "2026-03-19T03:43:09.268Z",
+      "date": "2026-03-19T03:43:00.000Z",
       "body": "I was pleased to discover that Passwords auto-filled my GitHub token when I set up the admin.html page on a work computer that I've never posted from before today thanks to iCloud keychain.",
       "tags": [
         "macos",
@@ -1203,7 +1240,7 @@
     },
     {
       "id": 428,
-      "date": "2026-03-19T03:38:33.360Z",
+      "date": "2026-03-19T03:38:00.000Z",
       "body": "I'm feeling better and improving, but still completely fed up with this congestion, nagging cough, and sore back muscles that are very uncomfortable when I cough.",
       "tags": [
         "health",
@@ -1218,7 +1255,7 @@
     },
     {
       "id": 427,
-      "date": "2026-03-19T00:05:34.317Z",
+      "date": "2026-03-19T00:05:00.000Z",
       "body": "Spurs 3-2 Atleti (5-7 aggregate)\nSatisfying win at home even if our Champions League run is over, Spurs need to build on this one heading into the crucial Forest match on Sunday.",
       "tags": [
         "spurs",
@@ -1248,7 +1285,7 @@
     },
     {
       "id": 425,
-      "date": "2026-03-17T15:20:01.083Z",
+      "date": "2026-03-17T15:20:00.000Z",
       "body": "[Handsome](https://handsomepod.com) is the weekly comedy podcast Tig Notaro does with Mae Martin, and Fortune Feimster, and I find it to be a pretty fun and funny watch/listen. They've got a nice cross-generational rapport and riff about whatever for a while before they discuss/answer an interesting question submitted by a fellow celebrity like Stephen Colbert or Jennifer Aniston.",
       "tags": [
         "comedy",
@@ -1264,7 +1301,7 @@
     },
     {
       "id": 424,
-      "date": "2026-03-17T15:02:18.429Z",
+      "date": "2026-03-17T15:02:00.000Z",
       "body": "I've used the carousel horse emoji to represent Spokane in at least a few microblog posts, but unfortunately I forgot to add it to the emoji picker yesterday when I was revising it.",
       "tags": [
         "meta",
@@ -1280,7 +1317,7 @@
     },
     {
       "id": 423,
-      "date": "2026-03-17T14:59:01.243Z",
+      "date": "2026-03-17T14:59:00.000Z",
       "body": "Impressed to see that Tig Notaro is doing two back-to-back shows in Spokane on June 12th at the Bing Crosby Theater at $70 a ticket, and the first show is already sold out! I would love to see her in person, but $200 for a night out with Mary would be a pretty big hit on the monthly budget.",
       "tags": [
         "spokane",
@@ -1296,7 +1333,7 @@
     },
     {
       "id": 422,
-      "date": "2026-03-17T14:37:20.839Z",
+      "date": "2026-03-17T14:37:00.000Z",
       "body": "One of our family St. Patrick's Day traditions that Mary started is making snake-shaped calzones. We eat a ton of homemade pizza at our house, so we're all expected to be able to shape some pizza dough and toppings into a credible snake shape!",
       "tags": [
         "family",
@@ -1326,7 +1363,7 @@
     },
     {
       "id": 420,
-      "date": "2026-03-17T05:10:20.656Z",
+      "date": "2026-03-17T05:10:00.000Z",
       "body": "Emoji handling is hard, flags need special code. Had to do a quick bug fix to get the US flag to resolve in the holidays section.",
       "tags": [
         "meta",
@@ -1342,7 +1379,7 @@
     },
     {
       "id": 419,
-      "date": "2026-03-17T04:30:22.149Z",
+      "date": "2026-03-17T04:30:00.000Z",
       "body": "Just took my first crack at updating `emoji_data.json` since factoring it out of `admin.html`. Definitely not the final form, but it should be an improvement. Can't actually test and take advantage of it until my next post.",
       "tags": [
         "meta",
@@ -1358,7 +1395,7 @@
     },
     {
       "id": 418,
-      "date": "2026-03-16T20:44:57.227Z",
+      "date": "2026-03-16T20:44:00.000Z",
       "body": "Cold, rainy day today, and it didn't help that I was feeling under the weather. Ended up working the first half in the office. and now I'm finishing the day working remotely from home.",
       "tags": [
         "weather",
@@ -1373,7 +1410,7 @@
     },
     {
       "id": 417,
-      "date": "2026-03-15T18:30:25.611Z",
+      "date": "2026-03-15T18:30:00.000Z",
       "body": "LIV 1-1 TOT FT Richarlison gets it done late with the equalizer. I actually missed it because I was checking something for Mary, who's off at work right now. *Doing my part!*",
       "tags": [
         "spurs",
@@ -1389,7 +1426,7 @@
     },
     {
       "id": 416,
-      "date": "2026-03-15T17:21:55.632Z",
+      "date": "2026-03-15T17:21:00.000Z",
       "body": "LIV 1-0 TOT HT Richy has had a couple of header chances, but can't quite find a way past Alisson. Liverpool have been knocking at the door, but don't seem unbeatable.",
       "tags": [
         "spurs",
@@ -1403,7 +1440,7 @@
     },
     {
       "id": 415,
-      "date": "2026-03-15T16:52:51.431Z",
+      "date": "2026-03-15T16:52:00.000Z",
       "body": "LIV 1 - 0 TOT Szoboszlai capitalizes on a soft foul free kick from the top of the box. Vic got his hand on the shot, but too much power.",
       "tags": [
         "spurs",
@@ -1417,7 +1454,7 @@
     },
     {
       "id": 414,
-      "date": "2026-03-15T16:17:27.571Z",
+      "date": "2026-03-15T16:17:00.000Z",
       "body": "Refactored some emoji picker code this morning and set up some other emoji related tools. The current picker works great, but is missing some emojis I need and also contains a bunch I'll never use.",
       "tags": [
         "coding",
@@ -1431,7 +1468,7 @@
     },
     {
       "id": 413,
-      "date": "2026-03-15T04:21:47.475Z",
+      "date": "2026-03-15T04:21:00.000Z",
       "body": "In 2012 comedian Tig Notaro nearly died from an abdominal infection, her mother died suddenly, and not long after that, Tig was diagnosed with breast cancer that required a double mastectomy. *Tig* 👍👍 is the 2015 documentary about what came next, and it's incredibly real, sad, moving, funny, and ultimately inspirational.",
       "tags": [
         "documentary",
@@ -1445,7 +1482,7 @@
     },
     {
       "id": 412,
-      "date": "2026-03-14T21:11:45.983Z",
+      "date": "2026-03-14T21:11:00.000Z",
       "body": "The post tagging functionality in Microcosm is a happy accident that I didn't fully appreciate until after I had been working with the system for a few days. Now I've realized it allows me to filter to exactly the output I need for a given task.",
       "tags": [
         "meta",
@@ -1460,7 +1497,7 @@
     },
     {
       "id": 411,
-      "date": "2026-03-14T20:20:23.973Z",
+      "date": "2026-03-14T20:20:00.000Z",
       "body": "Thinking of a feature, describing it to Claude and having it build it in a minute or so is pretty magical. Updated `export-posts.js` to be able to specify posts from a specific range of days in the markdown format I use and render any associated images in markdown format. Exporting microcosm and image posts to [so.axodys.com](https://so.axodys.com) just got way easier.",
       "tags": [
         "ai",
@@ -1476,7 +1513,7 @@
     },
     {
       "id": 410,
-      "date": "2026-03-14T20:05:42.687Z",
+      "date": "2026-03-14T20:05:00.000Z",
       "body": "Big 1-0 win for Eddie Howe and Newcastle over Chelsea at Stanford Bridge today. Love to see it.",
       "tags": [
         "epl",
@@ -1491,7 +1528,7 @@
     },
     {
       "id": 409,
-      "date": "2026-03-14T17:38:25.594Z",
+      "date": "2026-03-14T17:38:00.000Z",
       "body": "Productive morning. Caught up on my last three Week Notes and two Microcosm posts on my Bear Blog ([so.axodys.com](https://so.axodys.com)), which tends to be more of a periodically updated archive than a blog with daily activity. The next Microcosm post (Microcosm 2026 - Mar 8-15) will be interesting because it also contains mini-posts that should get standalone posts in Bear. I think I'll update `posts-exports.js` with a couple of flags to strip tags and simplify making those posts.",
       "tags": [
         "blogging",

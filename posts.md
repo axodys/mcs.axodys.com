@@ -1,12 +1,434 @@
 ## 2026
 
+* #### 😶‍🌫️🤔 APR 12 08:39
+Wasn't expecting such a foggy morning. Not what I would call typical Spokane spring weather.
+tags: weather, mood
+
+* #### ⚽️ APR 12 08:08
+**SUN 1-0 TOT FT**  
+Saw some promising build-up, and Kolo Muani looks rejuvenated under De Zerbi, but no calls, no goals, and no points.
+tags: spurs, result
+
+* #### ⚽️ APR 12 07:24 AM
+**SUN 1-0 TOT** '61
+Absolute garbage deflection goal.
+
+* #### ⚽️ APR 12 07:00 AM
+**SUN 0 - 0 TOT HT**
+Can't complain too much about the start to the De Zerbi era. Spurs have been aggressive and had good chances. Kinsky's been fine. EPL refs are still EPL refs, making the usual EPL ref calls against Spurs.
+tags: spurs, update
+
+* #### 🤖🤔 APR 11 19:01
+The biggest surprise of the day, that's simultaneously unsurprising, was how much AI came up.
+tags: ai, highered, mood
+
+* #### 😄👩🏻‍🦰 APR 11 18:57
+Had a great time at Gonzaga Experience Live (GEL) with Mary and my son Nathan (who will be attending in the fall). We didn't need to be sold on Gonzaga, but I was really impressed with the program that they've put together to help close the deal for accepted students and their parents considering Gonzaga. As a long-time employee, it was very cool to see an entirely different, student-centric perspective on things for a change.
+tags: family, highered, mood
+
+* #### 🚀😎 APR 10 18:59
+The astronaut helicopter ride back to the ship is cool and all, but seems kind of extra all things considered. All four are now safely on the USS John Murtha.
+tags: nasa, mood
+
+* #### 🚀🤔 APR 10 18:12
+I do find it weird that they're taking so long to set up the stabilization ring and front porch, and that they didn't do it before they opened the hatch. It's only supposed to take 10 minutes or so to set it up, according to the sailors in charge.
+tags: nasa, mood
+
+* #### 🚀🎉 APR 10 17:36
+Integrity splashed down successfully, they've powered down, and we're just waiting for crew extraction by the Navy recovery team that's circling nearby!
+tags: nasa, mood
+
+* #### ⚽️🙄 APR 10 13:30
+WHU 3 - 0 WOL 68'. 
+Think I can safely turn this one off now that the Hammers have added two more in the last couple of minutes. Spurs in 18th.
+tags: epl, mood
+
+* #### 🏀🤔 APR 10 08:14
+Emmanuel Innocenti hitting the transfer portal is a fascinating one to me. He started most of Gonzaga's games this season, was an absolute glue guy that I personally valued way more than some of our flaky "high talent" transfers because you could count on him every game, yet he's one of the first to look for a move.
+tags: gonzaga, mood
+
+* #### 📺🥰 APR 10 07:15
+I'd heard of Old Enough! (👍), the Japanese show where they send young kids out in the world to do a grownup task while a camera person follows them wihout them knowing, but I'd never watched it before last night. It's cute and funny, but a little bit uncomfortable at times. The second episode, where a little boy had to do a lot of heavy lifting while the little girl "helping" him was a complete flake most of the journey was pretty frustrating. The epilogs at the end where we saw the kids again in adulthood was pretty poignant too.
+tags: series, mood
+
+* #### 🚀😬 APR 09 18:41
+Artemis II returns to Earth tomorrow around 5 pm Pacific. It's been an amazing mission, but still really worried about the heat shield.
+
+* #### ⚽️😤 APR 09 18:36
+Fought through my sore muscles to do another round of ball passing practice with two of my daughters. How can you say no when they ask you to do it? On a funny note, the one who wasn't feeling it had sore muscles of her own!
+tags: workout, mood
+
+* #### 🙄⚽️ APR 09 08:16
+You know you're getting old when passing a soccer ball around with your daughters the last couple of nights has left you stiff, sore, and achy. Also doesn't help that I was sick and sedentary for most of March.
+tags: workout, mood
+
+* #### 🤖🤔 APR 08 12:06
+I'm fascinated by the intersection between software engineering practices and effectively working with agentic AI. I have yet to do anything with the latter, and I've certainly never been a software architect or manager, but I'm interested in the whole process.
+tags: ai, coding
+
+* #### 🎙🗑️ APR 08 09:12
+Just went through and deleted a bunch of podcasts I'm never going to listen to from Overcast. Noticed it was using 7GB+ worth of storage last night, now it's more like 2GB.
+tags: chore, mood
+
+* #### 🧙⚙️ APR 08 07:57
+Not sure if I've forgotten how to use [Scryfall](https://scryfall.com) or if something's up with the site because simple set/card queries that I swear I've done in the past are just hanging this morning.
+tags: web, app, mood
+
+* #### 📺 APR 07 19:38
+Daredevil: Born Again S2E4: Gloves Off 👍👍 We're all winners when Bullseye gets an entire episode to unleash his special talents on Fisk and his AVTF goons. Can't wait to see the fallout from this one because it seems likely that Kingpin is going to start lashing out.
+tags: episode, review
+
+* #### 📺 APR 07 15:53
+Daredevil: Born Again S2E3: The Scales & the Sword 👍 Didn't realize this one was released back-to-back with last week's episode, so kind of late to the game. There were some good moments related to the Swordsman, but felt a little bit let down overall. I'm definitely ready for some of Matt's old super friends to start helping out.
+tags: episode, review
+
+* #### 🤔💰 APR 07 13:46
+Just had a really promising meeting about a topic that could save Gonzaga a lot of money annually and improve some other issues at the same time. Already in a better mood than I was earlier.
+tags: work, money, mood
+
+* #### ☀️😐 APR 07 12:53
+Beautiful day outside, but I feel pretty meh at the moment. Attempting to push through and have a productive afternoon.
+tags: weather, mood
+
+* #### 🏀🏆 APR 06 20:38
+Michigan wins its second national title in 37 years. I'm old enough to remember the first one, an overtime thriller over Seton Hall back in 1989 at the Kingdome, no less. I was rooting for bearded coach, P.J. Carlisimo, and his star Australian guard, Andrew Gaze.
+tags: ncaa, mood
+
+* #### 🏀 APR 06 20:16
+Refs missing a lot of sliding pivot foot travels this game. I wanted Michigan to just dominate the game, but since they haven't done that, I'm rooting for UConn to come back. 63-67 with 29.9 to go.
+tags: ncaa, mood
+
+* #### 🚀🤔 APR 06 18:21
+In light of the Artemis II mission, I'm kind of curious about the NASA moon base proposals. Instead of futzing around with manned missions to the surface, I feel like we should be doing a ton with robots to establish a long-term presence.
+tags: nasa, robotics, mood
+
+* #### ⚙️😐 APR 06 16:30
+Looks like something is broken in the rendering code, investigating further. Think we located the issue, which VSCode had actually complained about as well and I didn't fully understand.
+tags: meta, mood
+
+* #### 🗓⚙️ APR 06 13:00
+One more try on the UI fix. Didn't quite have it right the first time around. Just noticed this post hadn't published so editing and trying again.
+tags: meta, blogging
+
+* #### 🤖⚙️ APR 06 12:36
+Noticed an archive picker UI bug on `index.html` where there was no entry for the current month (Apr at the moment), so worked with Claude to correct the issue. Should go live once this post is published.
+tags: ai, coding, meta
+
+* #### 🗓⚙️ APR 06 08:17
+The trouble with post tagging for me is all the freedom and conceptual drift over time. I prefer minimalist tags, and it always takes me a while to figure out best practices. This is also exacerbated when I go back and tag previously untagged archives, and inevitably, I end up with tagging schisms.
+tags: meta, blogging
+
+* #### 🐰👩🏻‍🦰 APR 05 20:14
+Had a nice Easter dinner of ham and scalloped potatoes at Mary's parents' house tonight, but unfortunately, Mary had to stay home with L, who has been sick the last couple of days.
+tags: family, food, health
+
+* #### 🗓⚙️ APR 05 16:44
+Made a fair amount of progress on tagging all of my old 2025 microblog.php posts today, and working on 2024 now with an eye towards importing everything into Microcosm in the near future.
+tags: meta, mood
+
+* #### 🏀🎶 APR 05 12:09
+[Tommy Lloyd's surest shot: Arizona coach built a behemoth and bond through his lifelong Beastie Boys fandom](https://www.cbssports.com/college-basketball/news/tommy-lloyd-arizona-beastie-boys-final-four-mix-master-mike/)
+
+>It's the late 1980s, and a rambunctious teenager with limbs like twigs is shooting hoops by himself in his driveway in Kelso, Washington, mere miles from the Oregon border. Up in the second-floor bedroom window, a boombox is blaring a cassette of  "Licensed to Ill," the groundbreaking debut Beastie Boys record. Young Tommy can play "Brass Monkey," "Paul Revere" and "She's Crafty" as loud as he wants; there's not a neighbor within 300 yards of the Lloyd family home. 
+
+>"In the country, the sticks," Lloyd said, thinking back on the first album he ever loved. "I would listen to it all the time."
+
+>The Beasties were Lloyd's first musical love, and nothing's changed since. The NYC trio's punky appeal to a lanky kid in Kelso was similarly felt for millions across the country in the 1980s. Diehard Arizona fans know the nod to his fandom that is the unofficial start to every Wildcats home game, when "(You Gotta) Fight for Your Right (To Party!)" is played on the loudspeaker as he emerges from the locker room and walks onto the floor. 
+
+I had no idea about this side of Tommy Lloyd, and I already liked him, but this adds a whole new layer to my appreciation of who he is. It's particularly cool to find out that he's been able to develop a genuine friendship with the Beastie Boy's long time DJ, Mix Master Mike in recent years.
+tags: ncaa, music, link
+
+* #### 🏀😐 APR 04 21:26
+This Michigan team handed Mark Few the worst defeat of his career, so not shocked at all by what happened tonight, just disappointed that Tommy Lloyd and his team didn't have an answer either.
+tags: ncaa, mood
+
+* #### 🏀 APR 04 19:19
+Michigan - Arizona going way too similarly to Michigan - Gonzaga went. AZ completely out of sorts and trail 48-32 at the half. Thinking about skipping the rest.
+tags: ncaa, update
+
+* #### 🚀😎 APR 04 16:36
+The video quality from the recent astronaut briefing onboard Artemis II was solid, and there's a live feed with a lot of interesting shots as well when they have bandwidth available. Pretty cool that we can get glitch-free HD imagery from that far away.
+tags: nasa, mood
+
+* #### 🗓⚙️ APR 04 15:21
+Exported all of my March microcosm posts into [so.axodys.com](https://so.axodys.com) with minimal effort thanks to all of the export tooling Claude and I created. Still working out the kinks of my image and link posts process since I don't do those types of posts that often currently.
+tags: meta, blogging
+
+* #### 📺🚀 APR 04 09:44
+For All Mankind S5E2: The Hard Six 👍👍 Baldwins being Baldwins (and even a cameo for the crime-against-pasta cheese powder Ed insists on), gotta love it. Kind of hilarious that Kelly wasn't even really angling for the Titan mission for herself, until the doofus project lead pissed her off. Seems likely that events are going to fully galvanize Alex, who was already showing interest in the cause, and I'm looking forward to more corporate conspiracy discoveries from Boyd.
+tags: episode, review
+
+* #### 🧙🤔 APR 04 08:42
+Caught up on my dailies this morning and made it to Gold 4 in Ranked after not playing for a few days. I've played less this set, but I think I'm still on track to complete the Mastery Pass (even though I didn't buy it) before Secrets of Strixhaven drops.
+tags: mtga, mood
+
+* #### 🥱📚 APR 03 11:41
+Feeling kind of sleepy. Might take a nap this afternoon or at least lay down and read for a while.
+tags: mood
+
+* #### ☁️ APR 02 14:16
+Went for a quick afternoon walk by the river. Flow is strong and the water level is still above a couple of the stanchion bases for the Don Kardong bridge. Enjoyed the fresh air and looking forward to the weekend.
+tags: weather, mood
+
+* #### 🎙🍏 APR 02 07:21
+Listening to [The Talk Show 445:'Apple at 50', with John Siracusa](https://daringfireball.net/thetalkshow/2026/04/01/ep-445) 👍👍 You simply can't beat two and a half hours worth of Apple history discussion between two of the top Apple-centric podcasters in my age range.
+tags: episode, review
+
+* #### 🤔 APR 02 07:06
+Campus felt completely dead this morning as I walked from my car to my building. I wonder if a lot of people have left a day early for the four day Easter holiday?
+tags: work, mood
+
+* #### 🚀🤔 APR 01 15:53
+Successful (and impressive) launch, sounds like they're just coasting for a bit now, and will deploy solar panels in about an hour. Pleased that everything is going smoothly so far.
+tags: nasa, news, mood
+
+* #### 🚀😐 APR 01 12:09
+Not going to lie, as cool as Artemis II and going back to the moon is I'm very worried about the [risks](https://docs.google.com/document/d/1ddi792xdfNXcBwF8qpDUxmZzIksrs0jy/edit?pli=1) NASA management is taking with the lives of the crew.
+tags: nasa, mood
+
+* #### 🌧️ APR 01 11:03
+Nice rainy day to welcome April. Looks like it's going to take a break during my drive home, but continue most of the day otherwise.
+tags: weather, mood
+
+* #### 📺🦸🏻‍♂️ MAR 31 19:37
+Daredevil: Born Again S2E2: Shoot the Moon 👍👍 Very ripped from ICE headlines vibe as Kingpin and his AVTF lackeys start arresting and harassing community members, but resistance is growing. Meanwhile, Bullseye remains an agent of chaos who may be stalking Vanessa, and we get a surprising reveal about who's doing the Masked Mayor Kingpin videos all over social media.
+tags: episode, review
+
+* #### 🏡🔨 MAR 31 18:27
+Finished rebuilding the problem fence section in our backyard. Dogs shouldn't be breaking out of that spot again, at least.
+tags: home, repair
+
+* #### 🏀🏆 MAR 31 14:21
+Looks like Mark Few finally got voted into the Naismith Hall of Fame this year. Totally deserved for a guy who has never missed an NCAA tournament during his coaching career, and has a shot to reach 800 career victories next season.
+tags: gonzaga, news
+
+* #### ⚽️😐 MAR 31 08:19
+Sounds like De Zerbi to Spurs is as good as done- a 5-year deal with no relegation clause, just waiting for the official club announcement. I have incredibly mixed feelings about this appointment.
+tags: spurs, news, mood
+
+* #### 🐶🏡 MAR 30 18:41
+Came home to a dog-escape disaster, so spent the rest of the evening repairing an entire section of fence in the corner of our yard behind our shed. Unfortunately, I had to pause halfway through to charge up my drill's battery. Hopefully, the sheet of plywood I put down to block the gap will keep them in for now.
+tags: pets, project
+
+* #### ⚙️🤔 MAR 30 11:40
+Cool to see that my custom microblogging system has doubled the number of posts that I do in a month. I averaged about 60 posts in January and February when I was doing it by hand.
+tags: meta, mood
+
+* #### 🏀🤔 MAR 30 10:44
+Impressed that one of my coworkers picked 3 seed Illinois to make the Final Four and would have had all four if not for the wild UConn - Duke finish. Arizona is my sentimental favorite because of Tommy Lloyd, Michigan seems like the rational choice, but rooting for Illinois for the pure chaos of it.
+tags: work, ncaa, mood
+
+* #### ⚽️🤔 MAR 29 21:50
+Now that Igor Tudor has departed Spurs by mutual agreement, my favorite wild replacement rumor by far is Ben Davies. He has his coaching badges, knows the squad, and is fully COYS. Probably makes too much sense at this point for Vinai and Johan to actually get on board with it.
+tags: spurs, mood
+
+* #### ☁️🏡 MAR 29 09:53
+No rain, but kind of a gloomy morning. Mary's given me about three different tasks to complete around the house today so trying to be productive.
+tags: weather, mood
+
+* #### 📺 MAR 28 20:53
+For All Mankind S5E1: First Light 👍👍 A solid return to one of my favorite shows, and some interesting cast additions. It's also pretty wild how the casting works since they skip a decade every season. Sean Kaufman, the perfectly cast actor who plays the aged-up Alex Baldwin, is two years younger than Cynthia Wu, who plays his mom, Kelly Baldwin! Ruby Cruz, who I recognized from the Willow series, is a similar age profile in real life, and plays Lily Dale, Miles Dale's daughter, a classmate/love interest for Alex. It all just works, and the Aleida/Margo prison scene was probably my favorite scene between a couple of seriously aged-up old cast members and friends.
+tags: episode, review
+
+* #### 🤕👩🏻‍🦰 MAR 28 18:21
+Mary and I spent a couple of hours at urgent care this afternoon getting her earlobe stitched up. One of our pups is prone to lunging at faces when excited (it's completely inappropriate, friendly behavior we've actively tried to discourage with limited success), accidentally caught one of Mary's hoop earrings on a tooth, and ripped a diagonal gash through her lobe.
+tags: pets, health, mood
+
+* #### 🚙🥳 MAR 27 19:29
+Put down a deposit to reserve the car we test drove last Friday, and it looks like we can pick it up tomorrow. Going to be a real relief to have enough cars to go around once again.
+tags: car, mood
+
+* #### 🌐🗑️ MAR 27 09:51
+Cleaning up my browser tabs, as you do.
+tags: mood
+
+* #### 🏀🤔 MAR 27 08:48
+Arizona absolutely smoked Arkansas last night 109-88 in a game I kind of wish I had watched now. If I'm Tommy Lloyd, I'm not really sure that Carolina is all that interesting, especially if he wins the title with U of A this year.
+tags: ncaa, result, mood
+
+* #### 🤖⚙️ MAR 27 08:24
+[Claude Code can now /dream](https://www.reddit.com/r/ClaudeCode/comments/1s2ci4f/claude_code_can_now_dream/)
+
+To summarize, Claude will now periodically try to clean up and organize the notes and information accumulated by the "Auto Memory" functionality to reduce accumulated noise, vague references, and contradictions. 
+
+It seems like a sensible approach to maintaining quality, but as some pointed out on Reddit, yet another automated background process to burn through your tokens.
+tags: ai, feature, link
+
+* #### 🏀 MAR 26 14:00
+Wild that Tommy Lloyd's name is being tossed around for the Carolina job, and Roy Williams has been gone for five years already. We even lived in the same apartment building way back in the day when Tommy was the junior assistant coach on the Gonzaga staff.
+tags: spokane, ncaa, mood
+
+* #### 🍏⚙️ MAR 26 09:56
+Working on a few more M4 Mac mini Zoom Room installations this morning. I think we'll have at least twenty in use on campus within a few weeks.
+tags: work, macos, config
+
+* #### 📺🦸🏻‍♂️ MAR 25 19:58
+Daredevil: Born Again S2E1: The Northern Star 👍👍 Great return to action for Matt Murdoch and friends with a particularly fraught ending. Looking forward to finding out more about the juicy details of the Kingpin being in bed with the CIA.
+tags: episode, review
+
+* #### 📺🤔 MAR 25 10:27
+Just heard that Paradise has been renewed for season 3. It was originally planned as a 3 season story arc so this is great news. It's such a well-crafted show that carrying out the original vision as intended sounds like the best possible outcome.
+tags: tv, news, mood
+
+* #### 🍏⚙️ MAR 25 09:13
+Updating Zoom Room Mac minis this morning. 26.4 came out in the last couple of days and want them to be as up to date as possible on deployment. Pretty happy with how they’re working in this role so far.
+tags: work, mood
+
+* #### 📺🤯 MAR 24 19:16
+Paradise S2E7: The Final Countdown 👍👍 Banger penultimate episode to a highly entertaining season with a little bit of resolution, and a couple of major new questions. Oh, and things are looking grim for the bunker. Can't wait to see how it all plays out.
+tags: episode, review, mood
+
+* #### 🤖🤔 MAR 24 11:33
+Claude gave me a fairly brief amount of help on a task today before letting me know I had to wait until 1 pm for additional assistance on the free tier. Makes me think that I was on some kind of intro mode for a few weeks to get me hooked because I had to have been using way more tokens while working on building Microcosm than I did this morning trying to solve a macOS scripting problem!
+tags: ai, mood
+
+* #### 🍿 MAR 22 20:57
+*Is This Thing On?* 👍 With his marriage to Laura Dern dissolving, Will Arnett stumbles into stand-up comedy as a means of coping with his issues. Impressed with how believable Dern and Arnett were in playing a married couple at least a decade younger than their actual ages.
+tags: movie, review
+
+* #### ⚽️😡 MAR 22 09:24
+Spurs lose 0-3 to Forest and drop below them on the edge of the relegation zone. Gray and Tel were good in the first half, but it was all downhill after giving up the late first-half corner goal to go behind. Udogie did nothing of note when he swapped for Van de Ven. They might just sack Tudor after this one.
+
+* #### ⚽️🙄 MAR 22 08:09
+Spurs lead 8 corners to 2 and trail 0-1 to Forest. So frustrating, but they're playing well offensively.
+
+* #### 🏀🙄 MAR 21 18:34
+Zags inexplicably let Texas dribble down the last 30 seconds of the game while down 1, then give up yet another dagger 3. I would have fouled early in the shot clock to prevent a 3 and have possession with time at the end of the game.
+tags: gonzaga, ncaa, mood
+
+* #### 📺 MAR 20 22:51
+Paradise S2E6: Jane 👍👍 Every time I'm ready for Paradise to answer some questions I have they seem to do it in the next episode. I'm guessing we're going to have to wait a little longer to learn about the "Killer" texts, but I'm bettings it's related to the mystery company Billy helped Sinatra acquire.
+tags: episode, review
+
+* #### 🚙👩🏻‍🦰 MAR 20 19:18
+Test drove a really promising car with Mary this afternoon, but financing is a little tricky because it's a repaired insurance auction car. Figuring out if we have some different options with our credit union.
+tags: car, shoppoing, mood
+
+* #### 🏀😎 MAR 20 07:43
+On a happy note, my bracket in the group contest we have at work, is tied for second after yesterday. I'm the only person who has picked Houston. A lot of people have Arizona as their number one choice because of the Tommy Lloyd, Gonzaga connection. 6 people picked GU. I would love that, but just getting to the Sweet 16 will be a major accomplishment if they can pull it off.
+tags: work, ncaa, mood
+
+* #### 🤧😐 MAR 20 07:23
+I'm working from home today, but still miserable with this cold and cough I've had all month. At least I'm taking the afternoon off.
+tags: health, mood
+
+* #### 🏀😤 MAR 19 21:52
+Zags get it done in the final couple of minutes and win 73 - 64 over a very tenacious and physical Kennesaw State. It wasn't pretty, but I'll take it.
+tags: gonzaga, ncaa, mood
+
+* #### 🏀😡 MAR 19 21:33
+Refs and commentators are killing the vibe with the Kennesaw favoritism at the end of the game. 69-62 Zags with 1:45 to go.
+tags: gonzaga, ncaa, mood
+
+* #### 🏀😤 MAR 19 20:22
+Solid offensive push in the final couple of minutes allows the Zags to go on a 10-0 run and take a 33-27 lead into the half. No real surprise that the Zags also completely flipped the rebounding margin during their run.
+tags: gonzaga, ncaa, mood
+
+* #### 🏀🙄 MAR 19 20:00
+Kennesaw State is crushing the rebounding battle, particularly on the offensive glass. Now I'm going to check the stats to confirm my evaluation. 19-13 with 6 OR vs 3 for GU.
+
+* #### 🏀😐 MAR 19 19:47
+7 - 14 Kennesaw St at the 11 minute mark. Mark Few calls timeout. Pretty disappointing start.
+tags: gonzaga, ncaa, mood
+
+* #### 🏀📺 MAR 19 19:33
+Got a Sling 3-Day pass so I can watch the Zags play today and hopefully Saturday. Zags started okay defensively with a lot of deflections, but trail 2-6 early.
+tags: Gonzaga, ncaa, mood
+
+* #### 🍏⚙️ MAR 18 20:43
+I was pleased to discover that Passwords auto-filled my GitHub token when I set up the admin.html page on a work computer that I've never posted from before today thanks to iCloud keychain.
+tags: macos, config, mood
+
+* #### 🤧😐 MAR 18 20:38
+I'm feeling better and improving, but still completely fed up with this congestion, nagging cough, and sore back muscles that are very uncomfortable when I cough.
+tags: health, mood
+
+* #### ⚽️🤔 MAR 18 17:05
+Spurs 3-2 Atleti (5-7 aggregate)
+Satisfying win at home even if our Champions League run is over, Spurs need to build on this one heading into the crucial Forest match on Sunday.
+tags: spurs, result
+
+* #### 😐 MAR 18 08:42
+[‘It’s time’: After 44 years, iconic Spokane event Pig Out in the Park comes to an end](https://www.spokesman.com/stories/2026/mar/17/after-44-years-iconic-spokane-event-pig-out-in-the/)
+
+It's wild to me that this has been dependent on one guy, Bill Burke, the entire time. A long-established and successful community event like this should have transitioned to a sustainable model with multiple contributors and shared governance that could continue on indefinitely years ago.
+tags: spokane, news, mood
+
+* #### 🎙📹 MAR 17 08:20
+[Handsome](https://handsomepod.com) is the weekly comedy podcast Tig Notaro does with Mae Martin, and Fortune Feimster, and I find it to be a pretty fun and funny watch/listen. They've got a nice cross-generational rapport and riff about whatever for a while before they discuss/answer an interesting question submitted by a fellow celebrity like Stephen Colbert or Jennifer Aniston.
+tags: comedy, podcast, video
+
+* #### ⚙️🙄 MAR 17 08:02
+I've used the carousel horse emoji to represent Spokane in at least a few microblog posts, but unfortunately I forgot to add it to the emoji picker yesterday when I was revising it.
+tags: meta, emoji, mood
+
+* #### 😂👩🏻‍🦰 MAR 17 07:59
+Impressed to see that Tig Notaro is doing two back-to-back shows in Spokane on June 12th at the Bing Crosby Theater at $70 a ticket, and the first show is already sold out! I would love to see her in person, but $200 for a night out with Mary would be a pretty big hit on the monthly budget.
+tags: spokane, comedy, show
+
+* #### ☘️👩🏻‍🦰 MAR 17 07:37
+One of our family St. Patrick's Day traditions that Mary started is making snake-shaped calzones. We eat a ton of homemade pizza at our house, so we're all expected to be able to shape some pizza dough and toppings into a credible snake shape!
+tags: family, holiday, food
+
+* #### 😂 MAR 16 22:45
+One kind of surprising thing about 2026 (to me) is that I’ve started getting more interested in comedians, standup comedy, comedy albums, and comedy podcasts.
+tags: comedy, mood
+
+* #### ⚙️🤔 MAR 16 22:10
+Emoji handling is hard, flags need special code. Had to do a quick bug fix to get the US flag to resolve in the holidays section.
+tags: meta, emoji, bug
+
+* #### ⚙️🤔 MAR 16 21:30
+Just took my first crack at updating `emoji_data.json` since factoring it out of `admin.html`. Definitely not the final form, but it should be an improvement. Can't actually test and take advantage of it until my next post.
+tags: meta, ui, emoji
+
+* #### 🌧️ MAR 16 13:44
+Cold, rainy day today, and it didn't help that I was feeling under the weather. Ended up working the first half in the office. and now I'm finishing the day working remotely from home.
+tags: weather, work, mood
+
+* #### ⚽️😤 MAR 15 11:30
+LIV 1-1 TOT FT Richarlison gets it done late with the equalizer. I actually missed it because I was checking something for Mary, who's off at work right now. *Doing my part!*
+tags: spurs, result, mood
+
+* #### ⚽️ MAR 15 10:21
+LIV 1-0 TOT HT Richy has had a couple of header chances, but can't quite find a way past Alisson. Liverpool have been knocking at the door, but don't seem unbeatable.
+tags: spurs, update
+
+* #### ⚽️ MAR 15 09:52
+LIV 1 - 0 TOT Szoboszlai capitalizes on a soft foul free kick from the top of the box. Vic got his hand on the shot, but too much power.
+tags: spurs, update
+
+* #### ⚙️ MAR 15 09:17
+Refactored some emoji picker code this morning and set up some other emoji related tools. The current picker works great, but is missing some emojis I need and also contains a bunch I'll never use.
+tags: coding, meta
+
+* #### 🍿 MAR 14 21:21
+In 2012 comedian Tig Notaro nearly died from an abdominal infection, her mother died suddenly, and not long after that, Tig was diagnosed with breast cancer that required a double mastectomy. *Tig* 👍👍 is the 2015 documentary about what came next, and it's incredibly real, sad, moving, funny, and ultimately inspirational.
+tags: documentary, review
+
+* #### 🗓⚙️ MAR 14 14:11
+The post tagging functionality in Microcosm is a happy accident that I didn't fully appreciate until after I had been working with the system for a few days. Now I've realized it allows me to filter to exactly the output I need for a given task.
+tags: meta, mood
+
+* #### 🤖⚙️ MAR 14 13:20
+Thinking of a feature, describing it to Claude and having it build it in a minute or so is pretty magical. Updated `export-posts.js` to be able to specify posts from a specific range of days in the markdown format I use and render any associated images in markdown format. Exporting microcosm and image posts to [so.axodys.com](https://so.axodys.com) just got way easier.
+tags: ai, coding, blogging
+
+* #### ⚽️ MAR 14 13:05
+Big 1-0 win for Eddie Howe and Newcastle over Chelsea at Stanford Bridge today. Love to see it.
+tags: epl, result, mood
+
+* #### 📝🐻 MAR 14 10:38
+Productive morning. Caught up on my last three Week Notes and two Microcosm posts on my Bear Blog ([so.axodys.com](https://so.axodys.com)), which tends to be more of a periodically updated archive than a blog with daily activity. The next Microcosm post (Microcosm 2026 - Mar 8-15) will be interesting because it also contains mini-posts that should get standalone posts in Bear. I think I'll update `posts-exports.js` with a couple of flags to strip tags and simplify making those posts.
+tags: blogging, meta
+
 * #### 🦸🏻‍♂️💰 MAR 13 15:06
 [How to love comics](https://buttondown.com/monteiro/archive/how-to-love-comics/) - Mike Monteiro with a very relatable piece on his love of comics.
 
 >Comics were 25¢ when I started going to Mister Grocer after school. Which meant all I had to do to get a comic was to find a quarter somewhere. And quarters were kinda magical as a kid. They didn’t come around every day. But every few days you’d come across one in between the couch cushions, or just minding its business on the kitchen table, or left on the edge of the bathroom sink by my father as he prepared to go out for the evening. Quarters weren’t given. They appeared. And they quickly disappeared. Into my pocket. To be traded for a comic at Mister Grocer the next day.
 
 Comic books were still in the 65¢ to 75¢ range when I fell in love in the 80s. I spent a lot of lawn mowing money on my collection.
-tags: comics, nostalgia
+tags: comics, nostalgia, link
 
 * #### 🤖⚙️ MAR 13 13:46
 Just came up with a pretty big usability improvement to the posts tab in the Microcosm admin page.
@@ -18,7 +440,7 @@ tags: ai, coding
 >My three-device lifestyle for the last decade has been a MacBook Pro (anchored to a Studio Display at my desk at home, and in my briefcase when travelling); my iPhone; and an iPad Pro with a Magic Keyboard for use around the rest of the house. This last week testing the MacBook Neo, I haven’t touched my iPad once, and I haven’t once wished this Neo were an iPad. And there were many times when I was very happy that it was a Mac.
 
 This is a killer observation to me. The only thing I regularly use my iPad Pro for is watching YouTube videos during my lunch. I could easily do the same and so much more with a cheaper MacBook Neo.
-tags: apple, laptop, review
+tags: laptop, review, link
 
 * #### ❄️📷 MAR 13 08:37
 Not only did it snow overnight, it’s still snowing this morning. Classic Spokane March!
@@ -40,7 +462,7 @@ tags: ai, coding, meta
 > Lembeck Appraisal and Consulting found that SVST’s revenue projections and historical data were inaccurate. The appraisal found that the theater was overengineered and would only be worth much less than its construction cost.
 
 Yeah, this project is dead in the water, considering there are already two 700-seat venues in downtown Spokane (The Bing and Myrtle Woldson Performing Arts Center at Gonzaga) directly competing with it to bring in outside acts. There's no way a 453 seat community theater venue can produce the yearly revenue required to pay back the amount of construction debt they're talking about, and the fiscally conservative Spokane Valley City Council is going to laugh in their faces.
-tags: spokane, news
+tags: spokane, news, link
 
 * #### 🏀 MAR 12 21:24
 [SGA](https://en.wikipedia.org/wiki/Shai_Gilgeous-Alexander) and OKC got it done in the fourth quarter, winning 104-102 over Boston. Former Zag, Chet Holmgren, hit the winning free throws, but Gilgeous-Alexander carried the Thunder with 14 points in the fourth quarter, and finished with 35 points and 9 assists in his record-breaking night.
@@ -739,7 +1161,7 @@ Richy has a second goal disallowed for VAR.
 tags: spurs, update
 
 * #### ⚽️ DEC 28 09:13
-Archie Gray just scored his first goal by redirecting Richarlison's header in the box. 0-1 Spurs. 
+Archie Gray just scored his first goal by redirecting Richarlison's header in the box. 0-1 Spurs.
 tags: spurs, update
 
 * #### ⚽️ DEC 28 09:00
