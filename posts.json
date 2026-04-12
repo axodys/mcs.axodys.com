@@ -1,6 +1,22 @@
 {
   "posts": [
     {
+      "id": 506,
+      "date": "2026-04-12T02:01:18.881Z",
+      "body": "The biggest surprise of the day, that's simultaneously unsurprising, was how much AI came up.",
+      "tags": [
+        "ai",
+        "highered",
+        "mood"
+      ],
+      "emojis": [
+        "🤖",
+        "🤔"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 505,
       "date": "2026-04-12T01:57:48.286Z",
       "body": "Had a great time at Gonzaga Experience Live (GEL) with Mary and my son Nathan (who will be attending in the fall). We didn't need to be sold on Gonzaga, but I was really impressed with the program that they've put together to help close the deal for accepted students and their parents considering Gonzaga. As a long-time employee, it was very cool to see an entirely different, student-centric perspective on things for a change.",
