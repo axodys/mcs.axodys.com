@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 511,
+      "date": "2026-04-12T16:02:02.540Z",
+      "body": "Accidentally trashed a couple of this morning's posts because of a sync mistake on my part, but it was relatively easy to repair thanks to my markdown export and import functionality.",
+      "tags": [
+        "blogging",
+        "meta"
+      ],
+      "emojis": [
+        "🗓",
+        "⚙️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 510,
       "date": "2026-04-12T15:39:00.000Z",
       "body": "Wasn't expecting such a foggy morning. Not what I would call typical Spokane spring weather.",
