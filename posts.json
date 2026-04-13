@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 514,
+      "date": "2026-04-13T20:58:56.940Z",
+      "body": "Finally started trying out local model AI using Ollama on my work M4 Mini today. I specifically requested the 24GB model for this possibility, but just never pursued it until now. Gemma 4 seems completely responsive and usable. I asked it about the Strait of Hormuz and it gave a very thorough and insightful answer.",
+      "tags": [
+        "ai",
+        "mood"
+      ],
+      "emojis": [
+        "🤖",
+        "😎"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 513,
       "date": "2026-04-13T16:46:01.621Z",
       "body": "What if Romero being out with a knee injury for the rest of the season ends up being a wildly improbable silver lining for Spurs? I don't this is likely, particularly with how well-suited he is for De Zerbi's approach, but there have been times this season that I've preferred Kevin Danso because he's a reliable and steady center back.",
