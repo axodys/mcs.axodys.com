@@ -1,6 +1,22 @@
 {
   "posts": [
     {
+      "id": 515,
+      "date": "2026-04-14T14:46:26.027Z",
+      "body": "Emmanuel Innocenti is going to ASU to play for Randy Bennett. Seems like a very shrewd pickup from a smart coach who recognized an underrated Gonzaga gem. I'm intrigued to see what kind of team Bennett assembles at Tempe.",
+      "tags": [
+        "ncaa",
+        "gonzaga",
+        "mood"
+      ],
+      "emojis": [
+        "🏀",
+        "🤔"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 514,
       "date": "2026-04-13T20:58:56.940Z",
       "body": "Finally started trying out local model AI using Ollama on my work M4 Mini today. I specifically requested the 24GB model for this possibility, but just never pursued it until now. Gemma 4 seems completely responsive and usable. I asked it about the Strait of Hormuz and it gave a very thorough and insightful answer.",
