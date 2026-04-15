@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 520,
+      "date": "2026-04-15T18:52:08.380Z",
+      "body": "Finally succeeded in signing up for Claude Pro, looking forward to getting to work on some new projects this month and figuring out how frugally I can do the kinds of things I'm interested in. I expect local and cloud instances of Gemma 4 to play a role.",
+      "tags": [
+        "ai",
+        "mood"
+      ],
+      "emojis": [
+        "🤖",
+        "🤔"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 519,
       "date": "2026-04-15T15:16:32.927Z",
       "body": "Heh, decided to sign up for a month of Claude Pro this morning and of course Anthropic is having a bunch of issues.",
