@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 519,
+      "date": "2026-04-15T15:16:32.927Z",
+      "body": "Heh, decided to sign up for a month of Claude Pro this morning and of course Anthropic is having a bunch of issues.",
+      "tags": [
+        "ai",
+        "mood"
+      ],
+      "emojis": [
+        "🤖",
+        "🙄"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 518,
       "date": "2026-04-15T14:56:18.658Z",
       "body": "Another very wet April morning. Gassed up on the way into work and between standing at the pump and walking across campus really needed my rain jacket!",
