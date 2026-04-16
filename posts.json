@@ -1,6 +1,22 @@
 {
   "posts": [
     {
+      "id": 521,
+      "date": "2026-04-16T05:02:04.338Z",
+      "body": "Claude is pretty dreamy for server setup and config. I've had a little Ubuntu home server set up on my LAN for months that I've wanted to host some containers on, but I never knew quite where to start. Made a ton of progress with updates and security in less than an hour's worth of work tonight.",
+      "tags": [
+        "ai",
+        "server",
+        "config"
+      ],
+      "emojis": [
+        "🤖",
+        "⚙️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 520,
       "date": "2026-04-15T18:52:08.380Z",
       "body": "Finally succeeded in signing up for Claude Pro, looking forward to getting to work on some new projects this month and figuring out how frugally I can do the kinds of things I'm interested in. I expect local and cloud instances of Gemma 4 to play a role.",
