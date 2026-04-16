@@ -1,6 +1,18 @@
 {
   "posts": [
     {
+      "id": 523,
+      "date": "2026-04-16T19:51:58.052Z",
+      "body": "Seems like a typical overcast and windy April day today, although I was surprised to see frost on our cars this morning and it's still only 45°F according to my watch. I definitely froze at my daughter's soccer practice last night.",
+      "tags": [],
+      "emojis": [
+        "☁️",
+        "🥶"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 522,
       "date": "2026-04-16T16:07:30.736Z",
       "body": "Listened to [The Changelog: Opus 4.5 changed everything (Interview)](https://changelog.com/podcast/678) (from February) last night and a really interesting tidbit jumped out of me. Both Adam and his guest, Burke Holland, felt like in the Anthropic/Claude space Sonnet was a lot more pleasant to plan and coordinate projects with than Opus. The high end model was brilliant at development, executing a plan, and building the software, but like an elite developer was maybe less interested in the soft communication skills that go into a successful project.",
