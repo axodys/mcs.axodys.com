@@ -1,6 +1,22 @@
 {
   "posts": [
     {
+      "id": 525,
+      "date": "2026-04-17T15:10:34.989Z",
+      "body": "Made a bunch of progress with Claude's guidance on my home server yesterday. Despite knowing what I wanted to do, I had completely stalled out on it after setting it up over the winter break because of the learning curve. Now I've got podman running a couple of different containers and a cloudflare tunnel connected to the nginx one.",
+      "tags": [
+        "ai",
+        "server",
+        "config"
+      ],
+      "emojis": [
+        "🤖",
+        "⚙️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 524,
       "date": "2026-04-16T20:15:24.793Z",
       "body": "As much as the NYT regularly irritates me, very pleased to learn today that my complimentary access pass through work now includes the Athletic, and NYT games. I'm a big fan of both of those.",
