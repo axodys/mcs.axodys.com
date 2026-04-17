@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 526,
+      "date": "2026-04-17T16:28:18.044Z",
+      "body": "Just in time for the girls' spring soccer season, the first Saturday Spurs match in a while when they take on Brighton at home. I feel like they're probably more likely to have good luck when I'm unable to watch anyway, so it's probably a win-win.",
+      "tags": [
+        "spurs",
+        "mood"
+      ],
+      "emojis": [
+        "⚽️",
+        "🙄"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 525,
       "date": "2026-04-17T15:10:34.989Z",
       "body": "Made a bunch of progress with Claude's guidance on my home server yesterday. Despite knowing what I wanted to do, I had completely stalled out on it after setting it up over the winter break because of the learning curve. Now I've got podman running a couple of different containers and a cloudflare tunnel connected to the nginx one.",
