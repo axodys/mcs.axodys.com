@@ -1,6 +1,22 @@
 {
   "posts": [
     {
+      "id": 529,
+      "date": "2026-04-19T21:39:02.184Z",
+      "body": "Fiddling around with ANSI/Unicode and SVG generation with Claude's Sonnet 4.6 (my default choice) model today. SVG generation is pretty impressive, but semi-challenging text-based art output like a basketball court diagram is hilarious.",
+      "tags": [
+        "ai",
+        "textart",
+        "mood"
+      ],
+      "emojis": [
+        "🤖",
+        "⚙️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 528,
       "date": "2026-04-19T21:33:03.455Z",
       "body": "Did some yardwork and got some more rays. Front yard is still in really rough post-winter shape and the sudden hot weather isn't helping. We need to start watering this week.",
