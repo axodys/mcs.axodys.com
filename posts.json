@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 530,
+      "date": "2026-04-19T23:57:49.452Z",
+      "body": "Warm afternoon 4.1K run with the girls on the Children of the Sun trail. First run since February. Lots of little aches and pains (probably due for new shoes soon), but felt good overall.",
+      "tags": [
+        "workout",
+        "mood"
+      ],
+      "emojis": [
+        "🏃",
+        "🥵"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 529,
       "date": "2026-04-19T21:39:02.184Z",
       "body": "Fiddling around with ANSI/Unicode and SVG generation with Claude's Sonnet 4.6 (my default choice) model today. SVG generation is pretty impressive, but semi-challenging text-based art output like a basketball court diagram is hilarious.",
