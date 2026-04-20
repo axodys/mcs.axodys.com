@@ -1,6 +1,20 @@
 {
   "posts": [
     {
+      "id": 533,
+      "date": "2026-04-20T21:43:42.482Z",
+      "body": "Just heard that Egypt is the World Cup team that Spokane and Gonzaga will be hosting. Wild that Mo Salah will be practicing less than a block from my office this summer!",
+      "tags": [
+        "spokane",
+        "worldcup"
+      ],
+      "emojis": [
+        "⚽️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 532,
       "date": "2026-04-20T21:04:09.065Z",
       "body": "Tim Cook is stepping down as CEO of Apple and turning things over to current hardware boss, John Ternus in September. That has been rumored for a while and seems like a logical change.",
