@@ -1,6 +1,22 @@
 {
   "posts": [
     {
+      "id": 531,
+      "date": "2026-04-20T16:57:22.506Z",
+      "body": "I discovered [The Physics of Basketball](https://en.wikipedia.org/wiki/The_Physics_of_Basketball) this morning and it's the first book I've wanted to actively dive in and just start reading immediately in quite a while.",
+      "tags": [
+        "basketball",
+        "physics",
+        "book"
+      ],
+      "emojis": [
+        "🏀",
+        "📚"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 530,
       "date": "2026-04-19T23:57:49.452Z",
       "body": "Warm afternoon 4.1K run with the girls on the Children of the Sun trail. First run since February. Lots of little aches and pains (probably due for new shoes soon), but felt good overall.",
