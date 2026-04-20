@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 532,
+      "date": "2026-04-20T21:04:09.065Z",
+      "body": "Tim Cook is stepping down as CEO of Apple and turning things over to current hardware boss, John Ternus in September. That has been rumored for a while and seems like a logical change.",
+      "tags": [
+        "apple",
+        "news"
+      ],
+      "emojis": [
+        "🍏",
+        "📰"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 531,
       "date": "2026-04-20T16:57:22.506Z",
       "body": "I discovered [The Physics of Basketball](https://en.wikipedia.org/wiki/The_Physics_of_Basketball) this morning and it's the first book I've wanted to actively dive in and just start reading immediately in quite a while.",
