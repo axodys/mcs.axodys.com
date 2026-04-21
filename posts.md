@@ -1,5 +1,101 @@
 ## 2026
 
+* #### 🍿 APR 21 06:57
+Bohemian Rhapsody 👍👍 Rami Malek is so good as Freddie Mercury, and the whole cast is solid. I didn't realize how collaborative the whole band was, but they were clearly good before Freddie brought the voice and vision. Lead guitarist Brian May is such a unique Isaac-Newton-reincarnate figure; Gwilyn Lee, really brought him to life as a super-talented musician in his own right, and the even-keeled rock of the band.
+
+* #### ⚽️ APR 20 14:43
+Just heard that Egypt is the World Cup team that Spokane and Gonzaga will be hosting. Wild that Mo Salah will be practicing less than a block from my office this summer!
+tags: spokane, worldcup
+
+* #### 🍏📰 APR 20 14:04
+Tim Cook is stepping down as CEO of Apple and turning things over to current hardware boss, John Ternus in September. That has been rumored for a while and seems like a logical change.
+tags: apple, news
+
+* #### 🏀📚 APR 20 09:57
+I discovered [The Physics of Basketball](https://en.wikipedia.org/wiki/The_Physics_of_Basketball) this morning and it's the first book I've wanted to actively dive in and just start reading immediately in quite a while.
+tags: basketball, physics, book
+
+* #### 🏃🥵 APR 19 16:57
+Warm afternoon 4.1K run with the girls on the Children of the Sun trail. First run since February. Lots of little aches and pains (probably due for new shoes soon), but felt good overall.
+tags: workout, mood
+
+* #### 🤖⚙️ APR 19 14:39
+Fiddling around with ANSI/Unicode and SVG generation with Claude's Sonnet 4.6 (my default choice) model today. SVG generation is pretty impressive, but semi-challenging text-based art output like a basketball court diagram is hilarious.
+tags: ai, textart, mood
+
+* #### 🏡☀️ APR 19 14:33
+Did some yardwork and got some more rays. Front yard is still in really rough post-winter shape and the sudden hot weather isn't helping. We need to start watering this week.
+tags: chore, weather, mood
+
+* #### ⚽️😐 APR 18 11:57
+**TOT 2-2 BRI FT**  
+Actually caught the second half for this one. So close, and yet so far. Glad we got the point, bummed out that we didn't capitalize on an outstanding Xavi performance, and let the full three points slip away in added time.
+tags: spurs, result, mood
+
+* #### ⚽️🙄 APR 17 09:28
+Just in time for the girls' spring soccer season, the first Saturday Spurs match in a while when they take on Brighton at home. I feel like they're probably more likely to have good luck when I'm unable to watch anyway, so it's probably a win-win.
+tags: spurs, mood
+
+* #### 🤖⚙️ APR 17 08:10
+Made a bunch of progress with Claude's guidance on my home server yesterday. Despite knowing what I wanted to do, I had completely stalled out on it after setting it up over the winter break because of the learning curve. Now I've got podman running a couple of different containers and a cloudflare tunnel connected to the nginx one.
+tags: ai, server, config
+
+* #### 📰😎 APR 16 13:15
+As much as the NYT regularly irritates me, very pleased to learn today that my complimentary access pass through work now includes the Athletic, and NYT games. I'm a big fan of both of those.
+tags: work, mood
+
+* #### ☁️🥶 APR 16 12:51
+Seems like a typical overcast and windy April day today, although I was surprised to see frost on our cars this morning and it's still only 45°F according to my watch. I definitely froze at my daughter's soccer practice last night.
+tags: weather, mood
+
+* #### 🎙🤖 APR 16 09:07
+Listened to [The Changelog: Opus 4.5 changed everything (Interview)](https://changelog.com/podcast/678) (from February) last night and a really interesting tidbit jumped out of me. Both Adam and his guest, Burke Holland, felt like in the Anthropic/Claude space Sonnet was a lot more pleasant to plan and coordinate projects with than Opus. The high end model was brilliant at development, executing a plan, and building the software, but like an elite developer was maybe less interested in the soft communication skills that go into a successful project.
+tags: ai, thought
+
+* #### 🤖⚙️ APR 15 22:02
+Claude is pretty dreamy for server setup and config. I've had a little Ubuntu home server set up on my LAN for months that I've wanted to host some containers on, but I never knew quite where to start. Made a ton of progress with updates and security in less than an hour's worth of work tonight.
+tags: ai, server, config
+
+* #### 🤖🤔 APR 15 11:52
+Finally succeeded in signing up for Claude Pro, looking forward to getting to work on some new projects this month and figuring out how frugally I can do the kinds of things I'm interested in. I expect local and cloud instances of Gemma 4 to play a role.
+tags: ai, mood
+
+* #### 🤖🙄 APR 15 08:16
+Heh, decided to sign up for a month of Claude Pro this morning and of course Anthropic is having a bunch of issues.
+tags: ai, mood
+
+* #### 🌧️🚙 APR 15 07:56
+Another very wet April morning. Gassed up on the way into work and between standing at the pump and walking across campus really needed my rain jacket!
+tags: weather, mood
+
+* #### 📺 APR 14 20:12
+Daredevil: Born Again S2E5: The Grand Design 👍👍 What a performance, D'Onofrio actually had me crying for the Kingpin. Fantastic flashback episode for the whole cast and arguably the best of the series to date.
+tags: episode, review
+
+* #### 📰🤡 APR 14 08:20
+Some absolutely egregious Trump sane-washing in the New York Times today over his fixation on Pope Leo. They even consulted an art expert on his Trump-as-Jesus AI-slop memes.
+tags: media, politics, mood
+
+* #### 🏀🤔 APR 14 07:46
+Emmanuel Innocenti is going to ASU to play for Randy Bennett. Seems like a very shrewd pickup from a smart coach who recognized an underrated Gonzaga gem. I'm intrigued to see what kind of team Bennett assembles at Tempe.
+tags: ncaa, gonzaga, mood
+
+* #### 🤖😎 APR 13 13:58
+Finally started trying out local model AI using Ollama on my work M4 Mini today. I specifically requested the 24GB model for this possibility, but just never pursued it until now. Gemma 4 seems completely responsive and usable. I asked it about the Strait of Hormuz and it gave a very thorough and insightful answer.
+tags: ai, mood
+
+* #### ⚽️🤔 APR 13 09:46
+What if Romero being out with a knee injury for the rest of the season ends up being a wildly improbable silver lining for Spurs? I don't this is likely, particularly with how well-suited he is for De Zerbi's approach, but there have been times this season that I've preferred Kevin Danso because he's a reliable and steady center back.
+tags: spurs, thought
+
+* #### 🌧️🤔 APR 13 09:33
+Started raining hard when I went to drive into work today. Made for a wet walk across campus too. Seems to have let up for the moment, but these scattered periods of intense rain over the last several days feel unusual for Spokane.
+tags: weather, mood
+
+* #### 🗓⚙️ APR 12 09:02
+Accidentally trashed a couple of this morning's posts because of a sync mistake on my part, but it was relatively easy to repair thanks to my markdown export and import functionality.
+tags: blogging, meta
+
 * #### 😶‍🌫️🤔 APR 12 08:39
 Wasn't expecting such a foggy morning. Not what I would call typical Spokane spring weather.
 tags: weather, mood
@@ -9,11 +105,12 @@ tags: weather, mood
 Saw some promising build-up, and Kolo Muani looks rejuvenated under De Zerbi, but no calls, no goals, and no points.
 tags: spurs, result
 
-* #### ⚽️ APR 12 07:24 AM
+* #### ⚽️ APR 12 07:24
 **SUN 1-0 TOT** '61
 Absolute garbage deflection goal.
+tags: spurs, update
 
-* #### ⚽️ APR 12 07:00 AM
+* #### ⚽️ APR 12 07:00
 **SUN 0 - 0 TOT HT**
 Can't complain too much about the start to the De Zerbi era. Spurs have been aggressive and had good chances. Kinsky's been fine. EPL refs are still EPL refs, making the usual EPL ref calls against Spurs.
 tags: spurs, update
@@ -53,6 +150,7 @@ tags: series, mood
 
 * #### 🚀😬 APR 09 18:41
 Artemis II returns to Earth tomorrow around 5 pm Pacific. It's been an amazing mission, but still really worried about the heat shield.
+tags: space
 
 * #### ⚽️😤 APR 09 18:36
 Fought through my sore muscles to do another round of ball passing practice with two of my daughters. How can you say no when they ask you to do it? On a funny note, the one who wasn't feeling it had sore muscles of her own!
@@ -288,9 +386,11 @@ tags: movie, review
 
 * #### ⚽️😡 MAR 22 09:24
 Spurs lose 0-3 to Forest and drop below them on the edge of the relegation zone. Gray and Tel were good in the first half, but it was all downhill after giving up the late first-half corner goal to go behind. Udogie did nothing of note when he swapped for Van de Ven. They might just sack Tudor after this one.
+tags: soccer
 
 * #### ⚽️🙄 MAR 22 08:09
 Spurs lead 8 corners to 2 and trail 0-1 to Forest. So frustrating, but they're playing well offensively.
+tags: soccer, mood
 
 * #### 🏀🙄 MAR 21 18:34
 Zags inexplicably let Texas dribble down the last 30 seconds of the game while down 1, then give up yet another dagger 3. I would have fouled early in the shot clock to prevent a 3 and have possession with time at the end of the game.
@@ -326,6 +426,7 @@ tags: gonzaga, ncaa, mood
 
 * #### 🏀🙄 MAR 19 20:00
 Kennesaw State is crushing the rebounding battle, particularly on the offensive glass. Now I'm going to check the stats to confirm my evaluation. 19-13 with 6 OR vs 3 for GU.
+tags: basketball, mood
 
 * #### 🏀😐 MAR 19 19:47
 7 - 14 Kennesaw St at the 11 minute mark. Mark Few calls timeout. Pretty disappointing start.

@@ -1,8 +1,21 @@
 {
   "posts": [
     {
+      "id": 534,
+      "date": "2026-04-21T13:57:00.000Z",
+      "body": "Bohemian Rhapsody 👍👍 Rami Malek is so good as Freddie Mercury, and the whole cast is solid. I didn't realize how collaborative the whole band was, but they were clearly good before Freddie brought the voice and vision. Lead guitarist Brian May is such a unique Isaac-Newton-reincarnate figure; Gwilyn Lee, really brought him to life as a super-talented musician in his own right, and the even-keeled rock of the band.",
+      "tags": [
+        "movie"
+      ],
+      "emojis": [
+        "🍿"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 533,
-      "date": "2026-04-20T21:43:42.482Z",
+      "date": "2026-04-20T21:43:00.000Z",
       "body": "Just heard that Egypt is the World Cup team that Spokane and Gonzaga will be hosting. Wild that Mo Salah will be practicing less than a block from my office this summer!",
       "tags": [
         "spokane",
@@ -16,7 +29,7 @@
     },
     {
       "id": 532,
-      "date": "2026-04-20T21:04:09.065Z",
+      "date": "2026-04-20T21:04:00.000Z",
       "body": "Tim Cook is stepping down as CEO of Apple and turning things over to current hardware boss, John Ternus in September. That has been rumored for a while and seems like a logical change.",
       "tags": [
         "apple",
@@ -31,7 +44,7 @@
     },
     {
       "id": 531,
-      "date": "2026-04-20T16:57:22.506Z",
+      "date": "2026-04-20T16:57:00.000Z",
       "body": "I discovered [The Physics of Basketball](https://en.wikipedia.org/wiki/The_Physics_of_Basketball) this morning and it's the first book I've wanted to actively dive in and just start reading immediately in quite a while.",
       "tags": [
         "basketball",
@@ -47,7 +60,7 @@
     },
     {
       "id": 530,
-      "date": "2026-04-19T23:57:49.452Z",
+      "date": "2026-04-19T23:57:00.000Z",
       "body": "Warm afternoon 4.1K run with the girls on the Children of the Sun trail. First run since February. Lots of little aches and pains (probably due for new shoes soon), but felt good overall.",
       "tags": [
         "workout",
@@ -62,7 +75,7 @@
     },
     {
       "id": 529,
-      "date": "2026-04-19T21:39:02.184Z",
+      "date": "2026-04-19T21:39:00.000Z",
       "body": "Fiddling around with ANSI/Unicode and SVG generation with Claude's Sonnet 4.6 (my default choice) model today. SVG generation is pretty impressive, but semi-challenging text-based art output like a basketball court diagram is hilarious.",
       "tags": [
         "ai",
@@ -78,7 +91,7 @@
     },
     {
       "id": 528,
-      "date": "2026-04-19T21:33:03.455Z",
+      "date": "2026-04-19T21:33:00.000Z",
       "body": "Did some yardwork and got some more rays. Front yard is still in really rough post-winter shape and the sudden hot weather isn't helping. We need to start watering this week.",
       "tags": [
         "chore",
@@ -94,7 +107,7 @@
     },
     {
       "id": 527,
-      "date": "2026-04-18T18:57:17.263Z",
+      "date": "2026-04-18T18:57:00.000Z",
       "body": "**TOT 2-2 BRI FT**  \nActually caught the second half for this one. So close, and yet so far. Glad we got the point, bummed out that we didn't capitalize on an outstanding Xavi performance, and let the full three points slip away in added time.",
       "tags": [
         "spurs",
@@ -110,7 +123,7 @@
     },
     {
       "id": 526,
-      "date": "2026-04-17T16:28:18.044Z",
+      "date": "2026-04-17T16:28:00.000Z",
       "body": "Just in time for the girls' spring soccer season, the first Saturday Spurs match in a while when they take on Brighton at home. I feel like they're probably more likely to have good luck when I'm unable to watch anyway, so it's probably a win-win.",
       "tags": [
         "spurs",
@@ -125,7 +138,7 @@
     },
     {
       "id": 525,
-      "date": "2026-04-17T15:10:34.989Z",
+      "date": "2026-04-17T15:10:00.000Z",
       "body": "Made a bunch of progress with Claude's guidance on my home server yesterday. Despite knowing what I wanted to do, I had completely stalled out on it after setting it up over the winter break because of the learning curve. Now I've got podman running a couple of different containers and a cloudflare tunnel connected to the nginx one.",
       "tags": [
         "ai",
@@ -141,7 +154,7 @@
     },
     {
       "id": 524,
-      "date": "2026-04-16T20:15:24.793Z",
+      "date": "2026-04-16T20:15:00.000Z",
       "body": "As much as the NYT regularly irritates me, very pleased to learn today that my complimentary access pass through work now includes the Athletic, and NYT games. I'm a big fan of both of those.",
       "tags": [
         "work",
@@ -171,7 +184,7 @@
     },
     {
       "id": 522,
-      "date": "2026-04-16T16:07:30.736Z",
+      "date": "2026-04-16T16:07:00.000Z",
       "body": "Listened to [The Changelog: Opus 4.5 changed everything (Interview)](https://changelog.com/podcast/678) (from February) last night and a really interesting tidbit jumped out of me. Both Adam and his guest, Burke Holland, felt like in the Anthropic/Claude space Sonnet was a lot more pleasant to plan and coordinate projects with than Opus. The high end model was brilliant at development, executing a plan, and building the software, but like an elite developer was maybe less interested in the soft communication skills that go into a successful project.",
       "tags": [
         "ai",
@@ -186,7 +199,7 @@
     },
     {
       "id": 521,
-      "date": "2026-04-16T05:02:04.338Z",
+      "date": "2026-04-16T05:02:00.000Z",
       "body": "Claude is pretty dreamy for server setup and config. I've had a little Ubuntu home server set up on my LAN for months that I've wanted to host some containers on, but I never knew quite where to start. Made a ton of progress with updates and security in less than an hour's worth of work tonight.",
       "tags": [
         "ai",
@@ -202,7 +215,7 @@
     },
     {
       "id": 520,
-      "date": "2026-04-15T18:52:08.380Z",
+      "date": "2026-04-15T18:52:00.000Z",
       "body": "Finally succeeded in signing up for Claude Pro, looking forward to getting to work on some new projects this month and figuring out how frugally I can do the kinds of things I'm interested in. I expect local and cloud instances of Gemma 4 to play a role.",
       "tags": [
         "ai",
@@ -217,7 +230,7 @@
     },
     {
       "id": 519,
-      "date": "2026-04-15T15:16:32.927Z",
+      "date": "2026-04-15T15:16:00.000Z",
       "body": "Heh, decided to sign up for a month of Claude Pro this morning and of course Anthropic is having a bunch of issues.",
       "tags": [
         "ai",
@@ -232,7 +245,7 @@
     },
     {
       "id": 518,
-      "date": "2026-04-15T14:56:18.658Z",
+      "date": "2026-04-15T14:56:00.000Z",
       "body": "Another very wet April morning. Gassed up on the way into work and between standing at the pump and walking across campus really needed my rain jacket!",
       "tags": [
         "weather",
@@ -247,7 +260,7 @@
     },
     {
       "id": 517,
-      "date": "2026-04-15T03:12:10.177Z",
+      "date": "2026-04-15T03:12:00.000Z",
       "body": "Daredevil: Born Again S2E5: The Grand Design 👍👍 What a performance, D'Onofrio actually had me crying for the Kingpin. Fantastic flashback episode for the whole cast and arguably the best of the series to date.",
       "tags": [
         "episode",
@@ -261,7 +274,7 @@
     },
     {
       "id": 516,
-      "date": "2026-04-14T15:20:05.758Z",
+      "date": "2026-04-14T15:20:00.000Z",
       "body": "Some absolutely egregious Trump sane-washing in the New York Times today over his fixation on Pope Leo. They even consulted an art expert on his Trump-as-Jesus AI-slop memes.",
       "tags": [
         "media",
@@ -277,7 +290,7 @@
     },
     {
       "id": 515,
-      "date": "2026-04-14T14:46:26.027Z",
+      "date": "2026-04-14T14:46:00.000Z",
       "body": "Emmanuel Innocenti is going to ASU to play for Randy Bennett. Seems like a very shrewd pickup from a smart coach who recognized an underrated Gonzaga gem. I'm intrigued to see what kind of team Bennett assembles at Tempe.",
       "tags": [
         "ncaa",
@@ -293,7 +306,7 @@
     },
     {
       "id": 514,
-      "date": "2026-04-13T20:58:56.940Z",
+      "date": "2026-04-13T20:58:00.000Z",
       "body": "Finally started trying out local model AI using Ollama on my work M4 Mini today. I specifically requested the 24GB model for this possibility, but just never pursued it until now. Gemma 4 seems completely responsive and usable. I asked it about the Strait of Hormuz and it gave a very thorough and insightful answer.",
       "tags": [
         "ai",
@@ -308,7 +321,7 @@
     },
     {
       "id": 513,
-      "date": "2026-04-13T16:46:01.621Z",
+      "date": "2026-04-13T16:46:00.000Z",
       "body": "What if Romero being out with a knee injury for the rest of the season ends up being a wildly improbable silver lining for Spurs? I don't this is likely, particularly with how well-suited he is for De Zerbi's approach, but there have been times this season that I've preferred Kevin Danso because he's a reliable and steady center back.",
       "tags": [
         "spurs",
@@ -323,7 +336,7 @@
     },
     {
       "id": 512,
-      "date": "2026-04-13T16:33:38.540Z",
+      "date": "2026-04-13T16:33:00.000Z",
       "body": "Started raining hard when I went to drive into work today. Made for a wet walk across campus too. Seems to have let up for the moment, but these scattered periods of intense rain over the last several days feel unusual for Spokane.",
       "tags": [
         "weather",
@@ -338,7 +351,7 @@
     },
     {
       "id": 511,
-      "date": "2026-04-12T16:02:02.540Z",
+      "date": "2026-04-12T16:02:00.000Z",
       "body": "Accidentally trashed a couple of this morning's posts because of a sync mistake on my part, but it was relatively easy to repair thanks to my markdown export and import functionality.",
       "tags": [
         "blogging",
