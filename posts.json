@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 538,
+      "date": "2026-04-22T20:59:17.993Z",
+      "body": "Used to \"To dare is to do.\" as a test phrase for Esperanto translation for locally hosted Gemma4 models and learned that Google translate and all of the Gemma4 models have a similar slavic root hallucination \"asidi\" for \"to do\". \"Aŭdaci estas fari\" is the best translation and Claude gave me a nice explanation of why and where Google is going wrong.\n\nAll that said, I still find the smaller locally hosted Gemma 4 models incredibly impressive, and want to explore code generation a lot further with them.",
+      "tags": [
+        "ai",
+        "translation"
+      ],
+      "emojis": [
+        "🤖",
+        "⚽️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 537,
       "date": "2026-04-22T18:47:10.121Z",
       "body": "First rainy day in a while, but disappointed that after today we're just going to be cool and dry through the weekend. The grass in our front yard really needs some consistent moisture after the recent hot weather, probably need to start watering this weekend.",
