@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 539,
+      "date": "2026-04-23T16:31:28.180Z",
+      "body": "Finally have a clear chip class differentiator on the Pro, Max, and Ultra Apple Silicon naming conventions: memory bandwidth.  Pro are in the 150-300 GB/s range depending on generation, Max 400 GB/s, and Ultra 800 GB/s.",
+      "tags": [
+        "apple",
+        "hardware"
+      ],
+      "emojis": [
+        "🍏",
+        "⚙️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 538,
       "date": "2026-04-22T20:59:17.993Z",
       "body": "Used to \"To dare is to do.\" as a test phrase for Esperanto translation for locally hosted Gemma4 models and learned that Google translate and all of the Gemma4 models have a similar slavic root hallucination \"asidi\" for \"to do\". \"Aŭdaci estas fari\" is the best translation and Claude gave me a nice explanation of why and where Google is going wrong.\n\nAll that said, I still find the smaller locally hosted Gemma 4 models incredibly impressive, and want to explore code generation a lot further with them.",
