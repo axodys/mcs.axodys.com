@@ -1,6 +1,22 @@
 {
   "posts": [
     {
+      "id": 540,
+      "date": "2026-04-23T19:52:28.985Z",
+      "body": "I feel like I'm turning into a Claude shill, but I've been completely blown away by the low level Mac troubleshooting advice it's provided on a couple of tricky user issues over the last couple of weeks.",
+      "tags": [
+        "macos",
+        "ai",
+        "solution"
+      ],
+      "emojis": [
+        "🤖",
+        "🍏"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 539,
       "date": "2026-04-23T16:31:28.180Z",
       "body": "Finally have a clear chip class differentiator on the Pro, Max, and Ultra Apple Silicon naming conventions: memory bandwidth.  Pro are in the 150-300 GB/s range depending on generation, Max 400 GB/s, and Ultra 800 GB/s.",
