@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 541,
+      "date": "2026-04-24T23:29:45.594Z",
+      "body": "Messing around with Hermes-Agent running in a container on my home server. It's cool, but heavy enough that it's better for giving long-running tasks to than having an ongoing conversation. On top of that, its container support seems more like an afterthought than something very many people use.",
+      "tags": [
+        "ai",
+        "sysadmin"
+      ],
+      "emojis": [
+        "🤖",
+        "⚙️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 540,
       "date": "2026-04-23T19:52:28.985Z",
       "body": "I feel like I'm turning into a Claude shill, but I've been completely blown away by the low level Mac troubleshooting advice it's provided on a couple of tricky user issues over the last couple of weeks.",
