@@ -1,6 +1,22 @@
 {
   "posts": [
     {
+      "id": 542,
+      "date": "2026-04-25T01:00:22.852Z",
+      "body": "Heh, Hermes-Agent is downright terrible at questions about its own functionality. I wonder if there's a way to expose model thinking because it shouldn't take 10.5 minutes to answer: \"What kind of rss reading support do you have?\" It did eventually give a good response, but what was tripping it up for so long?",
+      "tags": [
+        "ai",
+        "software",
+        "mood"
+      ],
+      "emojis": [
+        "🤖",
+        "🙄"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 541,
       "date": "2026-04-24T23:29:45.594Z",
       "body": "Messing around with Hermes-Agent running in a container on my home server. It's cool, but heavy enough that it's better for giving long-running tasks to than having an ongoing conversation. On top of that, its container support seems more like an afterthought than something very many people use.",
