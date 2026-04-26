@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 544,
+      "date": "2026-04-26T12:48:56.999Z",
+      "body": "Up early on the weekend as usual to let the dogs out and get my coffee going. Trying to be productive right out of the gate since I'll have to be upstairs watching the dogs by around 7 am.",
+      "tags": [
+        "life",
+        "mood"
+      ],
+      "emojis": [
+        "🐶",
+        "☕"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 543,
       "date": "2026-04-26T00:51:23.766Z",
       "body": "A lot of fascinating work is being done to compress AI models down to manageable sizes for local use. Today I learned about 1-Bit (-1,1) and ternary (-1,0,1) models from a company named [PrismML](https://prismml.com/news/ternary-bonsai), and it sounds really promising.",
