@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 543,
+      "date": "2026-04-26T00:51:23.766Z",
+      "body": "A lot of fascinating work is being done to compress AI models down to manageable sizes for local use. Today I learned about 1-Bit (-1,1) and ternary (-1,0,1) models from a company named [PrismML](https://prismml.com/news/ternary-bonsai), and it sounds really promising.",
+      "tags": [
+        "ai",
+        "til"
+      ],
+      "emojis": [
+        "🤖",
+        "⚙️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 542,
       "date": "2026-04-25T01:00:22.852Z",
       "body": "Heh, Hermes-Agent is downright terrible at questions about its own functionality. I wonder if there's a way to expose model thinking because it shouldn't take 10.5 minutes to answer: \"What kind of rss reading support do you have?\" It did eventually give a good response, but what was tripping it up for so long?",
