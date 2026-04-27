@@ -1,6 +1,22 @@
 {
   "posts": [
     {
+      "id": 545,
+      "date": "2026-04-27T06:50:46.083Z",
+      "body": "Got my dedicated local model host and Hermes-Agent setup today with a lot of help from Claude. Then I had it help evaluate some responses and even Sonnet 4.6 was so far beyond that that I decided to really test it, got a fair but predictably disappointing answer and got completely inspired to start on a secret project that I’ve wanted to L do for more than a decade and really appreciated Claude’s assostance",
+      "tags": [
+        "so",
+        "project",
+        "mood"
+      ],
+      "emojis": [
+        "🤖",
+        "😎"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 544,
       "date": "2026-04-26T12:48:56.999Z",
       "body": "Up early on the weekend as usual to let the dogs out and get my coffee going. Trying to be productive right out of the gate since I'll have to be upstairs watching the dogs by around 7 am.",
