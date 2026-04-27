@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 547,
+      "date": "2026-04-27T15:50:22.763Z",
+      "body": "TIL: The open source [SANE (Scanner Access Now Easy) Project](http://sane-project.org) probably makes one of my old usb flatbed scanners usable again. Going to have to give this a try tonight.",
+      "tags": [
+        "til",
+        "link",
+        "driver"
+      ],
+      "emojis": [
+        "⚙️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 546,
       "date": "2026-04-27T15:26:13.595Z",
       "body": "Starting on a long term newspaper clipping to archive project this week, and had Claude whip up a whole workflow this morning. Still need to sort out my scanning hardware and process, but excited to start messing around with this.",
