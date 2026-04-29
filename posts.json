@@ -1,6 +1,35 @@
 {
   "posts": [
     {
+      "id": 555,
+      "date": "2026-04-29T15:38:43.665Z",
+      "body": "Ted Lasso season 4 returning in August is pretty great news. Having him take over the AFC Richmond women's team is a cool angle for the next chapter in the series, and I'm really curious about where he's at personally as that's always been a huge part of the story.",
+      "tags": [
+        "tv",
+        "news"
+      ],
+      "emojis": [
+        "📺",
+        "⚽️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
+      "id": 554,
+      "date": "2026-04-29T15:01:45.907Z",
+      "body": "**Daredevil: Born Again S2E7: The Hateful Darkness 👍** \nUnfortunately, we've settled into a span of okay, but kind of bleak and disappointing episodes. The Karen Page stuff was all pretty good, not sure how I feel about the Daniel, Buck, and BB storyline at this point. The Heather stuff is seriously unhinged, but it would be kind of cool if she ends up playing a part in Buck's inevitable demise once she goes full Muse.",
+      "tags": [
+        "episode",
+        "review"
+      ],
+      "emojis": [
+        "📺"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 553,
       "date": "2026-04-29T14:43:50.964Z",
       "body": "It's been a while since I've regularly used a Mac that has TouchID, and I'd forgotten how handy it is.",
