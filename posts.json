@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 557,
+      "date": "2026-04-29T22:32:33.300Z",
+      "body": "Spokane Public Library has access to the right ProQuest database with full Spokesman Review access so I can get full pdfs of each original page. Claude pointed me in the right direction.",
+      "tags": [
+        "newspaper",
+        "reseach"
+      ],
+      "emojis": [
+        "📰",
+        "🌐"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 556,
       "date": "2026-04-29T21:24:30.419Z",
       "body": "Getting access to pre-2000s newspaper articles for free is a little trickier than I had hoped. Most of the area libraries' Spokesman Review digital archive access begins in mid 1994. Newspapers.com apparently has the full Spokesman run in image form, but it also has a monthly fee.",
