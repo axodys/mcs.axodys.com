@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 552,
+      "date": "2026-04-29T14:38:07.877Z",
+      "body": "Finally took advantage of an actual dark mode theme (Wolf) in 750 Words this morning after relying on Noir for a long time.",
+      "tags": [
+        "webapp",
+        "config"
+      ],
+      "emojis": [
+        "📝",
+        "⚙️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 551,
       "date": "2026-04-29T01:08:19.624Z",
       "body": "Mowed some parts of the yard that needed it and worked on fortifying the side yard so that the dogs won't go back there. Too much water, mud opportunities, and exposed coaxial cable that they would love to chomp and pull on.",
