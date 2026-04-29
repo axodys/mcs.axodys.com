@@ -1,6 +1,20 @@
 {
   "posts": [
     {
+      "id": 556,
+      "date": "2026-04-29T21:24:30.419Z",
+      "body": "Getting access to pre-2000s newspaper articles for free is a little trickier than I had hoped. Most of the area libraries' Spokesman Review digital archive access begins in mid 1994. Newspapers.com apparently has the full Spokesman run in image form, but it also has a monthly fee.",
+      "tags": [
+        "newspaper",
+        "research"
+      ],
+      "emojis": [
+        "📰"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 555,
       "date": "2026-04-29T15:38:43.665Z",
       "body": "Ted Lasso season 4 returning in August is pretty great news. Having him take over the AFC Richmond women's team is a cool angle for the next chapter in the series, and I'm really curious about where he's at personally as that's always been a huge part of the story.",
