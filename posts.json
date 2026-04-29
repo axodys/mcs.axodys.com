@@ -1,6 +1,22 @@
 {
   "posts": [
     {
+      "id": 553,
+      "date": "2026-04-29T14:43:50.964Z",
+      "body": "It's been a while since I've regularly used a Mac that has TouchID, and I'd forgotten how handy it is.",
+      "tags": [
+        "macos",
+        "security",
+        "feature"
+      ],
+      "emojis": [
+        "🍏",
+        "🔑"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 552,
       "date": "2026-04-29T14:38:07.877Z",
       "body": "Finally took advantage of an actual dark mode theme (Wolf) in 750 Words this morning after relying on Noir for a long time.",
