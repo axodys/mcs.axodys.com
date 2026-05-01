@@ -1,6 +1,20 @@
 {
   "posts": [
     {
+      "id": 566,
+      "date": "2026-05-01T23:41:37.746Z",
+      "body": "Doing some terminal tweaking with Claude's help. Config setting `font-thicken = true` is a huge Ghostty lifesaver for my old eyes that I didn't know about. Now working on the shell itself and adding [starship](https://starship.rs) to give my prompt a glowup.",
+      "tags": [
+        "cli",
+        "config"
+      ],
+      "emojis": [
+        "⚙️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 565,
       "date": "2026-05-01T19:25:31.510Z",
       "body": "For All Mankind S5E6: No Sudden Moves 👍👍 Tense episode that sets up the big Earth - Mars conflict of the season. Boyd and Miles team up as the voices of reason, but despite their efforts, it looks like Earth and the M6 are just going to drop the hammer. Kind of funny that the Space Marine team Earth is going to ship there have a couple of potential Mars sympathizers.",
