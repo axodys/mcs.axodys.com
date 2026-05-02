@@ -1,6 +1,20 @@
 {
   "posts": [
     {
+      "id": 567,
+      "date": "2026-05-02T05:27:46.358Z",
+      "body": "I heard that For All Mankind has been renewed for a sixth and final season. I think that's perfect as it will bring their timeline up to the present day era and hopefully allow for a satisfying conclusion to a pretty epic series.",
+      "tags": [
+        "tv",
+        "news"
+      ],
+      "emojis": [
+        "📺"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 566,
       "date": "2026-05-01T23:41:37.746Z",
       "body": "Doing some terminal tweaking with Claude's help. Config setting `font-thicken = true` is a huge Ghostty lifesaver for my old eyes that I didn't know about. Now working on the shell itself and adding [starship](https://starship.rs) to give my prompt a glowup.",
