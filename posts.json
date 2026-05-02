@@ -2,8 +2,8 @@
   "posts": [
     {
       "id": 568,
-      "date": "2026-05-02T13:28:43.004Z",
-      "body": "Realized last night that aiville (my local model testbed), though functional, was under some serious memory pressure due to some minor MLX/Bonsai-ternery bugs compounding over time. Got things sorted out again, but putting that model aside for now.",
+      "date": "2026-05-02T13:28:00.000Z",
+      "body": "Realized last night that aiville (my local model testbed), though functional, was under some serious memory pressure due to some minor MLX/Ternary-Bonsai-8B-mlx-2bit bugs compounding over time. Got things sorted out again, but putting that model aside and sticking with ollama-hosted ones for now.",
       "tags": [
         "ai",
         "config"
