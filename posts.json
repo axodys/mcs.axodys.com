@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 576,
+      "date": "2026-05-05T15:31:31.409Z",
+      "body": "Got up, did a quick watering pass on the front yard, and then went over it with the weed and feed. Annoyingly the suggested spreader value was too high for my spreader and dispensed faster than expected until I realized halfway through and dialed it back. One $30 bag should cover our entire yard, not just the front.",
+      "tags": [
+        "chore",
+        "modd"
+      ],
+      "emojis": [
+        "🏡",
+        "🤔"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 575,
       "date": "2026-05-04T20:59:24.335Z",
       "body": "M4 Mac mini's now start at 16GB - 512GB for $799 due to high chip demand and manufacturing constraints. Bummer that you simply can't get a $599 one any more.",
