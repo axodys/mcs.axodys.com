@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 578,
+      "date": "2026-05-06T17:56:48.988Z",
+      "body": "Granite 4.1:8b is kind of dumb on general knowledge questions, but it's still decently performant on low end Apple hardware. I'll probably try hooking it up to Hermes-Agent later this week.",
+      "tags": [
+        "ai",
+        "mood"
+      ],
+      "emojis": [
+        "🤖",
+        "🤔"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 577,
       "date": "2026-05-06T15:50:15.694Z",
       "body": "IBM's Granite 4.1:8b local model is interesting because it doesn't have a thinking loop like the comparably sized Qwen and Gemma models (I believe you can turn thinking off for those models) so it gives pretty fast responses.",
