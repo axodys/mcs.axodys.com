@@ -1,6 +1,22 @@
 {
   "posts": [
     {
+      "id": 581,
+      "date": "2026-05-07T20:33:52.707Z",
+      "body": "Finally realized that some of the knowledge base use cases I was considering for Hermes-Agent can be achieved with a local llm and my modest hardware if I ditch the framework and directly script it.",
+      "tags": [
+        "ai",
+        "coding",
+        "mood"
+      ],
+      "emojis": [
+        "🤖",
+        "🤔"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 580,
       "date": "2026-05-07T17:12:51.742Z",
       "body": "Curious to see if Villa bounces back against Forest in the Europa League semi-finals today. Not enough to tune in, but I'll follow on Fotmob.",
