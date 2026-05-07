@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 579,
+      "date": "2026-05-07T15:52:16.730Z",
+      "body": "Still kind of blown away by the kinds of exchanges that I can have with Claude. Had a good one about basketball slang origins.",
+      "tags": [
+        "ai",
+        "mood"
+      ],
+      "emojis": [
+        "🤖",
+        "🏀"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 578,
       "date": "2026-05-06T17:56:48.988Z",
       "body": "Granite 4.1:8b is kind of dumb on general knowledge questions, but it's still decently performant on low end Apple hardware. I'll probably try hooking it up to Hermes-Agent later this week.",
