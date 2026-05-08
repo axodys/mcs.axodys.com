@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 582,
+      "date": "2026-05-08T22:46:42.058Z",
+      "body": "Used Claude to whip up a script to dump some info I needed from our Jamf server via API. Will definitely be doing this kind of thing more in the future- next week in fact, when I need to do the equivalent query on the Windows side. I shudder to think how long this would have taken if I didn't automate this.",
+      "tags": [
+        "sysadmin",
+        "scripting"
+      ],
+      "emojis": [
+        "🤖",
+        "⚙️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 581,
       "date": "2026-05-07T20:33:52.707Z",
       "body": "Finally realized that some of the knowledge base use cases I was considering for Hermes-Agent can be achieved with a local llm and my modest hardware if I ditch the framework and directly script it.",
