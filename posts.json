@@ -1,12 +1,26 @@
 {
   "posts": [
     {
+      "id": 583,
+      "date": "2026-05-11T03:56:56.764Z",
+      "body": "For All Mankind S5E7: The Sirens of Titan 👍👍 Not sure what it says about me that I'm ready for Miles and Alex to drop a lander on Dev's head after this one. I definitely feel like the writers have dropped the ball on explaining Dev's allegiances all season, and I love how his desperate gambit demonstrated the fatal design flaw in his dream city.",
+      "tags": [
+        "tv",
+        "episode"
+      ],
+      "emojis": [
+        "📺"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 582,
-      "date": "2026-05-08T22:46:42.058Z",
+      "date": "2026-05-08T22:46:00.000Z",
       "body": "Used Claude to whip up a script to dump some info I needed from our Jamf server via API. Will definitely be doing this kind of thing more in the future- next week in fact, when I need to do the equivalent query on the Windows side. I shudder to think how long this would have taken if I didn't automate this.",
       "tags": [
         "sysadmin",
-        "scripting"
+        "coding"
       ],
       "emojis": [
         "🤖",
