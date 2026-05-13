@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 590,
+      "date": "2026-05-13T21:33:16.800Z",
+      "body": "TIL: that smaller Gemma 4 models handle tooling calls better if they can be expressed as xml rather than json. I discovered this via [Gemma Chat](https://github.com/ammaarreshi/gemma-chat/tree/main) a really cool, but not particularly active project a Google Engineer created.",
+      "tags": [
+        "ai",
+        "til"
+      ],
+      "emojis": [
+        "🤖",
+        "🔧"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 589,
       "date": "2026-05-13T21:24:24.042Z",
       "body": "Windy and damp day today. Sounds like it's going to be pretty gusty at times as well. Not a great day to have to watch a soccer practice so I'll probably go for a walk during if it's not raining too hard. Otherwise I might just retreat to my car.",
