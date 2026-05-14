@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 591,
+      "date": "2026-05-14T23:28:36.607Z",
+      "body": "The new Drafts.app release has Claude integration via MCP so excited to try that out. Having direct access to my goto text repository utility is super helpful.",
+      "tags": [
+        "ai",
+        "utility"
+      ],
+      "emojis": [
+        "🤖",
+        "⚙️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 590,
       "date": "2026-05-13T21:33:16.800Z",
       "body": "TIL: that smaller Gemma 4 models handle tooling calls better if they can be expressed as xml rather than json. I discovered this via [Gemma Chat](https://github.com/ammaarreshi/gemma-chat/tree/main) a really cool, but not particularly active project a Google Engineer created.",
