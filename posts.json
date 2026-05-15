@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 593,
+      "date": "2026-05-15T16:51:55.833Z",
+      "body": "Gemma Chat is a super cool project, but it's clearly not a priority for its originator, as pull requests with fixes have gone completely ignored for weeks. I wonder if anyone has forked it yet and given it some bugfix love?",
+      "tags": [
+        "ai",
+        "mood"
+      ],
+      "emojis": [
+        "🤖",
+        "🙄"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 592,
       "date": "2026-05-15T14:47:04.246Z",
       "body": "Feeling okay now that I'm somewhat hydrated, but woke up with a bit of a headache. Aiming for a productive Friday heading into the weekend.",
