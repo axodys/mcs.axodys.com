@@ -1,6 +1,22 @@
 {
   "posts": [
     {
+      "id": 598,
+      "date": "2026-05-19T14:31:09.849Z",
+      "body": "Now that we have enough laptops in the house set up with Magic Arena, excited to try some LAN party style family competitions with a couple of head to head games going at once.",
+      "tags": [
+        "mtga",
+        "family",
+        "mood"
+      ],
+      "emojis": [
+        "🧙",
+        "💻"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 597,
       "date": "2026-05-18T17:56:01.847Z",
       "body": "Had to give up my stupid USB-C - headphone jack dongle to my son since his bluetooth headphones died. Guess I won't be using my iPad to watch YouTube videos at lunch for a while.",
