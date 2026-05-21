@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 605,
+      "date": "2026-05-21T21:00:13.332Z",
+      "body": "It's surprisingly inexpensive to replace my iPhone 11's screen so I'll probably do that and the battery in the next month or so. I've been living with a slowly expanding patch of dead pixels for about a year and a half.",
+      "tags": [
+        "diy",
+        "repair"
+      ],
+      "emojis": [
+        "📱",
+        "🔧"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 604,
       "date": "2026-05-21T19:33:34.971Z",
       "body": "Just heard that the Spokane Zephyr are folding. Sad, angry, and not entirely surprised. Really glad we were able to take the girls to their second to last game.",
