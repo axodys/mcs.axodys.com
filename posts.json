@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 606,
+      "date": "2026-05-23T05:16:45.917Z",
+      "body": "Productive day at home today. Mowed the lawn and watered the front and back (this is the challenging one because of the dogs). Tired now though.",
+      "tags": [
+        "chore",
+        "mood"
+      ],
+      "emojis": [
+        "🏡",
+        "🥱"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 605,
       "date": "2026-05-21T21:00:13.332Z",
       "body": "It's surprisingly inexpensive to replace my iPhone 11's screen so I'll probably do that and the battery in the next month or so. I've been living with a slowly expanding patch of dead pixels for about a year and a half.",
