@@ -1,6 +1,18 @@
 {
   "posts": [
     {
+      "id": 615,
+      "date": "2026-05-26T20:05:58.376Z",
+      "body": "Figures that Harper has some codesigning/build issues on macOS that are messing things up at the moment. Looks like a fix is in the works, but annoying that this is going on when I wanted to immediately switch from Grammarly.",
+      "tags": [],
+      "emojis": [
+        "🙄",
+        "⚙️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 614,
       "date": "2026-05-26T19:00:52.338Z",
       "body": "[Harper](https://writewithharper.com/) looks like a really cool cross-platform, developer-friendly, free, and open-source Grammarly alternative. I'm definitely trying it out this afternoon.",
