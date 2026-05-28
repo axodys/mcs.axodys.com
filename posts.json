@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 621,
+      "date": "2026-05-28T20:38:26.470Z",
+      "body": "An absolutely legendary IT colleague of mine is retiring Monday after 46 years! Just finished some celebratory cake with him and the rest of the team. I just hit 28 years here myself this month and I can't really imagine working here another 18 years, but 12 or 13 is probably doable.",
+      "tags": [
+        "retirement",
+        "mood"
+      ],
+      "emojis": [
+        "🍰",
+        "🎈"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 620,
       "date": "2026-05-28T19:26:51.299Z",
       "body": "Used 64GB M1 Max PowerBooks look like the current sweet spot for local Mac-based llm performance and affordability considering they can be had on eBay in the $1200-$1300 range.",
