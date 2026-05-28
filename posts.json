@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 620,
+      "date": "2026-05-28T19:26:51.299Z",
+      "body": "Used 64GB M1 Max PowerBooks look like the current sweet spot for local Mac-based llm performance and affordability considering they can be had on eBay in the $1200-$1300 range.",
+      "tags": [
+        "mac",
+        "ai"
+      ],
+      "emojis": [
+        "🍏",
+        "💻"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 619,
       "date": "2026-05-28T16:19:12.965Z",
       "body": "Looks like we've got the possibility for severe weather between 2 pm and 10 pm today according to the National Weather Service, but my apps haven't really picked up on that yet. Apparently there's a slight risk of up to 70 mph wind gusts and 1.5\" hail in our area!",
