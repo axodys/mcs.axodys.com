@@ -1,6 +1,20 @@
 {
   "posts": [
     {
+      "id": 622,
+      "date": "2026-05-28T21:54:41.256Z",
+      "body": "Super hot afternoon. Just went for a quick walk down to the river and nearly melted!",
+      "tags": [
+        "weather",
+        "mood"
+      ],
+      "emojis": [
+        "🥵"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 621,
       "date": "2026-05-28T20:38:26.470Z",
       "body": "An absolutely legendary IT colleague of mine is retiring Monday after 46 years! Just finished some celebratory cake with him and the rest of the team. I just hit 28 years here myself this month and I can't really imagine working here another 18 years, but 12 or 13 is probably doable.",
