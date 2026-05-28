@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 619,
+      "date": "2026-05-28T16:19:12.965Z",
+      "body": "Looks like we've got the possibility for severe weather between 2 pm and 10 pm today according to the National Weather Service, but my apps haven't really picked up on that yet. Apparently there's a slight risk of up to 70 mph wind gusts and 1.5\" hail in our area!",
+      "tags": [
+        "weather",
+        "mood"
+      ],
+      "emojis": [
+        "⛈️",
+        "😱"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 618,
       "date": "2026-05-28T04:04:03.280Z",
       "body": "Nathan had his final band concert tonight in the Mt. Spokane courtyard. Lots of good music and fun vibes.",
