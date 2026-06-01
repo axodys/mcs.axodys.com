@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 629,
+      "date": "2026-06-01T19:21:46.226Z",
+      "body": "It’s that time of the year when I need to learn how to renew a GitHub access token again.",
+      "tags": [
+        "microcosm",
+        "chore"
+      ],
+      "emojis": [
+        "⚙️",
+        "🙄"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 628,
       "date": "2026-06-01T19:14:18.610Z",
       "body": "Our dogs escaped from our backyard yesterday afternoon briefly because the back gate wasn't properly latched. Add replacing the latch fence post to the summer tasks I need to do sooner rather than later.",
