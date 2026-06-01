@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 630,
+      "date": "2026-06-01T19:23:06.698Z",
+      "body": "My win rate collapsed in Secrets of Strixhaven over the last two or three drafts so I decided to quit drafting and crack my packs. Still deciding if I will buy 10 packs or just call it good for now and save for Marvel.",
+      "tags": [
+        "mtga",
+        "mood"
+      ],
+      "emojis": [
+        "🧙",
+        "🤔"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 629,
       "date": "2026-06-01T19:21:46.226Z",
       "body": "It’s that time of the year when I need to learn how to renew a GitHub access token again.",
