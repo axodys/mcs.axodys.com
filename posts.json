@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 631,
+      "date": "2026-06-02T15:23:31.822Z",
+      "body": "Saw that NBA Hall of Fame coach Rick Adelman had passed away yesterday at the age of 79. I remember him best from his time at Portland and Sacramento, he had some very good teams that narrowly missed out on a title.",
+      "tags": [
+        "obituary",
+        "nba"
+      ],
+      "emojis": [
+        "🪦",
+        "🏀"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 630,
       "date": "2026-06-01T19:23:06.698Z",
       "body": "My win rate collapsed in Secrets of Strixhaven over the last two or three drafts so I decided to quit drafting and crack my packs. Still deciding if I will buy 10 packs or just call it good for now and save for Marvel.",
