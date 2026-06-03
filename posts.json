@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 635,
+      "date": "2026-06-03T21:31:41.525Z",
+      "body": "Cool, Google just released Gemma 4 12B, a model specifically geared toward running locally on 16GB laptops. Looking forward to trying it out.",
+      "tags": [
+        "ai",
+        "release"
+      ],
+      "emojis": [
+        "🤖",
+        "💻"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 634,
       "date": "2026-06-03T17:19:50.435Z",
       "body": "Whooop whooop whooop whooop- \"May I have your attention please?\" It's that time of year when they test the fire alarm in our building.",
