@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 640,
+      "date": "2026-06-04T23:55:51.784Z",
+      "body": "My favorite thing about `yazi` is simply being able to shuffle all my files around quickly without messing around with a mouse (or trackball), but the in terminal previews are pretty baller!",
+      "tags": [
+        "cli",
+        "utility"
+      ],
+      "emojis": [
+        "🔧",
+        "⚙️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 639,
       "date": "2026-06-04T19:36:26.930Z",
       "body": "Looks like some of my sysadmin colleagues are already experimenting with dedicated local model hosting for departmental use and testing. I haven't heard all the details yet, but I think I heard them say they can run 3 Gemma 4-31B instances simultaneously on the test box. In my mind this kind of locally hosted setup is the future of AI, cloud-based and metered is not economically sustainable.",
