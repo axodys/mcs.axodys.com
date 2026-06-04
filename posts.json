@@ -1,6 +1,20 @@
 {
   "posts": [
     {
+      "id": 638,
+      "date": "2026-06-04T17:51:46.352Z",
+      "body": "Wow! `yazi` is a pretty sweet terminal based file manager. I have no idea how to do anything besides moving around with the vi keybindings, but I'm excited to learn more. The in terminal graphical previews are awesome!",
+      "tags": [
+        "cli",
+        "utility"
+      ],
+      "emojis": [
+        "🔧"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 637,
       "date": "2026-06-04T15:21:54.822Z",
       "body": "Happiness is capitalizing on an MTGA Daily Deal draft token gold pricing mistake (6750 gold instead of 9000) before they realize and fix it.",
