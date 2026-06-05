@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 642,
+      "date": "2026-06-05T19:14:27.338Z",
+      "body": "Still thinking about my command line game today. I'm no master, but I've always preferred the `vim` editing approach. Think it's time to get a standard neovim configuration going so that I can use it everywhere.",
+      "tags": [
+        "cli",
+        "utility",
+        "nvim"
+      ],
+      "emojis": [
+        "⚙️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 641,
       "date": "2026-06-05T17:12:10.460Z",
       "body": "Just learned today that Anthony Head, the British actor who player Rupert on Ted Lasso, had passed. He was only in a little over half the episodes in the original three seasons, but he was a great antagonist figure every time he appeared, and brought a lot to the show.",
