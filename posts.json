@@ -1,6 +1,19 @@
 {
   "posts": [
     {
+      "id": 641,
+      "date": "2026-06-05T17:12:10.460Z",
+      "body": "Just learned today that Anthony Head, the British actor who player Rupert on Ted Lasso, had passed. He was only in a little over half the episodes in the original three seasons, but he was a great antagonist figure every time he appeared, and brought a lot to the show.",
+      "tags": [
+        "obituary"
+      ],
+      "emojis": [
+        "🪦"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 640,
       "date": "2026-06-04T23:55:51.784Z",
       "body": "My favorite thing about `yazi` is simply being able to shuffle all my files around quickly without messing around with a mouse (or trackball), but the in terminal previews are pretty baller!",
