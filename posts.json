@@ -1,6 +1,20 @@
 {
   "posts": [
     {
+      "id": 645,
+      "date": "2026-06-08T16:57:51.334Z",
+      "body": "Air quality in the office is musty again. It's cool at least, but generally a sign that the AC isn't running normally, and my sinuses don't like it because it's clearly a mild trigger for my allergies.",
+      "tags": [
+        "work",
+        "mood"
+      ],
+      "emojis": [
+        "🙄"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 644,
       "date": "2026-06-08T15:48:52.123Z",
       "body": "Turns out that SCLD/Libby does have the full manga run of My Dress-Up Darling in digital form so I won't be stuck waiting years to find out how the story ends once I finish season 2.",
