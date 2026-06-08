@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 643,
+      "date": "2026-06-08T05:37:21.396Z",
+      "body": "Finished up Blue Lock season 2 tonight and really dug this season. The series as a whole ended up being way less dystopian than I originally thought after watching the first episode. Yes, there was ton of cutthroat competition, but I don't think you could ask for a better demonstration of the benefits of small-sided games for developing teamwork and players. Looking forward to season 3.",
+      "tags": [
+        "anime",
+        "review"
+      ],
+      "emojis": [
+        "📺",
+        "⚽️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 642,
       "date": "2026-06-05T19:14:27.338Z",
       "body": "Still thinking about my command line game today. I'm no master, but I've always preferred the `vim` editing approach. Think it's time to get a standard neovim configuration going so that I can use it everywhere.",
