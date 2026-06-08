@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 646,
+      "date": "2026-06-08T17:32:49.651Z",
+      "body": "Apple announces macOS 27 Golden Gate and it sounds very much like a Snow Leopard style refinement of Tahoe rather than another radical GUI overhaul and feature-packed release. That's definitely what I was hoping for.",
+      "tags": [
+        "apple",
+        "mood"
+      ],
+      "emojis": [
+        "🍏",
+        "🤔"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 645,
       "date": "2026-06-08T16:57:51.334Z",
       "body": "Air quality in the office is musty again. It's cool at least, but generally a sign that the AC isn't running normally, and my sinuses don't like it because it's clearly a mild trigger for my allergies.",
