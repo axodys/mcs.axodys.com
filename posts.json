@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 647,
+      "date": "2026-06-09T02:11:07.853Z",
+      "body": "The latest version of Ollama supports the new Gemma4:12B model that's geared towards laptop class devices. What I found puzzling about using it in Ollama vs LMStudio was that a 128K context didn't blow up its RAM usage. Speed was also only about 10 tokens/s, but totally usable.",
+      "tags": [
+        "ai",
+        "mood"
+      ],
+      "emojis": [
+        "🤖",
+        "🤔"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 646,
       "date": "2026-06-08T17:32:49.651Z",
       "body": "Apple announces macOS 27 Golden Gate and it sounds very much like a Snow Leopard style refinement of Tahoe rather than another radical GUI overhaul and feature-packed release. That's definitely what I was hoping for.",
