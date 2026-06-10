@@ -1,6 +1,20 @@
 {
   "posts": [
     {
+      "id": 650,
+      "date": "2026-06-10T16:30:55.817Z",
+      "body": "[Carmela Conroy will need more than math to get to Congress](https://www.spokesman.com/stories/2026/jun/10/carmela-conroy-will-need-more-than-math-to-get-to-/)  \nConroy seems to have a solid resume, but has no it-factor. Until a qualified and charismatic alternative candidate enters the Eastern Washington chat I don't see Baumgartner getting voted out (which absolutely sucks).",
+      "tags": [
+        "politics",
+        "spokane"
+      ],
+      "emojis": [
+        "🗽"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 649,
       "date": "2026-06-10T11:30:24.681Z",
       "body": "Martin talked about his radical Neovim customization on the latest Linux Matters podcast. It’s hilarious, but it makes sense in that it’s the best option for setting up a modern IDE in the terminal and why I started messing with it myself.",
