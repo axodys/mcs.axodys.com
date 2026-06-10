@@ -1,6 +1,22 @@
 {
   "posts": [
     {
+      "id": 649,
+      "date": "2026-06-10T11:30:24.681Z",
+      "body": "Martin talked about his radical Neovim customization on the latest Linux Matters podcast. It’s hilarious, but it makes sense in that it’s the best option for setting up a modern IDE in the terminal and why I started messing with it myself.",
+      "tags": [
+        "cli",
+        "utility",
+        "mood"
+      ],
+      "emojis": [
+        "⚙️",
+        "🤯"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 648,
       "date": "2026-06-10T04:36:40.234Z",
       "body": "Already through the first four volumes of the *My Dress-Up Darling* manga. I'm too much of a completionist to not start at the beginning even even though volumes 11-15 are the new material I'm looking forward to. And the fact of the matter is that it's just as enjoyable in its own right as the anime.",
