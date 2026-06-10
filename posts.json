@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 648,
+      "date": "2026-06-10T04:36:40.234Z",
+      "body": "Already through the first four volumes of the *My Dress-Up Darling* manga. I'm too much of a completionist to not start at the beginning even even though volumes 11-15 are the new material I'm looking forward to. And the fact of the matter is that it's just as enjoyable in its own right as the anime.",
+      "tags": [
+        "anime",
+        "mood"
+      ],
+      "emojis": [
+        "📚",
+        "😊"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 647,
       "date": "2026-06-09T02:11:07.853Z",
       "body": "The latest version of Ollama supports the new Gemma4:12B model that's geared towards laptop class devices. What I found puzzling about using it in Ollama vs LMStudio was that a 128K context didn't blow up its RAM usage. Speed was also only about 10 tokens/s, but totally usable.",
