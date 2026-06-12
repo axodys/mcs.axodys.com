@@ -1,6 +1,19 @@
 {
   "posts": [
     {
+      "id": 654,
+      "date": "2026-06-12T00:31:11.970Z",
+      "body": "It feels like a Friday and it's definitely not a Friday.",
+      "tags": [
+        "mood"
+      ],
+      "emojis": [
+        "😐"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 653,
       "date": "2026-06-12T00:28:44.019Z",
       "body": "This should have been a purely happy celebration day as we went to the hospital and met our new grandson for the first time, but it ended up being really stressful and sad for completely unrelated reasons that are mostly worked out now. Our grandson is a super-cute chunk though!",
