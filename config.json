@@ -1,8 +1,7 @@
 {
-  "title": "Microcosm",
-  "tagline": "micro 'cause I'm at it",
-  "author": "Jason Gilman",
+  "title": "Journal",
+  "tagline": "",
+  "author": "",
   "timezone": "America/Los_Angeles",
-  "siteUrl": "https://mcs.axodys.com/",
-  "feedLimit": 100
+  "siteUrl": ""
 }
