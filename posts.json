@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 659,
+      "date": "2026-06-16T20:43:51.861Z",
+      "body": "Just got a Level 3 Evacuation notice a little while ago for a nearby wildfire. It's about five miles away from us so we're not in immediate danger from that fire, but we live next to a very similar forested area that's equally vulnerable to high winds.",
+      "tags": [
+        "weather",
+        "mood"
+      ],
+      "emojis": [
+        "🌬️",
+        "🔥"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 658,
       "date": "2026-06-16T20:13:18.702Z",
       "body": "Continuing my slice-of-life anime kick, started up *Akane-banashi* and *Blue Box* this week and really like both. I'd never heard of Rakugo before starting the former and it's pretty incredible- traditional solo comedic storytelling as an artistic practice requiring years of apprenticeship and training. *Blue Box* is just a sweet teen romance between a basketball star girl and an aspiring badmitton player  boy who go to the same school and are always practicing in the same gymnasium.",
