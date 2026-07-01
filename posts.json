@@ -1,6 +1,20 @@
 {
   "posts": [
     {
+      "id": 678,
+      "date": "2026-07-01T19:12:30.033Z",
+      "body": "My Blue Box inspired, Claude-powered research seems to indicate that most high school sports in Japan exist in a practice and knockout tournament paradigm. That's fine for individual sports like badminton, and completely sucks for team sports like basketball.",
+      "tags": [
+        "sports",
+        "japan"
+      ],
+      "emojis": [
+        "🏀"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 677,
       "date": "2026-07-01T17:06:49.542Z",
       "body": "Luka Vušković is go for Brighton for basically £50m after add-ons. Seems like good business for Spurs. The guy is an offensive talent, but completely unproven as a Premier League caliber defender.",
