@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 687,
+      "date": "2026-07-08T20:41:05.362Z",
+      "body": "Really dragging this afternoon. Might splurge for a mocha.",
+      "tags": [
+        "coffee",
+        "mood"
+      ],
+      "emojis": [
+        "🥱",
+        "☕"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 686,
       "date": "2026-07-08T20:30:55.193Z",
       "body": "Realized yesterday that the fifth season of *Welcome to Wrexham* wrapped up two weeks ago and I haven't even started it. Next binge incoming!",
