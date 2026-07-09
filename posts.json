@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 688,
+      "date": "2026-07-09T21:32:12.865Z",
+      "body": "Spotlight losing my applications again has me thinking about open source macOS application launchers for the first time in ages. Going to give Sol a try first I think.",
+      "tags": [
+        "macos",
+        "utility"
+      ],
+      "emojis": [
+        "🍏",
+        "⚙️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 687,
       "date": "2026-07-08T20:41:05.362Z",
       "body": "Really dragging this afternoon. Might splurge for a mocha.",
