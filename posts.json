@@ -1,6 +1,22 @@
 {
   "posts": [
     {
+      "id": 690,
+      "date": "2026-07-10T21:49:05.334Z",
+      "body": "It's pretty hilarious that despite Gruber repeatedly glazing ChatGPT for having a great Mac-native application, they supplanted it with an Electron-based monstrosity of their own this week, and I learned about it via his chagrined post.",
+      "tags": [
+        "ai",
+        "app",
+        "comedy"
+      ],
+      "emojis": [
+        "🤖",
+        "🤣"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 689,
       "date": "2026-07-10T16:56:01.354Z",
       "body": "I'm like Sol for its minimalism, but I've found its file/folder capabilities wanting so far. Unclear if I'm doing it wrong or what?",
