@@ -1,6 +1,22 @@
 {
   "posts": [
     {
+      "id": 689,
+      "date": "2026-07-10T16:56:01.354Z",
+      "body": "I'm like Sol for its minimalism, but I've found its file/folder capabilities wanting so far. Unclear if I'm doing it wrong or what?",
+      "tags": [
+        "macos",
+        "utility",
+        "mood"
+      ],
+      "emojis": [
+        "🍏",
+        "🤔"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 688,
       "date": "2026-07-09T21:32:12.865Z",
       "body": "Spotlight losing my applications again has me thinking about open source macOS application launchers for the first time in ages. Going to give Sol a try first I think.",
