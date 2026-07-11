@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 691,
+      "date": "2026-07-11T18:37:39.422Z",
+      "body": "Mario Saint-Supery opting to sign with a Spanish club out of the blue this week is brutal from a team-building and player replacement perspective this late in the summer.",
+      "tags": [
+        "gonzaga",
+        "mood"
+      ],
+      "emojis": [
+        "🏀",
+        "😐"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 690,
       "date": "2026-07-10T21:49:05.334Z",
       "body": "It's pretty hilarious that despite Gruber repeatedly glazing ChatGPT for having a great Mac-native application, they supplanted it with an Electron-based monstrosity of their own this week, and I learned about it via his chagrined post.",
