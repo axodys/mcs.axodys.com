@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 697,
+      "date": "2026-07-14T15:09:00.160Z",
+      "body": "The Seahawks just sold for $9.6B and originally cost Paul Allen $194M! Pretty incredible 50x return on investment there, and the profit is all going to his charitable foundation.",
+      "tags": [
+        "seahawks",
+        "news"
+      ],
+      "emojis": [
+        "🏈",
+        "🤯"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 696,
       "date": "2026-07-14T04:36:36.493Z",
       "body": "Silo S3E1: Who Are You? 👍👍 Cool to finally start getting some near present day backstory, frustrating to see amnesia-induced Juliette get used as an unwitting pawn by Robert and Camille Sims.",
