@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 725,
+      "date": "2026-08-03T02:34:30.894Z",
+      "body": "We know at least one person who lost their home in the Old Trails fire already and I'm sure there are probably more based on the estimate of several hundred lost structures. So tragic.",
+      "tags": [
+        "spokane",
+        "weather"
+      ],
+      "emojis": [
+        "😢",
+        "🏡"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 724,
       "date": "2026-08-02T16:59:25.529Z",
       "body": "Very eerie day with the nearby wildfire smoke blocking the sun and casting a dirty yellow tinge on everything. Our house isn't in any immediate danger, but we're sandwiched between two evacuation zones and I still feel pretty uneasy. At least there isn't much wind today and we have power.",
