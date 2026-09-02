@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 753,
+      "date": "2026-09-02T17:18:40.527Z",
+      "body": "Happy to get some rainy weather again, mixed feelings that we're already a couple of days into September.",
+      "tags": [
+        "weather",
+        "mood"
+      ],
+      "emojis": [
+        "🌧️",
+        "😐"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 752,
       "date": "2026-09-01T17:02:16.185Z",
       "body": "Learned some things about working with AD bindings and accounts in macOS purely via the command line today thanks to Claude so that was pretty cool.",
