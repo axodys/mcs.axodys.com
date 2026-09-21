@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 766,
+      "date": "2026-09-21T15:04:06.629Z",
+      "body": "It's a good thing Netflix is getting some new anime seasons that I want to watch in October because I feel like I'm getting close to needing to sign up for Crunchy Roll to watch all of the shows I'm interested in and I don't really want to sign up for another streaming service.",
+      "tags": [
+        "anime",
+        "mood"
+      ],
+      "emojis": [
+        "📺",
+        "🤔"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 765,
       "date": "2026-09-21T05:22:58.719Z",
       "body": "Finally watched A League of Their Own thirty plus years after it came out. Thought it was a good movie but hated the ending.",
