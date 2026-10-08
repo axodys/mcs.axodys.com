@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 773,
+      "date": "2026-10-08T21:32:09.268Z",
+      "body": "Looks like the Forester is repaired and ready for pickup (the solenoid that controls AWD went bad). Relieved to finally have that issue resolved.",
+      "tags": [
+        "car",
+        "mood"
+      ],
+      "emojis": [
+        "🚙",
+        "😊"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 772,
       "date": "2026-10-05T15:40:15.607Z",
       "body": "It took three drafts and going with mono green in the latest one to get my first win in Reality Fracture limited. Not really digging the set so far.",
