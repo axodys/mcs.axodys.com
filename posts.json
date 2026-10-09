@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 774,
+      "date": "2026-10-09T19:25:39.615Z",
+      "body": "Today's brutal inflation shock- forgot a can of Coke Zero for lunch so picked one up at the Hemminson Center Marketplace: $2.20 for a single can! That said, it'd probably be more from a vending machine and most of those don't take cash anymore anyway.",
+      "tags": [
+        "money",
+        "mood"
+      ],
+      "emojis": [
+        "😱",
+        "🤔"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 773,
       "date": "2026-10-08T21:32:09.268Z",
       "body": "Looks like the Forester is repaired and ready for pickup (the solenoid that controls AWD went bad). Relieved to finally have that issue resolved.",
