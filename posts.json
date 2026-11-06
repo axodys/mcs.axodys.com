@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 797,
+      "date": "2026-11-06T21:16:50.738Z",
+      "body": "I've been using JAMF Pro forever and generally like it for its power and flexibility, but it's wild how poorly integrated its interface is by modern endpoint management standards.",
+      "tags": [
+        "software",
+        "mood"
+      ],
+      "emojis": [
+        "🍏",
+        "⚙️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 796,
       "date": "2026-11-06T18:49:18.357Z",
       "body": "Annoyed that I forgot to pack yogurt for my lunch today. But at least I've had a productive morning.",
