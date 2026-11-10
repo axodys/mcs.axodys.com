@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 799,
+      "date": "2026-11-10T18:30:08.482Z",
+      "body": "It's raining hard in Spokane right now. I went outside for a quick walk and some fresh air; the upper thighs of my pants immediately started getting soaked.",
+      "tags": [
+        "weather",
+        "mood"
+      ],
+      "emojis": [
+        "🌧️",
+        "😮"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 798,
       "date": "2026-11-09T14:45:22.657Z",
       "body": "Dave Winer is doing some interesting stuff with a [Markdown only version of the web](https://demo.bonbonweb.org/?url=https%3A%2F%2Fdave.writersweb.org%2Fscripting%2F2026%2F11%2F06.md). I've been interested in that concept since [Gemini](https://geminiprotocol.net) kind of broke new ground in that space (sorry, pun not intended) during the pandemic.",
