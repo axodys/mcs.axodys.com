@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 800,
+      "date": "2026-11-10T21:05:08.727Z",
+      "body": "I discovered that I was actually still logged into my Twitter account on my work Mac so I fixed two-factor authentication and hooked it up to Google Authenticator. Yesterday I noticed that I couldn't access Twitter at home because I know longer use the app and login required a two factor code.",
+      "tags": [
+        "twitter",
+        "security"
+      ],
+      "emojis": [
+        "🌐",
+        "🔒"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 799,
       "date": "2026-11-10T18:30:08.482Z",
       "body": "It's raining hard in Spokane right now. I went outside for a quick walk and some fresh air; the upper thighs of my pants immediately started getting soaked.",
