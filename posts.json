@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 810,
+      "date": "2026-11-19T19:57:40.632Z",
+      "body": "Tried out the Bonbon markdown web browser today, ran into a dark mode issue, and then fixed it thanks to a [custom dark css theme](https://github.com/user-attachments/files/35044540/dark.css) another user came up with.",
+      "tags": [
+        "markdown",
+        "web"
+      ],
+      "emojis": [
+        "🌐",
+        "⚙️"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 809,
       "date": "2026-11-19T05:57:50.953Z",
       "body": "The Boros Momo - Naked Time deck that came in third at Worlds last weekend is pretty fun. I tried it in the Play Queue today and went 4-0. Even if you aren't able to bounce the Naked Time enchantment before it gets to the land sacrifice step you can still tap that land first. Of course bringing in a one mana 3/3 pixie with haste and bouncing it back to hand is the dream play.",
