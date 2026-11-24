@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 815,
+      "date": "2026-11-24T17:28:00.977Z",
+      "body": "Having a lot of fun playing Pick 2 drafts on Arena with the Star Trek set. I've already trophied twice in six drafts and have a positive win rate so I'm inclined to keep at it and go for Platinum over the holiday break.",
+      "tags": [
+        "mtga",
+        "trophy"
+      ],
+      "emojis": [
+        "🧙",
+        "🏆"
+      ],
+      "image": null,
+      "imageCaption": null
+    },
+    {
       "id": 814,
       "date": "2026-11-23T22:15:00.000Z",
       "body": "Picked up a cheap Taysing plugin LED track light on Amazon, shocked to discover that it's a full-on IOT device with ~~Apple Home~~ Alexa and Google Home support. Did this tech become ubiquitous while I wasn't paying attention?",
